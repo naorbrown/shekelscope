@@ -1,0 +1,166 @@
+{
+  "taxYear": 2025,
+  "lastUpdated": "2025-01-01",
+  "cities": [
+    {
+      "id": "tel_aviv",
+      "nameEn": "Tel Aviv-Yafo",
+      "nameHe": "תל אביב-יפו",
+      "ratePerSqm": 78,
+      "avgApartmentSqm": 72,
+      "avgAnnualArnona": 5616,
+      "avgMonthlyArnona": 468
+    },
+    {
+      "id": "jerusalem",
+      "nameEn": "Jerusalem",
+      "nameHe": "ירושלים",
+      "ratePerSqm": 72,
+      "avgApartmentSqm": 80,
+      "avgAnnualArnona": 5760,
+      "avgMonthlyArnona": 480
+    },
+    {
+      "id": "haifa",
+      "nameEn": "Haifa",
+      "nameHe": "חיפה",
+      "ratePerSqm": 62,
+      "avgApartmentSqm": 75,
+      "avgAnnualArnona": 4650,
+      "avgMonthlyArnona": 388
+    },
+    {
+      "id": "rishon_lezion",
+      "nameEn": "Rishon LeZion",
+      "nameHe": "ראשון לציון",
+      "ratePerSqm": 65,
+      "avgApartmentSqm": 78,
+      "avgAnnualArnona": 5070,
+      "avgMonthlyArnona": 423
+    },
+    {
+      "id": "petah_tikva",
+      "nameEn": "Petah Tikva",
+      "nameHe": "פתח תקווה",
+      "ratePerSqm": 61,
+      "avgApartmentSqm": 76,
+      "avgAnnualArnona": 4636,
+      "avgMonthlyArnona": 386
+    },
+    {
+      "id": "ashdod",
+      "nameEn": "Ashdod",
+      "nameHe": "אשדוד",
+      "ratePerSqm": 55,
+      "avgApartmentSqm": 80,
+      "avgAnnualArnona": 4400,
+      "avgMonthlyArnona": 367
+    },
+    {
+      "id": "netanya",
+      "nameEn": "Netanya",
+      "nameHe": "נתניה",
+      "ratePerSqm": 60,
+      "avgApartmentSqm": 76,
+      "avgAnnualArnona": 4560,
+      "avgMonthlyArnona": 380
+    },
+    {
+      "id": "beer_sheva",
+      "nameEn": "Beer Sheva",
+      "nameHe": "באר שבע",
+      "ratePerSqm": 42,
+      "avgApartmentSqm": 82,
+      "avgAnnualArnona": 3444,
+      "avgMonthlyArnona": 287
+    },
+    {
+      "id": "bnei_brak",
+      "nameEn": "Bnei Brak",
+      "nameHe": "בני ברק",
+      "ratePerSqm": 68,
+      "avgApartmentSqm": 65,
+      "avgAnnualArnona": 4420,
+      "avgMonthlyArnona": 368
+    },
+    {
+      "id": "holon",
+      "nameEn": "Holon",
+      "nameHe": "חולון",
+      "ratePerSqm": 63,
+      "avgApartmentSqm": 72,
+      "avgAnnualArnona": 4536,
+      "avgMonthlyArnona": 378
+    },
+    {
+      "id": "ramat_gan",
+      "nameEn": "Ramat Gan",
+      "nameHe": "רמת גן",
+      "ratePerSqm": 71,
+      "avgApartmentSqm": 70,
+      "avgAnnualArnona": 4970,
+      "avgMonthlyArnona": 414
+    },
+    {
+      "id": "rehovot",
+      "nameEn": "Rehovot",
+      "nameHe": "רחובות",
+      "ratePerSqm": 58,
+      "avgApartmentSqm": 78,
+      "avgAnnualArnona": 4524,
+      "avgMonthlyArnona": 377
+    },
+    {
+      "id": "bat_yam",
+      "nameEn": "Bat Yam",
+      "nameHe": "בת ים",
+      "ratePerSqm": 64,
+      "avgApartmentSqm": 65,
+      "avgAnnualArnona": 4160,
+      "avgMonthlyArnona": 347
+    },
+    {
+      "id": "herzliya",
+      "nameEn": "Herzliya",
+      "nameHe": "הרצליה",
+      "ratePerSqm": 74,
+      "avgApartmentSqm": 80,
+      "avgAnnualArnona": 5920,
+      "avgMonthlyArnona": 493
+    },
+    {
+      "id": "kfar_saba",
+      "nameEn": "Kfar Saba",
+      "nameHe": "כפר סבא",
+      "ratePerSqm": 59,
+      "avgApartmentSqm": 82,
+      "avgAnnualArnona": 4838,
+      "avgMonthlyArnona": 403
+    }
+  ],
+  "context": {
+    "whatIsArnona": "Arnona is Israel's municipal property tax, levied by local authorities on residential and commercial properties. It is the primary revenue source for municipalities and funds local services such as sanitation, infrastructure maintenance, education, and welfare.",
+    "whyItMatters": "Arnona is one of the largest recurring housing costs for Israeli residents after mortgage or rent. Rates vary significantly between cities and even between neighborhoods within the same city, making it a key factor in cost-of-living comparisons.",
+    "howItIsCalculated": "Arnona rates are set per square meter by each municipality and vary based on property type (residential, commercial, industrial), zone within the city, building age, and floor level. Municipalities publish rate tables (tzavei arnona) annually, subject to Interior Ministry approval.",
+    "discountsAndExemptions": "Eligible groups can receive arnona discounts of 20-100%, including: new immigrants (olim) for the first year, elderly on low income, disabled persons, IDF soldiers during service, recipients of income support (havtachat hachnasa), and single parents. Students may receive partial discounts in some municipalities.",
+    "paymentSchedule": "Arnona is billed bimonthly (every two months) and can be paid via bank standing order (hora'at keva), credit card, post office, or municipal website. Paying the full annual amount upfront typically earns a 2% discount."
+  },
+  "sources": [
+    {
+      "name": "Tel Aviv Municipality — Arnona Rate Tables",
+      "url": "https://www.tel-aviv.gov.il/Residents/Arnona"
+    },
+    {
+      "name": "Jerusalem Municipality — Arnona Information",
+      "url": "https://www.jerusalem.muni.il/en/residents/arnona/"
+    },
+    {
+      "name": "Israel Central Bureau of Statistics — Housing Data",
+      "url": "https://www.cbs.gov.il"
+    },
+    {
+      "name": "Kol Zchut — Arnona Rights and Discounts",
+      "url": "https://www.kolzchut.org.il/en/Arnona"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "app": {
     "name": "Open Shekel",
-    "tagline": "You're paying for the system that's working against you",
-    "description": "Every paycheck, you fund the bureaucracy that blocks your housing, inflates your food prices, and prevents competition. See exactly how — and what you can do about it.",
-    "hookLine": "This isn't someone else's problem. This is YOUR money.",
-    "disclaimer": "This is an estimate for educational purposes. Consult a tax professional for your specific situation."
+    "tagline": "Stop enabling the system that works against you",
+    "description": "Enter your salary. See exactly which ministries take your money, what they do with it, and why things still cost so much. Then do something about it.",
+    "hookLine": "Every paycheck, you fund the bureaucracy that makes your life harder. See the numbers. Take action.",
+    "disclaimer": "This is an estimate for educational purposes based on 2025 tax rates. Consult a tax professional for your specific situation."
   },
   "nav": {
     "calculator": "Calculator",
@@ -15,32 +15,34 @@
     "language": "Language"
   },
   "calculator": {
-    "title": "Israeli Tax Calculator",
-    "subtitle": "Enter your income to see your complete tax breakdown",
-    "monthlyIncome": "Monthly Gross Income (₪)",
+    "title": "What happens to your salary?",
+    "subtitle": "Enter your monthly salary to see the full picture",
+    "monthlyIncome": "Monthly Gross Salary (₪)",
     "annualIncome": "Annual Gross Income (₪)",
+    "city": "Your City",
+    "selectCity": "Select city for arnona estimate",
     "employmentType": "Employment Type",
     "employee": "Employee",
     "selfEmployed": "Self-Employed",
     "gender": "Gender",
     "male": "Male",
     "female": "Female",
-    "advancedOptions": "Advanced Options",
+    "advancedOptions": "Customize (employment type, gender, children)",
     "children": "Number of Children",
     "childAge": "Child Age",
     "addChild": "Add Child",
     "removeChild": "Remove",
     "pensionRate": "Pension Contribution Rate (%)",
     "monthlySpending": "Monthly Consumer Spending (₪)",
-    "calculate": "Calculate My Taxes",
+    "calculate": "See Where It Goes",
     "monthly": "Monthly",
     "annual": "Annual",
     "banner": {
-      "line1": "93% of land controlled by one government body.",
-      "line2": "13 years to get a building permit.",
-      "line3": "Food costs 19% more than Europe.",
-      "line4": "Cars taxed at 100%+ markup.",
-      "punchline": "Your taxes fund every one of these systems. See exactly how much below."
+      "line1": "93% of land is controlled by one government body — the Israel Land Authority.",
+      "line2": "It takes an average of 13 years to get a building permit approved.",
+      "line3": "Grocery prices are 19% higher than the European average.",
+      "line4": "Import taxes on cars exceed 100%, making ownership a luxury.",
+      "punchline": "Every paycheck, you enable these systems. See exactly how much — and who to hold accountable."
     }
   },
   "results": {

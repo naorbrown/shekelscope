@@ -11,6 +11,7 @@ import { calculateHealthTax } from './health-tax';
 import { calculateTaxCredits } from './tax-credits';
 import { calculateVat } from './vat';
 import { calculateEmployerCosts } from './employer-costs';
+import { calculateArnona } from './arnona';
 import { roundToAgora, annualToMonthly } from './utils';
 
 import taxRates2025 from '@/lib/data/tax-rates-2025.json';
@@ -91,6 +92,9 @@ export function calculateTotalTax(profile: TaxpayerProfile): TotalTaxResult {
     color: a.color,
   }));
 
+  // 9. Arnona (municipal tax)
+  const arnona = profile.cityId ? calculateArnona(profile.cityId) : null;
+
   return {
     grossIncome: income,
     incomeTax,
@@ -106,5 +110,6 @@ export function calculateTotalTax(profile: TaxpayerProfile): TotalTaxResult {
     dailyTax: roundToAgora(totalDeductions / 365),
     employerCost,
     budgetAllocation,
+    arnona,
   };
 }

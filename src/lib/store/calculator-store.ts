@@ -10,6 +10,7 @@ interface CalculatorState {
   employmentType: EmploymentType;
   gender: Gender;
   childAges: number[];
+  selectedCity: string | null;
   displayMode: 'monthly' | 'annual';
   result: TotalTaxResult | null;
   hasCalculated: boolean;
@@ -20,6 +21,7 @@ interface CalculatorState {
   addChild: () => void;
   removeChild: (index: number) => void;
   setChildAge: (index: number, age: number) => void;
+  setSelectedCity: (city: string | null) => void;
   setDisplayMode: (mode: 'monthly' | 'annual') => void;
   calculate: () => void;
   reset: () => void;
@@ -32,6 +34,7 @@ export const useCalculatorStore = create<CalculatorState>()(
       employmentType: 'employee',
       gender: 'male',
       childAges: [],
+      selectedCity: null,
       displayMode: 'monthly',
       result: null,
       hasCalculated: false,
@@ -46,6 +49,7 @@ export const useCalculatorStore = create<CalculatorState>()(
         set((s) => ({
           childAges: s.childAges.map((a, i) => (i === index ? age : a)),
         })),
+      setSelectedCity: (city) => set({ selectedCity: city }),
       setDisplayMode: (mode) => set({ displayMode: mode }),
 
       calculate: () => {
@@ -58,6 +62,7 @@ export const useCalculatorStore = create<CalculatorState>()(
           gender: state.gender,
           taxYear: 2025,
           childAges: state.childAges.length > 0 ? state.childAges : undefined,
+          cityId: state.selectedCity ?? undefined,
         };
 
         const result = calculateTotalTax(profile);
@@ -70,6 +75,7 @@ export const useCalculatorStore = create<CalculatorState>()(
           employmentType: 'employee',
           gender: 'male',
           childAges: [],
+          selectedCity: null,
           result: null,
           hasCalculated: false,
         }),
@@ -81,6 +87,7 @@ export const useCalculatorStore = create<CalculatorState>()(
         employmentType: state.employmentType,
         gender: state.gender,
         childAges: state.childAges,
+        selectedCity: state.selectedCity,
         displayMode: state.displayMode,
         result: state.result,
         hasCalculated: state.hasCalculated,
