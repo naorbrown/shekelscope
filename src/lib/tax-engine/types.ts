@@ -10,6 +10,7 @@ export interface TaxpayerProfile {
   childAges?: number[];
   pensionContributionRate?: number;
   monthlyConsumerSpending?: number;
+  cityId?: string;
 }
 
 // --- Rate data types (mirror JSON structure) ---
@@ -104,6 +105,15 @@ export interface VatResult {
   annualVatPaid: number;
 }
 
+export interface ArnonaResult {
+  annualAmount: number;
+  monthlyAmount: number;
+  cityId: string;
+  cityNameEn: string;
+  cityNameHe: string;
+  ratePerSqm: number;
+}
+
 export interface BudgetAllocationResult {
   id: string;
   nameEn: string;
@@ -128,4 +138,5 @@ export interface TotalTaxResult {
   dailyTax: number;
   employerCost: number;
   budgetAllocation: BudgetAllocationResult[];
+  arnona: ArnonaResult | null;
 }
