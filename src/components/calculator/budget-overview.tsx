@@ -86,9 +86,7 @@ export function BudgetOverview() {
         <CardHeader>
           <CardTitle className="text-lg">{t('budgetBreakdown')}</CardTitle>
           <p className="text-sm text-muted-foreground">
-            {isHe
-              ? 'לחצו על כל קטגוריה לפרטים, בעיות ופעולות'
-              : 'Click any category for details, problems, and actions you can take'}
+            {t('budgetClickHint')}
           </p>
         </CardHeader>
         <CardContent>

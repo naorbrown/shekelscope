@@ -79,16 +79,6 @@ function ComparisonBarChart({
 export function OECDComparison() {
   const t = useTranslations('dashboard');
 
-  const taxBurdenData: BarDataItem[] = useMemo(
-    () =>
-      oecdData.taxToGDP.countries.map((c) => ({
-        name: c.country,
-        value: c.percentage,
-        isIsrael: c.country === 'Israel',
-      })),
-    []
-  );
-
   const housingData: BarDataItem[] = useMemo(
     () =>
       oecdData.housingAffordability.countries.map((c) => ({
@@ -98,25 +88,6 @@ export function OECDComparison() {
       })),
     []
   );
-
-  const healthcareData: BarDataItem[] = useMemo(
-    () =>
-      oecdData.healthcareSpendingPerCapita.countries.map((c) => ({
-        name: c.country,
-        value: c.spendingPerCapitaUSD,
-        isIsrael: c.country === 'Israel',
-      })),
-    []
-  );
-
-  const educationData: BarDataItem[] = useMemo(() => {
-    const ed = oecdData.educationSpending.spendingPerStudentUSD;
-    return [
-      { name: 'Israel', value: ed.israel, isIsrael: true },
-      { name: 'United States', value: ed.us, isIsrael: false },
-      { name: 'OECD Average', value: ed.oecdAverage, isIsrael: false },
-    ];
-  }, []);
 
   const efficiencyData: BarDataItem[] = useMemo(() => {
     return [
@@ -128,8 +99,9 @@ export function OECDComparison() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.3 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
     >
       <Card>
         <CardHeader>
@@ -137,40 +109,16 @@ export function OECDComparison() {
           <CardDescription>{t('oecdSubtitle')}</CardDescription>
         </CardHeader>
         <CardContent>
-          <Tabs defaultValue="taxBurden">
-            <TabsList className="w-full grid grid-cols-5">
-              <TabsTrigger value="taxBurden">{t('oecdTabs.taxBurden')}</TabsTrigger>
+          <Tabs defaultValue="housing">
+            <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="housing">{t('oecdTabs.housing')}</TabsTrigger>
-              <TabsTrigger value="healthcare">{t('oecdTabs.healthcare')}</TabsTrigger>
-              <TabsTrigger value="education">{t('oecdTabs.education')}</TabsTrigger>
               <TabsTrigger value="efficiency">{t('oecdTabs.efficiency')}</TabsTrigger>
             </TabsList>
-
-            <TabsContent value="taxBurden" className="pt-4">
-              <ComparisonBarChart data={taxBurdenData} unit="%" />
-              <p className="text-muted-foreground text-xs mt-2 text-center">
-                Tax revenue as % of GDP
-              </p>
-            </TabsContent>
 
             <TabsContent value="housing" className="pt-4">
               <ComparisonBarChart data={housingData} unit="x" />
               <p className="text-muted-foreground text-xs mt-2 text-center">
-                Housing price-to-income ratio
-              </p>
-            </TabsContent>
-
-            <TabsContent value="healthcare" className="pt-4">
-              <ComparisonBarChart data={healthcareData} unit="" />
-              <p className="text-muted-foreground text-xs mt-2 text-center">
-                Healthcare spending per capita (USD)
-              </p>
-            </TabsContent>
-
-            <TabsContent value="education" className="pt-4">
-              <ComparisonBarChart data={educationData} unit="" />
-              <p className="text-muted-foreground text-xs mt-2 text-center">
-                Education spending per student (USD) | PISA: Israel {oecdData.educationSpending.pisaScores.israel} vs OECD {oecdData.educationSpending.pisaScores.oecdAverage}
+                Housing price-to-income ratio — higher means less affordable
               </p>
             </TabsContent>
 

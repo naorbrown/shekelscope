@@ -4,6 +4,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { TaxpayerProfile, TotalTaxResult, EmploymentType, Gender } from '@/lib/tax-engine/types';
 import { calculateTotalTax } from '@/lib/tax-engine/total';
+import { DEFAULT_MONTHLY_INCOME } from '@/lib/constants';
 
 interface CalculatorState {
   monthlyIncome: number;
@@ -30,7 +31,7 @@ interface CalculatorState {
 export const useCalculatorStore = create<CalculatorState>()(
   persist(
     (set, get) => ({
-      monthlyIncome: 13316,
+      monthlyIncome: DEFAULT_MONTHLY_INCOME,
       employmentType: 'employee',
       gender: 'male',
       childAges: [],
@@ -71,7 +72,7 @@ export const useCalculatorStore = create<CalculatorState>()(
 
       reset: () =>
         set({
-          monthlyIncome: 13316,
+          monthlyIncome: DEFAULT_MONTHLY_INCOME,
           employmentType: 'employee',
           gender: 'male',
           childAges: [],

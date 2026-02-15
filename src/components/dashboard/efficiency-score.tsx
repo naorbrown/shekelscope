@@ -2,16 +2,11 @@
 
 import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { formatCurrency, formatPercent } from '@/components/shared/currency-display';
 import { analyzeEfficiency, calculateTotalOverhead, calculateTotalSavings } from '@/lib/efficiency-analyzer';
-import type { BudgetAllocationResult } from '@/lib/tax-engine/types';
-
-interface EfficiencyScoreProps {
-  budgetAllocation: BudgetAllocationResult[];
-}
+import { useCalculatorStore } from '@/lib/store/calculator-store';
 
 const GRADE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
   A: { bg: 'bg-green-500/10', text: 'text-green-600 dark:text-green-400', border: 'border-green-500/30' },
@@ -26,9 +21,14 @@ function getGradeStyle(grade: string) {
   return GRADE_COLORS[grade] ?? GRADE_COLORS['N/A'];
 }
 
-export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
+export function EfficiencyScore() {
   const t = useTranslations('dashboard');
-  const locale = useLocale();
+  const { result } = useCalculatorStore();
+
+  const budgetAllocation = useMemo(
+    () => result?.budgetAllocation ?? [],
+    [result]
+  );
 
   const efficiencyResults = useMemo(
     () => analyzeEfficiency(budgetAllocation),
@@ -45,11 +45,14 @@ export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
     [efficiencyResults]
   );
 
+  if (!result) return null;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
     >
       <Card>
         <CardHeader>
@@ -60,13 +63,13 @@ export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
           {/* Summary stats */}
           <div className="mb-6 grid grid-cols-2 gap-4">
             <div className="rounded-lg bg-red-500/10 p-4 text-center">
-              <p className="text-sm text-muted-foreground">Est. Total Overhead</p>
+              <p className="text-sm text-muted-foreground">{t('overheadLabel')}</p>
               <p className="text-xl font-bold text-red-600 dark:text-red-400">
                 {formatCurrency(totalOverhead)}
               </p>
             </div>
             <div className="rounded-lg bg-green-500/10 p-4 text-center">
-              <p className="text-sm text-muted-foreground">Potential Savings</p>
+              <p className="text-sm text-muted-foreground">{t('savingsLabel')}</p>
               <p className="text-xl font-bold text-green-600 dark:text-green-400">
                 {formatCurrency(totalSavings)}
               </p>
@@ -79,11 +82,7 @@ export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
               const allocation = budgetAllocation.find(
                 (a) => a.id === item.categoryId
               );
-              const name = allocation
-                ? locale === 'he'
-                  ? allocation.nameHe
-                  : allocation.nameEn
-                : item.categoryId;
+              const name = allocation ? allocation.nameEn : item.categoryId;
               const gradeStyle = getGradeStyle(item.grade);
               const overheadPct =
                 item.yourContribution > 0
@@ -98,7 +97,8 @@ export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
                 <motion.div
                   key={item.categoryId}
                   initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.05 * index }}
                   className={`rounded-lg border p-3 ${gradeStyle.border}`}
                 >
@@ -139,7 +139,6 @@ export function EfficiencyScore({ budgetAllocation }: EfficiencyScoreProps) {
                     )}
                   </div>
 
-                  {/* Visual bar for overhead */}
                   <div className="mt-2 h-1.5 w-full rounded-full bg-muted overflow-hidden">
                     <div
                       className="h-full rounded-full bg-green-500 transition-all"

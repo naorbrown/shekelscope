@@ -177,3 +177,93 @@ export interface ActionLevel {
 export interface ActionResourcesData {
   levels: ActionLevel[];
 }
+
+// --- Freedom Analysis Types ---
+
+export interface ReformScenario {
+  id: string;
+  label: string;
+  incomeTaxReductionPercent: number;
+  vatReductionPercent: number;
+  niReductionPercent: number;
+  description: string;
+}
+
+export interface CountryCapitalGains {
+  country: string;
+  shortTerm: number;
+  longTerm: number;
+  notes: string;
+}
+
+export interface IsraelCapitalGains {
+  standard: number;
+  significantShareholder: number;
+  realEstateAppreciation: number;
+  foreignInvestments: number;
+  crypto: number;
+  dividends: number;
+  interestIncome: number;
+  notes: string;
+}
+
+export interface ComparisonMarket {
+  market: string;
+  listedCompanies: number;
+  dailyVolumeBillionUSD: number;
+}
+
+export interface TASERestrictions {
+  foreignOwnershipLimits: boolean;
+  dualListingBarriers: boolean;
+  regulatoryComplexity: string;
+  marketCapBillionUSD: number;
+  numberOfListedCompanies: number;
+  averageDailyVolumeBillionUSD: number;
+  comparisonMarkets: ComparisonMarket[];
+}
+
+export interface AssetTaxInfo {
+  taxRate: number;
+  reporting?: string;
+  restrictions?: string;
+  additionalTaxOnDividends?: boolean;
+  currencyGainsTaxed?: boolean;
+  notes?: string;
+  purchaseTax?: string;
+  appreciationTax?: number;
+  bettermentLevy?: string;
+}
+
+export interface DeregulationItem {
+  currentPremiumPercent?: number;
+  estimatedReductionPercent?: number;
+  currentTaxPercent?: number;
+  reformedTaxPercent?: number;
+  currentPriceToIncome?: number;
+  targetPriceToIncome?: number;
+  estimatedRentReductionPercent?: number;
+  actualReductionPercent?: number;
+  mechanism: string;
+}
+
+export interface EconomicPrinciple {
+  id: string;
+  author: string;
+  principle: string;
+  application: string;
+}
+
+export interface FreedomAnalysisData {
+  lastUpdated: string;
+  reformScenarios: Record<string, ReformScenario>;
+  capitalGainsTax: {
+    israel: IsraelCapitalGains;
+    international: CountryCapitalGains[];
+  };
+  taseRestrictions: TASERestrictions;
+  alternativeAssets: Record<string, AssetTaxInfo>;
+  deregulationMultipliers: Record<string, DeregulationItem>;
+  economicPrinciples: EconomicPrinciple[];
+  sources: AnalysisSource[];
+}

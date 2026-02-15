@@ -1,5 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
-import { InsightsClient } from '@/components/insights/insights-client';
+import { redirect } from 'next/navigation';
 
 export default async function InsightsPage({
   params,
@@ -7,7 +6,5 @@ export default async function InsightsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale);
-
-  return <InsightsClient />;
+  redirect(`/${locale}#efficiency`);
 }

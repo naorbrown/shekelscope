@@ -11,6 +11,10 @@
     "dashboard": "לוח בקרה",
     "insights": "העלות האמיתית",
     "why": "למה הכל כל כך יקר?",
+    "budget": "התקציב שלך",
+    "compare": "ישראל מול העולם",
+    "costOfLiving": "יוקר המחייה",
+    "freedom": "חירות כלכלית",
     "action": "פעלו",
     "language": "שפה"
   },
@@ -69,7 +73,8 @@
     "rate": "שיעור",
     "overview": "סקירה",
     "details": "פרטים",
-    "budgetBreakdown": "לאן הולכים המסים שלך"
+    "budgetBreakdown": "לאן הולכים המסים שלך",
+    "budgetClickHint": "לחצו על כל קטגוריה לפרטים, בעיות ופעולות"
   },
   "budget": {
     "defense": "ביטחון",
@@ -110,6 +115,8 @@
       "education": "חינוך",
       "efficiency": "יעילות"
     },
+    "overheadLabel": "סה\"כ תקורה משוער",
+    "savingsLabel": "חיסכון פוטנציאלי",
     "treemapTitle": "תקציב לפי משרד",
     "efficiencyTitle": "כרטיס ציון יעילות ממשלתית",
     "efficiencySubtitle": "כמה מהכסף שלכם באמת מגיע לשירות",
@@ -198,6 +205,170 @@
       "alternative": "סעיפי שקיעה המחייבים אישור מחדש תקופתי של סוכנויות, כפי שנהוג בטקסס, כופים סקירה סדירה ומבטלים תוכניות שמיצו את ייעודן.",
       "rootCause": "ברגע שתוכנית ממשלתית נוצרת, היא לעולם לא מתה — רק גדלה."
     }
+  },
+  "sections": {
+    "costOfLiving": {
+      "title": "Why Everything Costs More",
+      "subtitle": "Import taxes, monopolies, and regulation inflate every price you pay. Here's the proof — and the proof that it doesn't have to be this way.",
+      "foodPremium": "Food prices are 19% higher than the EU average",
+      "carTax": "Import taxes on cars exceed 100%",
+      "telecomSuccess": "When telecom was deregulated in 2012, prices dropped 80% in 3 years",
+      "comparisonTitle": "What you pay vs. what others pay",
+      "deregulationProof": "Deregulation works. Telecom proved it. Food, energy, and transportation are next.",
+      "rootCause": "Import duties protect uncompetitive domestic producers. Government-granted monopolies face no competition. Regulation raises costs that consumers pay.",
+      "alternative": "Open markets to competition. Remove import quotas. Let consumers choose — and watch prices drop like they did with mobile phones."
+    },
+    "housingCrisis": {
+      "title": "The Housing Supply Crisis",
+      "subtitle": "Why rent always goes up — and who benefits from the status quo",
+      "priceToIncome": "10.6x",
+      "priceToIncomeLabel": "Price-to-income ratio",
+      "priceToIncomeDetail": "OECD average is 6.4x",
+      "permitTime": "13 years",
+      "permitTimeLabel": "Average permit time",
+      "permitTimeDetail": "From planning to building permit",
+      "landControl": "93%",
+      "landControlLabel": "State-controlled land",
+      "landControlDetail": "Israel Land Authority monopoly",
+      "permitComparisonTitle": "How long it takes to get a building permit",
+      "rootCause": "The Israel Land Authority controls 93% of land. Artificial scarcity drives prices. Only 8% of Israel's land is designated as buildable. The planning system takes 13 years on average from proposal to permit.",
+      "alternative": "In Texas, a building permit takes 2 weeks and housing costs 3x annual income. Free land markets with streamlined permitting could transform Israeli housing within a decade.",
+      "whoIsResponsible": "Israel Land Authority, Ministry of Housing, local planning committees",
+      "actions": {
+        "contactHousing": "Contact Ministry of Housing",
+        "contactILA": "Israel Land Authority",
+        "fileFOI": "File FOI Request",
+        "housingUrl": "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
+        "ilaUrl": "https://www.gov.il/he/departments/israel_land_authority"
+      }
+    },
+    "centralBank": {
+      "title": "The Inflation Tax You Don't See",
+      "subtitle": "How money printing and currency manipulation transfer wealth from workers to asset owners",
+      "m1Growth": "+60%",
+      "m1GrowthLabel": "M1 money supply (5 years)",
+      "m1GrowthDetail": "Each shekel you earn is worth less",
+      "housingInflation": "+120%",
+      "housingInflationLabel": "Housing prices (decade)",
+      "housingInflationDetail": "Far outpacing wage growth",
+      "realWages": "Stagnant",
+      "realWagesLabel": "Real wage growth",
+      "realWagesDetail": "Barely keeping pace with inflation",
+      "howItWorks": "When the Bank of Israel expands the money supply, each existing shekel becomes worth less. This is economically identical to a tax — but one that was never voted on and never debated in the Knesset.",
+      "whoBenefits": "Asset owners, real estate investors, and the government benefit. Workers, savers, first-time buyers, and renters lose.",
+      "currencyManipulation": "The Bank of Israel purchases billions in foreign currency to prevent shekel appreciation. While this helps exporters, it raises import costs for every consumer — making food, electronics, and vehicles more expensive.",
+      "supplyRestriction": "Bank regulation channels credit toward government bonds and established corporations, restricting lending to small businesses that could increase competition.",
+      "rootCause": "Central bank monetary expansion devalues your earnings. Low interest rates fuel housing speculation. The government benefits because inflation shrinks its debt — at your expense.",
+      "alternative": "Rules-based monetary policy, transparent inflation reporting including housing costs, open banking to increase competition, and Knesset oversight of monetary decisions that affect purchasing power.",
+      "actions": {
+        "boiData": "Bank of Israel Data",
+        "knessetFinance": "Knesset Finance Committee",
+        "boiUrl": "https://www.boi.org.il/en/monetary-policy",
+        "knessetUrl": "https://main.knesset.gov.il/Activity/committees/Finance/Pages/default.aspx"
+      }
+    },
+    "debunker": {
+      "title": "What Politicians Say vs. Reality",
+      "subtitle": "Left or right — they divide you on identity, but agree on keeping economic power. Here are the most common talking points and what the data actually shows.",
+      "theySayLabel": "They say",
+      "realityLabel": "Reality",
+      "askInsteadLabel": "Ask instead"
+    }
+  },
+  "freedom": {
+    "title": "מה יכולתם לקבל במקום?",
+    "subtitle": "המסים שלכם לא חייבים להיות כל כך גבוהים. המכולת לא חייבת לעלות כל כך הרבה. הנה איך חירות כלכלית נראית עבורכם.",
+    "noData": "הריצו את המחשבון קודם כדי לראות את ניתוח החירות האישי שלכם.",
+    "goToCalculator": "למחשבון",
+    "hero": {
+      "currentBurden": "נטל המס השנתי הנוכחי שלכם",
+      "reformedBurden": "תחת רפורמה מתונה",
+      "annualSavings": "יכולתם לחסוך בשנה"
+    },
+    "scenarioToggle": {
+      "moderate": "רפורמה מתונה",
+      "ambitious": "רפורמה שאפתנית"
+    },
+    "paycheck": {
+      "title": "המשכורת שלכם תחת רפורמה",
+      "subtitle": "זה לצד זה: מה אתם מרוויחים עכשיו מול מה שיכולתם להרוויח",
+      "current": "נוכחי",
+      "reformed": "לאחר רפורמה",
+      "gross": "משכורת ברוטו",
+      "deductions": "סה\"כ ניכויים",
+      "net": "הכנסה נטו",
+      "effectiveRate": "שיעור מס אפקטיבי",
+      "monthlySavings": "חיסכון חודשי",
+      "annualSavings": "חיסכון שנתי",
+      "extraMonths": "חודשי משכורת נוספים בשנה",
+      "extraMonthsDesc": "החיסכון במסים שלכם שווה ל-{months} חודשי משכורת ברוטו נוספים כל שנה."
+    },
+    "costOfLiving": {
+      "title": "יוקר המחייה שלכם תחת חירות",
+      "subtitle": "הסירו מסי יבוא, שברו מונופולים, שחררו את שוק הדיור — וצפו במחירים יורדים",
+      "category": "קטגוריה",
+      "current": "נוכחי",
+      "reformed": "אחרי רפורמה",
+      "savings": "אתם חוסכים",
+      "food": "מזון חודשי",
+      "car": "רכב ממוצע",
+      "rent": "שכירות חודשית",
+      "totalMonthly": "סה\"כ חיסכון חודשי",
+      "totalAnnual": "סה\"כ חיסכון שנתי",
+      "foodNote": "הסרת מכסות ומכסי יבוא על מזון",
+      "carNote": "הסרת מס רכישה של 83%, השארת מע\"מ 18% בלבד",
+      "rentNote": "שוק קרקעות חופשי + רישוי מזורז"
+    },
+    "investment": {
+      "title": "חירות השקעות",
+      "subtitle": "ישראל ממסה את ההשקעות שלכם בכבדות. הנה ההשוואה — ומה זה עולה לכם.",
+      "capitalGains": "השוואת מס רווחי הון",
+      "country": "מדינה",
+      "shortTerm": "טווח קצר",
+      "longTerm": "טווח ארוך",
+      "notes": "הערות",
+      "israelRates": "שיעורי מס השקעות בישראל",
+      "standard": "רווחי הון סטנדרטי",
+      "significantShareholder": "בעל מניות מהותי",
+      "dividends": "דיבידנדים",
+      "interestIncome": "הכנסות ריבית",
+      "crypto": "מטבעות קריפטו",
+      "foreignInvestments": "השקעות בחו\"ל",
+      "realEstate": "עליית ערך נדל\"ן",
+      "taseTitle": "מגבלות הבורסה לניירות ערך בתל אביב (TASE)",
+      "taseListedCompanies": "חברות רשומות",
+      "taseMarketCap": "שווי שוק",
+      "taseDailyVolume": "מחזור יומי",
+      "taseIssues": "מגבלות בעלות זרה, חסמי רישום כפול ומורכבות רגולטורית גבוהה מגבילים את הגישה לשוק ואת הנזילות.",
+      "altAssetsTitle": "מיסוי נכסים אלטרנטיביים",
+      "cryptoDesc": "מס 25% על כל הרווחים. בנקים מסרבים לקבל הפקדות ממקור קריפטו.",
+      "foreignStocksDesc": "מס 25% על רווחים. רווחי מטבע על אחזקות זרות ממוסים בנפרד.",
+      "realEstateDesc": "מס רכישה עד 10% על נכסי השקעה. מס שבח 25%. היטל השבחה עד 50% על רווחי שינוי ייעוד.",
+      "compoundTitle": "העלות של 10 שנים עם מס רווחי הון גבוה",
+      "compoundDesc": "השקעה של {amount} בשנה בתשואה של 8% על פני 10 שנים:",
+      "currentScenario": "ב-25% רווחי הון (נוכחי)",
+      "reformedScenario": "ב-15% רווחי הון (רפורמה)",
+      "youLose": "אתם מפסידים {amount} על פני 10 שנים בגלל מיסוי מופרז"
+    },
+    "principles": {
+      "title": "הטיעון לטובת חירות כלכלית",
+      "subtitle": "עקרונות מוכחים, תוצאות אמיתיות. דרגולציית הסלולר של ישראל עצמה מוכיחה זאת.",
+      "telecomProof": "כשישראל שחררה את שוק הסלולר ב-2012, החשבון החודשי ירד מ-₪250 ל-₪50 — הפחתה של 80%. אותם כוחות תחרותיים ישנו את המזון, הדיור והתחבורה."
+    },
+    "score": {
+      "title": "ציון החירות הכלכלית שלכם",
+      "subtitle": "כמה חופשיים אתם כלכלית, בהשוואה לסטנדרטים עולמיים?",
+      "overall": "ציון כולל",
+      "taxFreedom": "חופש ממסים",
+      "purchasingPower": "כוח קנייה",
+      "investmentFreedom": "חירות השקעות",
+      "gradeA": "מצוין",
+      "gradeB": "טוב",
+      "gradeC": "ממוצע",
+      "gradeD": "חלש",
+      "gradeF": "חלש מאוד"
+    },
+    "callToAction": "חירות כלכלית היא לא מופשטת — היא ההבדל בין חיסכון לעתיד לבין קושי להגיע לסוף החודש. דרשו יותר."
   },
   "why": {
     "title": "למה הכל כל כך יקר?",
