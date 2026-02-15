@@ -3,7 +3,7 @@
 import { useCallback, useMemo } from 'react';
 import * as Plot from '@observablehq/plot';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { ChartContainer } from '@/components/charts/chart-container';
@@ -66,6 +66,7 @@ export function OECDComparison() {
   const t = useTranslations('dashboard');
   const { data: result } = useOECDData();
   const { data: timeseriesResult } = useOECDTimeSeries();
+  const prefersReducedMotion = useReducedMotion();
 
   const oecdData = result?.data;
   const tsData = timeseriesResult?.data;
@@ -94,10 +95,10 @@ export function OECDComparison() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
     >
       <Card>
         <CardHeader>

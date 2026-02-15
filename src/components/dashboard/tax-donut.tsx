@@ -2,11 +2,12 @@
 
 import { useMemo, useRef, useEffect } from 'react';
 import { pie, arc } from 'd3-shape';
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { formatCurrency, formatPercent } from '@/components/shared/currency-display';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
+import { AccessibleDataTable } from '@/components/charts/accessible-data-table';
 
 const COLORS = ['#ef4444', '#f97316', '#3b82f6', '#8b5cf6'];
 
@@ -19,8 +20,11 @@ interface SliceData {
 export function TaxDonut() {
   const t = useTranslations('dashboard');
   const tResults = useTranslations('results');
+  const locale = useLocale();
+  const isHe = locale === 'he';
   const { result, displayMode } = useCalculatorStore();
   const svgRef = useRef<SVGSVGElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const divisor = displayMode === 'monthly' ? 12 : 1;
 
@@ -105,10 +109,10 @@ export function TaxDonut() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
     >
       <Card>
         <CardHeader>
@@ -121,6 +125,8 @@ export function TaxDonut() {
                 ref={svgRef}
                 viewBox="0 0 220 220"
                 className="w-full h-auto max-w-[220px]"
+                role="img"
+                aria-label={t('donutTitle')}
               />
               {/* Center label */}
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
@@ -156,6 +162,18 @@ export function TaxDonut() {
                 </div>
               ))}
             </div>
+
+            <AccessibleDataTable
+              caption={t('donutTitle')}
+              columns={[
+                { key: 'name', label: isHe ? 'סוג מס' : 'Tax Type' },
+                { key: 'amount', label: isHe ? 'סכום' : 'Amount' },
+              ]}
+              rows={data.map((d) => ({
+                name: d.name,
+                amount: formatCurrency(d.value),
+              }))}
+            />
           </div>
         </CardContent>
       </Card>

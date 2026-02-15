@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef, useEffect, useState, type PointerEvent } from 'react';
+import { useMemo, useRef, useEffect, useState, useCallback, type PointerEvent, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import {
   sankey as d3Sankey,
@@ -9,10 +9,11 @@ import {
   type SankeyNode,
   type SankeyLink,
 } from 'd3-sankey';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { formatCurrency } from '@/components/shared/currency-display';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
+import { AccessibleDataTable } from '@/components/charts/accessible-data-table';
 
 interface NodeExtra { name: string; color: string }
 interface LinkExtra { source: number; target: number; value: number }
@@ -29,6 +30,7 @@ export function SankeyFlow() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(700);
   const [hoveredLink, setHoveredLink] = useState<number | null>(null);
+  const [focusedLink, setFocusedLink] = useState<number | null>(null);
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;
@@ -36,6 +38,7 @@ export function SankeyFlow() {
     to: string;
     value: number;
   } | null>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const height = Math.max(350, width * 0.5);
 
@@ -125,6 +128,43 @@ export function SankeyFlow() {
     });
   }, [result, width, height, isRTL]);
 
+  const activeLink = hoveredLink ?? focusedLink;
+
+  const handleLinkKeyDown = useCallback(
+    (e: ReactKeyboardEvent, i: number, link: SLink) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const src = link.source as SNode;
+        const tgt = link.target as SNode;
+        setFocusedLink((prev) => (prev === i ? null : i));
+        setTooltip({
+          x: ((src.x1 ?? 0) + (tgt.x0 ?? 0)) / 2,
+          y: ((src.y0 ?? 0) + (src.y1 ?? 0)) / 2,
+          from: src.name,
+          to: tgt.name,
+          value: link.value,
+        });
+      } else if (e.key === 'Escape') {
+        setFocusedLink(null);
+        setTooltip(null);
+      }
+    },
+    [],
+  );
+
+  const flowTableRows = useMemo(() => {
+    if (!graph) return [];
+    return graph.links.map((link) => {
+      const src = link.source as SNode;
+      const tgt = link.target as SNode;
+      return {
+        from: src.name,
+        to: tgt.name,
+        amount: formatCurrency(link.value),
+      };
+    });
+  }, [graph]);
+
   if (!result || !graph) return null;
 
   const linkPath = sankeyLinkHorizontal();
@@ -156,10 +196,10 @@ export function SankeyFlow() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
     >
       <Card>
         <CardHeader>
@@ -179,17 +219,24 @@ export function SankeyFlow() {
               <g>
                 {graph.links.map((link, i) => {
                   const src = link.source as SNode;
+                  const tgt = link.target as SNode;
                   return (
                     <path
                       key={i}
                       d={linkPath(link as Parameters<typeof linkPath>[0]) ?? ''}
                       fill="none"
                       stroke={src.color}
-                      strokeOpacity={hoveredLink === i ? 0.5 : 0.15}
+                      strokeOpacity={activeLink === i ? 0.5 : 0.15}
                       strokeWidth={Math.max(1, link.width ?? 1)}
                       onPointerEnter={(e) => handleLinkPointer(i, link, e)}
                       onPointerLeave={clearHover}
-                      className="cursor-pointer transition-[stroke-opacity] duration-150"
+                      tabIndex={0}
+                      role="link"
+                      aria-label={`${src.name} → ${tgt.name}: ${formatCurrency(link.value)}`}
+                      onFocus={() => setFocusedLink(i)}
+                      onBlur={() => { if (focusedLink === i) { setFocusedLink(null); setTooltip(null); } }}
+                      onKeyDown={(e) => handleLinkKeyDown(e, i, link)}
+                      className="cursor-pointer transition-[stroke-opacity] duration-150 focus:outline-none focus-visible:stroke-opacity-50"
                     />
                   );
                 })}
@@ -254,6 +301,8 @@ export function SankeyFlow() {
             {/* Tooltip */}
             {tooltip && (
               <div
+                role="status"
+                aria-live="polite"
                 className="absolute z-10 pointer-events-none rounded-md border bg-card px-3 py-2 text-xs shadow-lg"
                 style={{
                   left: Math.max(8, Math.min(tooltip.x, width - 150)),
@@ -269,6 +318,16 @@ export function SankeyFlow() {
                 </p>
               </div>
             )}
+
+            <AccessibleDataTable
+              caption={t('sankeyTitle')}
+              columns={[
+                { key: 'from', label: isRTL ? 'מקור' : 'From' },
+                { key: 'to', label: isRTL ? 'יעד' : 'To' },
+                { key: 'amount', label: isRTL ? 'סכום' : 'Amount' },
+              ]}
+              rows={flowTableRows}
+            />
           </div>
         </CardContent>
       </Card>

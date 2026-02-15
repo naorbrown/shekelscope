@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useRef, useEffect, useState } from 'react';
+import { useMemo, useRef, useEffect, useState, useCallback, type KeyboardEvent } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { hierarchy, treemap, treemapSquarify } from 'd3-hierarchy';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { formatCurrency } from '@/components/shared/currency-display';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
+import { AccessibleDataTable } from '@/components/charts/accessible-data-table';
 
 interface TreemapDatum {
   id: string;
@@ -29,6 +30,8 @@ export function BudgetTreemap() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(600);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [lockedId, setLockedId] = useState<string | null>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const divisor = displayMode === 'monthly' ? 12 : 1;
   const height = Math.max(300, width * 0.55);
@@ -77,14 +80,39 @@ export function BudgetTreemap() {
     >;
   }, [result, divisor, width, height, bt]);
 
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent, id: string) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setLockedId((prev) => (prev === id ? null : id));
+      } else if (e.key === 'Escape') {
+        setLockedId(null);
+        setActiveId(null);
+      }
+    },
+    [],
+  );
+
+  const visibleId = lockedId ?? activeId;
+
+  const tableRows = useMemo(
+    () =>
+      leaves.map((leaf) => ({
+        name: leaf.data.name,
+        amount: formatCurrency(leaf.data.amount),
+        percentage: `${leaf.data.percentage}%`,
+      })),
+    [leaves],
+  );
+
   if (!result) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
     >
       <Card>
         <CardHeader>
@@ -103,21 +131,23 @@ export function BudgetTreemap() {
                 const d = leaf.data;
                 const w = leaf.x1 - leaf.x0;
                 const h = leaf.y1 - leaf.y0;
-                const isActive = activeId === d.id;
+                const isActive = visibleId === d.id;
                 const showLabel = w > 55 && h > 35;
                 const showAmount = w > 70 && h > 50;
 
                 return (
                   <g
                     key={d.id}
-                    onPointerEnter={() => setActiveId(d.id)}
-                    onPointerLeave={() => setActiveId(null)}
+                    onPointerEnter={() => { if (!lockedId) setActiveId(d.id); }}
+                    onPointerLeave={() => { if (!lockedId) setActiveId(null); }}
                     className="cursor-pointer"
                     role="button"
                     aria-label={`${d.name}: ${formatCurrency(d.amount)} (${d.percentage}%)`}
+                    aria-pressed={lockedId === d.id}
                     tabIndex={0}
-                    onFocus={() => setActiveId(d.id)}
-                    onBlur={() => setActiveId(null)}
+                    onFocus={() => { if (!lockedId) setActiveId(d.id); }}
+                    onBlur={() => { if (!lockedId) setActiveId(null); }}
+                    onKeyDown={(e) => handleKeyDown(e, d.id)}
                   >
                     <rect
                       x={leaf.x0}
@@ -166,8 +196,8 @@ export function BudgetTreemap() {
               })}
             </svg>
 
-            {activeId && (() => {
-              const leaf = leaves.find((l) => l.data.id === activeId);
+            {visibleId && (() => {
+              const leaf = leaves.find((l) => l.data.id === visibleId);
               if (!leaf) return null;
               const d = leaf.data;
               const tooltipX = leaf.x0 + (leaf.x1 - leaf.x0) / 2;
@@ -175,6 +205,8 @@ export function BudgetTreemap() {
 
               return (
                 <div
+                  role="status"
+                  aria-live="polite"
                   className="absolute z-10 pointer-events-none rounded-md border bg-card px-3 py-2 text-xs shadow-lg"
                   style={{
                     left: Math.min(tooltipX, width - 120),
@@ -189,6 +221,16 @@ export function BudgetTreemap() {
                 </div>
               );
             })()}
+
+            <AccessibleDataTable
+              caption={t('treemapTitle')}
+              columns={[
+                { key: 'name', label: isHe ? 'קטגוריה' : 'Category' },
+                { key: 'amount', label: isHe ? 'סכום' : 'Amount' },
+                { key: 'percentage', label: '%' },
+              ]}
+              rows={tableRows}
+            />
           </div>
         </CardContent>
       </Card>
