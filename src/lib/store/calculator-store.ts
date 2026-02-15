@@ -213,32 +213,38 @@ export const useCalculatorStore = create<CalculatorState>()(
     }),
     {
       name: 'openshekel-calculator',
-      version: 1,
+      version: 2,
       migrate: (persistedState: unknown, version: number): CalculatorState => {
         const state = persistedState as Record<string, unknown>;
-        if (version === 0) {
-          // v0 → v1: add new fields, keep everything else unchanged
+        if (version < 1) {
+          // v0 → v1: add new fields
           return {
             ...state,
             profiles: [],
             activeProfileId: null,
             completedActions: [],
             reminders: [],
+            result: null,
+            hasCalculated: false,
+          } as unknown as CalculatorState;
+        }
+        if (version < 2) {
+          // v1 → v2: stop persisting result/hasCalculated (caused hydration mismatch)
+          return {
+            ...state,
+            result: null,
+            hasCalculated: false,
           } as unknown as CalculatorState;
         }
         return state as unknown as CalculatorState;
       },
       partialize: (state) => ({
-        // v0 fields
         monthlyIncome: state.monthlyIncome,
         employmentType: state.employmentType,
         gender: state.gender,
         childAges: state.childAges,
         selectedCity: state.selectedCity,
         displayMode: state.displayMode,
-        result: state.result,
-        hasCalculated: state.hasCalculated,
-        // v1 fields
         profiles: state.profiles,
         activeProfileId: state.activeProfileId,
         completedActions: state.completedActions,

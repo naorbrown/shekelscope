@@ -1,0 +1,61 @@
+{
+  "platforms": [
+    {
+      "id": "knesset",
+      "nameEn": "Knesset Members",
+      "nameHe": "חברי כנסת",
+      "descriptionEn": "Contact your elected representatives directly",
+      "descriptionHe": "פנו ישירות לנבחרי הציבור שלכם",
+      "url": "https://main.knesset.gov.il/mk/current/Pages/default.aspx",
+      "contactUrl": "https://main.knesset.gov.il/mk/current/Pages/default.aspx",
+      "icon": "landmark"
+    },
+    {
+      "id": "foi",
+      "nameEn": "Freedom of Information",
+      "nameHe": "חופש המידע",
+      "descriptionEn": "File a freedom of information request",
+      "descriptionHe": "הגישו בקשה לחופש מידע",
+      "url": "https://foi.gov.il/",
+      "icon": "fileSearch"
+    },
+    {
+      "id": "stateComptroller",
+      "nameEn": "State Comptroller",
+      "nameHe": "מבקר המדינה",
+      "descriptionEn": "File complaints about government waste",
+      "descriptionHe": "הגישו תלונה על בזבוז כספי ציבור",
+      "url": "https://www.mevaker.gov.il/",
+      "contactUrl": "https://www.mevaker.gov.il/he/Complaints/Pages/default.aspx",
+      "icon": "shieldCheck"
+    },
+    {
+      "id": "municipality",
+      "nameEn": "Your Municipality",
+      "nameHe": "הרשות המקומית",
+      "descriptionEn": "Engage with local government on arnona and services",
+      "descriptionHe": "פנו לרשות המקומית בנושא ארנונה ושירותים",
+      "url": "https://www.gov.il/he/departments/local_authorities",
+      "icon": "building"
+    },
+    {
+      "id": "taxAuthority",
+      "nameEn": "Israel Tax Authority",
+      "nameHe": "רשות המסים",
+      "descriptionEn": "Access tax services and file inquiries",
+      "descriptionHe": "גישה לשירותי מס והגשת פניות",
+      "url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "contactUrl": "https://www.gov.il/he/service/tax-authority-contact",
+      "icon": "receipt"
+    },
+    {
+      "id": "idi",
+      "nameEn": "Israel Democracy Institute",
+      "nameHe": "המכון הישראלי לדמוקרטיה",
+      "descriptionEn": "Research and advocacy for democratic governance",
+      "descriptionHe": "מחקר וקידום ממשל דמוקרטי",
+      "url": "https://en.idi.org.il",
+      "icon": "scale"
+    }
+  ]
+}
