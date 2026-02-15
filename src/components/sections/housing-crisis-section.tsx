@@ -11,8 +11,8 @@ import { SectionWrapper } from './section-wrapper';
 import { Home, Clock, MapPin, ExternalLink } from 'lucide-react';
 import housingData from '@/lib/data/housing-data.json';
 
-const ISRAEL_COLOR = '#ef4444';
-const OTHER_COLOR = '#94a3b8';
+const ISRAEL_COLOR = '#B05A50';
+const OTHER_COLOR = '#9A9588';
 
 interface PermitItem {
   name: string;

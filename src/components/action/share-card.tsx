@@ -4,18 +4,19 @@ import { useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Share2, Copy, Check } from 'lucide-react';
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 export function ShareCard() {
   const locale = useLocale();
   const [copied, setCopied] = useState(false);
+  const [canShare, setCanShare] = useState(false);
+  const [shareUrl, setShareUrl] = useState('');
 
-  const canShare = useMemo(() => {
-    if (typeof navigator === 'undefined') return false;
-    return typeof navigator.share === 'function';
-  }, []);
+  useEffect(() => {
+    setCanShare(typeof navigator.share === 'function');
+    setShareUrl(window.location.origin + `/${locale}`);
+  }, [locale]);
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.origin + `/${locale}` : '';
   const shareTitle = locale === 'he'
     ? 'שקל פתוח - לאן הולך הכסף שלך?'
     : 'Open Shekel - Where does YOUR money go?';

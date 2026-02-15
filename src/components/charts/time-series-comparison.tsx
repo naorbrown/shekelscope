@@ -21,8 +21,8 @@ interface TimeSeriesComparisonProps {
 }
 
 const MARGIN = { top: 16, right: 12, bottom: 32, left: 46 };
-const ISRAEL_COLOR = '#ef4444';
-const OECD_COLOR = '#94a3b8';
+const ISRAEL_COLOR = '#B05A50';
+const OECD_COLOR = '#9A9588';
 
 export function TimeSeriesComparison({
   data,
