@@ -1,10 +1,11 @@
 'use client';
 
-import { useMemo, useRef, useEffect, useState } from 'react';
+import { useMemo, useRef, useEffect, useState, useCallback, type KeyboardEvent } from 'react';
 import { useLocale } from 'next-intl';
 import * as d3Scale from 'd3-scale';
 import * as d3Shape from 'd3-shape';
 import * as d3Array from 'd3-array';
+import { AccessibleDataTable } from '@/components/charts/accessible-data-table';
 
 export interface TimeSeriesDataPoint {
   year: number;
@@ -35,6 +36,23 @@ export function TimeSeriesComparison({
   const [width, setWidth] = useState(500);
   const height = 260;
   const [hovered, setHovered] = useState<number | null>(null);
+  const [focusedIdx, setFocusedIdx] = useState<number | null>(null);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = (e.key === 'ArrowRight') !== isRTL ? 1 : -1;
+        setFocusedIdx((prev) => {
+          const next = (prev ?? -1) + dir;
+          return Math.max(0, Math.min(data.length - 1, next));
+        });
+      } else if (e.key === 'Escape') {
+        setFocusedIdx(null);
+      }
+    },
+    [data.length, isRTL],
+  );
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -84,16 +102,27 @@ export function TimeSeriesComparison({
     };
   }, [data, innerW, innerH, isRTL]);
 
-  // Find nearest data point for hover
+  // Find nearest data point for hover or keyboard focus
   const hoveredPoint = useMemo(() => {
+    if (focusedIdx !== null) return data[focusedIdx] ?? null;
     if (hovered === null) return null;
     const x = hovered - MARGIN.left;
     const year = Math.round(xScale.invert(x));
     return data.find((d) => d.year === year) ?? null;
-  }, [hovered, xScale, data]);
+  }, [hovered, focusedIdx, xScale, data]);
 
   const il = israelLabel ?? (isRTL ? 'ישראל' : 'Israel');
   const oecd = oecdLabel ?? (isRTL ? 'ממוצע OECD' : 'OECD Average');
+
+  const tableRows = useMemo(
+    () =>
+      data.map((d) => ({
+        year: String(d.year),
+        israel: `${d.israel}${unit}`,
+        oecdAverage: `${d.oecdAverage}${unit}`,
+      })),
+    [data, unit],
+  );
 
   return (
     <div ref={containerRef} className="w-full">
@@ -101,11 +130,17 @@ export function TimeSeriesComparison({
         width={width}
         height={height}
         viewBox={`0 0 ${width} ${height}`}
-        className="select-none"
+        className="select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        role="img"
+        aria-label={`${il} vs ${oecd} — ${data[0]?.year ?? ''}–${data[data.length - 1]?.year ?? ''}`}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+        onBlur={() => setFocusedIdx(null)}
         onPointerMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           const x = e.clientX - rect.left;
           if (x >= MARGIN.left && x <= width - MARGIN.right) {
+            setFocusedIdx(null);
             setHovered(x);
           } else {
             setHovered(null);
@@ -222,9 +257,11 @@ export function TimeSeriesComparison({
         </g>
       </svg>
 
-      {/* Hover tooltip (HTML overlay for proper RTL) */}
+      {/* Hover/focus tooltip (HTML overlay for proper RTL) */}
       {hoveredPoint && (
         <div
+          role="status"
+          aria-live="polite"
           className="pointer-events-none -mt-2 mb-1 flex justify-center text-xs gap-4"
         >
           <span className="font-medium" style={{ color: ISRAEL_COLOR }}>
@@ -254,6 +291,16 @@ export function TimeSeriesComparison({
           {oecd}
         </span>
       </div>
+
+      <AccessibleDataTable
+        caption={`${il} vs ${oecd}`}
+        columns={[
+          { key: 'year', label: isRTL ? 'שנה' : 'Year' },
+          { key: 'israel', label: il },
+          { key: 'oecdAverage', label: oecd },
+        ]}
+        rows={tableRows}
+      />
     </div>
   );
 }
