@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Shekel symbol -->
+  <circle cx="600" cy="240" r="80" fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.3"/>
+  <text x="600" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#3b82f6">₪</text>
+
+  <!-- Brand name -->
+  <text x="600" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white">Open Shekel</text>
+
+  <!-- Tagline -->
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8">Israeli Tax Transparency</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#64748b">See where every shekel of your taxes goes</text>
+
+  <!-- Bottom accent line -->
+  <rect x="400" y="530" width="400" height="3" rx="1.5" fill="#3b82f6"/>
+</svg>

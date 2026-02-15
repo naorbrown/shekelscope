@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { TaxForm } from '@/components/calculator/tax-form';
 import { ResultsSummary } from '@/components/calculator/results-summary';
 import { ResultsBreakdown } from '@/components/calculator/results-breakdown';
@@ -6,8 +6,14 @@ import { BudgetOverview } from '@/components/calculator/budget-overview';
 import { DisplayToggle } from '@/components/calculator/display-toggle';
 import { RadicalBanner } from '@/components/calculator/radical-banner';
 
-export default function Home() {
-  const t = useTranslations('app');
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('app');
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">

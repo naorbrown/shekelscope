@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "ShekelScope",
+    "name": "Open Shekel",
     "tagline": "You're paying for the system that's working against you",
     "description": "Every paycheck, you fund the bureaucracy that blocks your housing, inflates your food prices, and prevents competition. See exactly how — and what you can do about it.",
     "hookLine": "This isn't someone else's problem. This is YOUR money.",
@@ -311,7 +311,7 @@
         "title": "Spread Awareness",
         "description": "You can't change what people don't see. Help others see.",
         "shareTool": {
-          "title": "Share ShekelScope",
+          "title": "Share Open Shekel",
           "description": "Send this tool to 5 people. Let them see their own numbers."
         },
         "talkToFamily": {

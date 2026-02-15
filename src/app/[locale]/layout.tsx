@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { routing } from '@/lib/i18n/routing';
@@ -11,6 +13,44 @@ const inter = Inter({
   variable: '--font-sans',
 });
 
+const siteUrl = 'https://naorbrown.github.io/openshekel';
+
+export const metadata: Metadata = {
+  title: 'Open Shekel - Israeli Tax Transparency',
+  description:
+    'See exactly where every shekel of your taxes goes. Israeli tax calculator with budget breakdown and civic action tools.',
+  openGraph: {
+    title: 'Open Shekel - Israeli Tax Transparency',
+    description:
+      'See exactly where every shekel of your taxes goes.',
+    url: siteUrl,
+    siteName: 'Open Shekel',
+    images: [
+      {
+        url: `${siteUrl}/og-image.svg`,
+        width: 1200,
+        height: 630,
+        alt: 'Open Shekel - Israeli Tax Transparency',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Open Shekel - Israeli Tax Transparency',
+    description:
+      'See exactly where every shekel of your taxes goes.',
+    images: [`${siteUrl}/og-image.svg`],
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -22,6 +62,7 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const dir = locale === 'he' ? 'rtl' : 'ltr';

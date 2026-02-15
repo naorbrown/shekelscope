@@ -30,14 +30,14 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
 
   const buildShareText = useCallback(() => {
     const lines = [
-      `${t('receiptTitle')} - ShekelScope`,
+      `${t('receiptTitle')} - Open Shekel`,
       `${t('receiptSubtitle')}: ${formatCurrency(totalDaily, true)}`,
       '',
       ...dailyAllocations.map(
         (a) => `${a.name}: ${formatCurrency(a.dailyAmount, true)}`
       ),
       '',
-      'https://shekelscope.com',
+      'https://naorbrown.github.io/openshekel',
     ];
     return lines.join('\n');
   }, [t, totalDaily, dailyAllocations]);
@@ -48,7 +48,7 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
-          title: 'ShekelScope - Daily Tax Receipt',
+          title: 'Open Shekel - Daily Tax Receipt',
           text,
         });
         return;

@@ -17,8 +17,8 @@ export function ShareCard() {
 
   const shareUrl = typeof window !== 'undefined' ? window.location.origin + `/${locale}` : '';
   const shareTitle = locale === 'he'
-    ? 'שקל סקופ - לאן הולך הכסף שלך?'
-    : 'ShekelScope - Where does YOUR money go?';
+    ? 'שקל פתוח - לאן הולך הכסף שלך?'
+    : 'Open Shekel - Where does YOUR money go?';
   const shareText = locale === 'he'
     ? 'גלו בדיוק לאן הולך כל שקל מהמסים שלכם.'
     : 'See exactly where every shekel of your taxes goes.';
@@ -45,7 +45,7 @@ export function ShareCard() {
     <Card className="border-primary/20 bg-primary/5">
       <CardContent className="flex flex-col items-center gap-3 py-4 sm:flex-row sm:justify-between">
         <p className="text-sm font-medium text-foreground">
-          {locale === 'he' ? 'שתפו את שקל סקופ עם חברים ומשפחה' : 'Share ShekelScope with friends and family'}
+          {locale === 'he' ? 'שתפו את שקל פתוח עם חברים ומשפחה' : 'Share Open Shekel with friends and family'}
         </p>
         <Button onClick={handleShare} variant="default" size="sm">
           {copied ? (

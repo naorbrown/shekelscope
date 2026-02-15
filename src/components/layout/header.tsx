@@ -28,7 +28,7 @@ export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const localePrefix = locale === 'en' ? '' : `/${locale}`;
+  const localePrefix = `/${locale}`;
 
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'he' : 'en';
@@ -43,11 +43,10 @@ export function Header() {
 
   /** Check if a nav link is the active route */
   const isActive = (href: string) => {
-    const fullHref = localePrefix + href;
     if (href === '/') {
-      return pathname === '/' || pathname === `/${locale}`;
+      return pathname === `/${locale}` || pathname === `/${locale}/`;
     }
-    return pathname.startsWith(fullHref);
+    return pathname.startsWith(`/${locale}${href}`);
   };
 
   return (
@@ -55,6 +54,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href={`${localePrefix}/`} className="flex items-center gap-2">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground text-lg font-bold">₪</span>
           <span className="text-xl font-bold text-primary">{appT('name')}</span>
         </Link>
 
