@@ -6,5 +6,5 @@ export default async function InsightsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  redirect(`/${locale}#efficiency`);
+  redirect(`/${locale}/results`);
 }

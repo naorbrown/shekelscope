@@ -8,14 +8,8 @@
   },
   "nav": {
     "calculator": "מחשבון",
-    "dashboard": "לוח בקרה",
-    "insights": "העלות האמיתית",
-    "why": "למה הכל כל כך יקר?",
-    "budget": "התקציב שלך",
-    "compare": "ישראל מול העולם",
-    "costOfLiving": "יוקר המחייה",
-    "freedom": "חירות כלכלית",
-    "action": "פעלו",
+    "results": "תוצאות",
+    "learn": "למידה",
     "language": "שפה"
   },
   "calculator": {

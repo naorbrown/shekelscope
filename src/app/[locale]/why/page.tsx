@@ -6,5 +6,5 @@ export default async function WhyPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  redirect(`/${locale}#cost-of-living`);
+  redirect(`/${locale}/learn`);
 }

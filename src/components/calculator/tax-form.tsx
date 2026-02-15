@@ -1,6 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,10 +11,13 @@ import arnonaData from '@/lib/data/arnona-rates.json';
 export function TaxForm() {
   const t = useTranslations('calculator');
   const store = useCalculatorStore();
+  const router = useRouter();
+  const locale = useLocale();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     store.calculate();
+    router.push(`/${locale}/results`);
   };
 
   return (

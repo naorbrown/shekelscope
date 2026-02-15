@@ -6,5 +6,5 @@ export default async function FreedomPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  redirect(`/${locale}#freedom`);
+  redirect(`/${locale}/results`);
 }

@@ -8,11 +8,8 @@
   },
   "nav": {
     "calculator": "Calculator",
-    "budget": "Your Budget",
-    "compare": "Israel vs World",
-    "costOfLiving": "Cost of Living",
-    "freedom": "Economic Freedom",
-    "action": "Take Action",
+    "results": "Results",
+    "learn": "Learn",
     "language": "Language"
   },
   "calculator": {
