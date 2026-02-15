@@ -75,7 +75,7 @@ export const useCalculatorStore = create<CalculatorState>()(
         }),
     }),
     {
-      name: 'shekelscope-calculator',
+      name: 'openshekel-calculator',
       partialize: (state) => ({
         monthlyIncome: state.monthlyIncome,
         employmentType: state.employmentType,

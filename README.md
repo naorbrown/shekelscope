@@ -1,8 +1,10 @@
-# ShekelScope
+# Open Shekel
 
 **Israeli tax transparency tool — see where every shekel of your taxes goes, why the system is broken, and what you can do about it.**
 
-ShekelScope is a web application that calculates your Israeli tax burden, shows exactly where your money flows through the government budget, grades each ministry on efficiency, compares Israel to OECD nations, and provides actionable steps for civic change.
+**[Live Site](https://naorbrown.github.io/openshekel/en)**
+
+Open Shekel is a web application that calculates your Israeli tax burden, shows exactly where your money flows through the government budget, grades each ministry on efficiency, compares Israel to OECD nations, and provides actionable steps for civic change.
 
 ## Why This Exists
 
@@ -50,8 +52,8 @@ This tool makes the invisible visible. Every shekel. Every ministry. Every ineff
 
 ```bash
 # Clone
-git clone https://github.com/naorbrown/shekelscope.git
-cd shekelscope
+git clone https://github.com/naorbrown/openshekel.git
+cd openshekel
 
 # Install dependencies
 pnpm install
@@ -162,8 +164,8 @@ pnpm test:e2e
 ## Internationalization
 
 - **Locales**: English (`en`), Hebrew (`he`)
-- **RTL**: Automatically applied for Hebrew via middleware
-- **Prefix**: English routes have no prefix, Hebrew uses `/he`
+- **RTL**: Automatically applied for Hebrew
+- **Prefix**: All routes include locale prefix (`/en/...`, `/he/...`)
 - **Translations**: `src/messages/en.json` and `src/messages/he.json`
 
 To add a new language:

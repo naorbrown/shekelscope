@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Navigation', () => {
   test('navigates to all main pages', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/en');
 
     // Dashboard
     await page.getByRole('link', { name: /dashboard/i }).click();
@@ -22,17 +22,15 @@ test.describe('Navigation', () => {
 
     // Calculator (home)
     await page.getByRole('link', { name: /calculator/i }).click();
-    await expect(page).toHaveURL(/\/$/);
+    await expect(page).toHaveURL(/\/en/);
   });
 
   test('language toggle switches to Hebrew', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/en');
 
-    // Find and click language toggle
-    const langButton = page.getByRole('button', { name: /language|שפה/i });
-    if (await langButton.isVisible()) {
-      await langButton.click();
-    }
+    // Click the Hebrew toggle button
+    const langButton = page.getByRole('button', { name: 'עברית' });
+    await langButton.click();
 
     // Should navigate to Hebrew version
     await page.waitForURL(/\/he/);
@@ -43,7 +41,7 @@ test.describe('Navigation', () => {
 
   test('mobile menu works on small viewport', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('/');
+    await page.goto('/en');
 
     // Mobile hamburger menu should be visible
     const menuButton = page.getByRole('button', { name: /menu|open/i });
