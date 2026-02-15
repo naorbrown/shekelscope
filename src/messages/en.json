@@ -114,7 +114,12 @@
     "overheadLabel": "Est. Total Overhead",
     "savingsLabel": "Potential Savings",
     "treemapTitle": "Budget by Ministry",
-    "sankeyTitle": "Follow the Money"
+    "sankeyTitle": "Follow the Money",
+    "dataSource": "Source",
+    "liveData": "Live data",
+    "localData": "Local data",
+    "lastUpdated": "Updated {date}",
+    "apiError": "Using cached data — live update failed"
   },
   "insights": {
     "title": "The Real Cost",

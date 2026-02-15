@@ -120,7 +120,12 @@
     "treemapTitle": "תקציב לפי משרד",
     "efficiencyTitle": "כרטיס ציון יעילות ממשלתית",
     "efficiencySubtitle": "כמה מהכסף שלכם באמת מגיע לשירות",
-    "sankeyTitle": "עקבו אחרי הכסף"
+    "sankeyTitle": "עקבו אחרי הכסף",
+    "dataSource": "מקור",
+    "liveData": "נתונים חיים",
+    "localData": "נתונים מקומיים",
+    "lastUpdated": "עודכן {date}",
+    "apiError": "משתמש בנתונים שמורים — עדכון חי נכשל"
   },
   "insights": {
     "title": "העלות האמיתית",

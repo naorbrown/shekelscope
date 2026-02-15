@@ -267,3 +267,20 @@ export interface FreedomAnalysisData {
   economicPrinciples: EconomicPrinciple[];
   sources: AnalysisSource[];
 }
+
+// --- OECD Time-Series Types ---
+
+export interface TimeSeriesDataPoint {
+  year: number;
+  israel: number;
+  oecdAverage: number;
+}
+
+export interface OECDTimeSeriesData {
+  lastUpdated: string;
+  source: string;
+  sourceUrl: string;
+  taxToGDP: TimeSeriesDataPoint[];
+  healthSpendingPerCapita: TimeSeriesDataPoint[];
+  housingPriceToIncome: TimeSeriesDataPoint[];
+}

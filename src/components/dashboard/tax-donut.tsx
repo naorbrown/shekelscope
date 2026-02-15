@@ -1,7 +1,7 @@
 'use client';
 
-import { useMemo } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { useMemo, useRef, useEffect } from 'react';
+import { pie, arc } from 'd3-shape';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -20,6 +20,7 @@ export function TaxDonut() {
   const t = useTranslations('dashboard');
   const tResults = useTranslations('results');
   const { result, displayMode } = useCalculatorStore();
+  const svgRef = useRef<SVGSVGElement>(null);
 
   const divisor = displayMode === 'monthly' ? 12 : 1;
 
@@ -54,9 +55,53 @@ export function TaxDonut() {
     return slices.filter((s) => s.value > 0);
   }, [result, divisor, tResults]);
 
-  if (!result) return null;
-
   const totalTax = data.reduce((sum, d) => sum + d.value, 0);
+
+  useEffect(() => {
+    if (!svgRef.current || data.length === 0) return;
+
+    const svg = svgRef.current;
+    const width = 220;
+    const height = 220;
+    const outerRadius = 100;
+    const innerRadius = 70;
+
+    // Clear existing content
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('transform', `translate(${width / 2},${height / 2})`);
+
+    const pieGen = pie<SliceData>()
+      .value((d) => d.value)
+      .padAngle(0.03)
+      .sort(null);
+
+    const arcGen = arc<{ startAngle: number; endAngle: number }>()
+      .innerRadius(innerRadius)
+      .outerRadius(outerRadius)
+      .cornerRadius(2);
+
+    const arcs = pieGen(data);
+
+    for (const d of arcs) {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', arcGen(d) ?? '');
+      path.setAttribute('fill', d.data.color);
+      path.setAttribute('stroke', 'none');
+
+      // Tooltip on hover
+      const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+      title.textContent = `${d.data.name}: ${formatCurrency(d.data.value)}`;
+      path.appendChild(title);
+
+      g.appendChild(path);
+    }
+
+    svg.appendChild(g);
+  }, [data]);
+
+  if (!result) return null;
 
   return (
     <motion.div
@@ -71,38 +116,12 @@ export function TaxDonut() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col items-center">
-            <div className="relative h-[280px] w-full max-w-[320px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={data}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={70}
-                    outerRadius={100}
-                    dataKey="value"
-                    stroke="none"
-                    paddingAngle={2}
-                  >
-                    {data.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    formatter={(value: any, name: any) => [
-                      formatCurrency(Number(value)),
-                      String(name),
-                    ]}
-                    contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
-                      fontSize: '13px',
-                    }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+            <div className="relative h-[280px] w-full max-w-[320px] flex items-center justify-center">
+              <svg
+                ref={svgRef}
+                viewBox="0 0 220 220"
+                className="w-full h-auto max-w-[220px]"
+              />
               {/* Center label */}
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
                 <p className="text-muted-foreground text-xs">

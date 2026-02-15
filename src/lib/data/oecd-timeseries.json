@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2025-01-01",
+  "source": "OECD Revenue Statistics, OECD Health Statistics",
+  "sourceUrl": "https://data.oecd.org",
+  "taxToGDP": [
+    { "year": 2015, "israel": 31.4, "oecdAverage": 33.7 },
+    { "year": 2016, "israel": 31.2, "oecdAverage": 34.0 },
+    { "year": 2017, "israel": 31.8, "oecdAverage": 34.2 },
+    { "year": 2018, "israel": 31.1, "oecdAverage": 33.9 },
+    { "year": 2019, "israel": 30.5, "oecdAverage": 33.8 },
+    { "year": 2020, "israel": 29.8, "oecdAverage": 33.5 },
+    { "year": 2021, "israel": 32.2, "oecdAverage": 34.1 },
+    { "year": 2022, "israel": 32.5, "oecdAverage": 34.0 },
+    { "year": 2023, "israel": 32.0, "oecdAverage": 34.1 }
+  ],
+  "healthSpendingPerCapita": [
+    { "year": 2015, "israel": 2547, "oecdAverage": 3800 },
+    { "year": 2016, "israel": 2630, "oecdAverage": 3920 },
+    { "year": 2017, "israel": 2740, "oecdAverage": 4050 },
+    { "year": 2018, "israel": 2838, "oecdAverage": 4200 },
+    { "year": 2019, "israel": 2920, "oecdAverage": 4400 },
+    { "year": 2020, "israel": 3080, "oecdAverage": 4700 },
+    { "year": 2021, "israel": 3150, "oecdAverage": 4800 },
+    { "year": 2022, "israel": 3100, "oecdAverage": 4900 },
+    { "year": 2023, "israel": 3100, "oecdAverage": 4900 }
+  ],
+  "housingPriceToIncome": [
+    { "year": 2015, "israel": 8.9, "oecdAverage": 5.8 },
+    { "year": 2016, "israel": 9.3, "oecdAverage": 5.9 },
+    { "year": 2017, "israel": 9.5, "oecdAverage": 6.0 },
+    { "year": 2018, "israel": 9.2, "oecdAverage": 6.1 },
+    { "year": 2019, "israel": 9.4, "oecdAverage": 6.1 },
+    { "year": 2020, "israel": 9.8, "oecdAverage": 6.2 },
+    { "year": 2021, "israel": 10.2, "oecdAverage": 6.3 },
+    { "year": 2022, "israel": 10.5, "oecdAverage": 6.4 },
+    { "year": 2023, "israel": 10.6, "oecdAverage": 6.4 }
+  ]
+}

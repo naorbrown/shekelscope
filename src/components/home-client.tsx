@@ -11,8 +11,6 @@ import { TaxDonut } from '@/components/dashboard/tax-donut';
 import { DailyReceipt } from '@/components/dashboard/daily-receipt';
 import { OECDComparison } from '@/components/dashboard/oecd-comparison';
 import { EfficiencyScore } from '@/components/dashboard/efficiency-score';
-import { BudgetTreemap } from '@/components/dashboard/budget-treemap';
-import { SankeyFlow } from '@/components/dashboard/sankey-flow';
 import { CostOfLivingSection } from '@/components/sections/cost-of-living-section';
 import { HousingCrisisSection } from '@/components/sections/housing-crisis-section';
 import { CentralBankSection } from '@/components/sections/central-bank-section';
@@ -60,14 +58,8 @@ export function HomeClient() {
           </div>
 
           {/* Section 5: Budget overview */}
-          <section id="budget" className="scroll-mt-20 space-y-6 mb-12">
+          <section id="budget" className="scroll-mt-20 mb-12">
             <BudgetOverview />
-            <BudgetTreemap />
-          </section>
-
-          {/* Section 5b: Follow the Money */}
-          <section id="follow-the-money" className="scroll-mt-20 mb-12">
-            <SankeyFlow />
           </section>
 
           {/* Section 6: Israel vs World */}
