@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { routing } from '@/lib/i18n/routing';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { QueryProvider } from '@/components/providers/query-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
@@ -71,13 +72,15 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <TooltipProvider>
-            <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-          </TooltipProvider>
+          <QueryProvider>
+            <TooltipProvider>
+              <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+              <Footer />
+            </TooltipProvider>
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

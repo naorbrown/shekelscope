@@ -1,21 +1,15 @@
 'use client';
 
-import { useMemo } from 'react';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-} from 'recharts';
+import { useCallback, useMemo } from 'react';
+import * as Plot from '@observablehq/plot';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import oecdData from '@/lib/data/oecd-comparison.json';
+import { ChartContainer } from '@/components/charts/chart-container';
+import { DataSourceBadge } from '@/components/shared/data-source-badge';
+import { useOECDData, useOECDTimeSeries } from '@/lib/data/fetchers';
+import { TimeSeriesComparison } from '@/components/charts/time-series-comparison';
 
 const ISRAEL_COLOR = '#3b82f6';
 const OTHER_COLOR = '#94a3b8';
@@ -33,68 +27,70 @@ function ComparisonBarChart({
   data: BarDataItem[];
   unit: string;
 }) {
-  return (
-    <div className="h-[300px] w-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" className="stroke-muted-foreground/20" />
-          <XAxis
-            dataKey="name"
-            tick={{ fontSize: 11 }}
-            className="fill-muted-foreground"
-            interval={0}
-            angle={-25}
-            textAnchor="end"
-            height={60}
-          />
-          <YAxis
-            tick={{ fontSize: 11 }}
-            className="fill-muted-foreground"
-            tickFormatter={(v) => `${v}${unit}`}
-          />
-          <Tooltip
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            formatter={(value: any) => [`${value}${unit}`, '']}
-            contentStyle={{
-              backgroundColor: 'hsl(var(--card))',
-              border: '1px solid hsl(var(--border))',
-              borderRadius: '8px',
-              fontSize: '13px',
-            }}
-          />
-          <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={entry.isIsrael ? ISRAEL_COLOR : OTHER_COLOR}
-              />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
+  const render = useCallback(
+    ({ width }: { width: number; isRTL: boolean }) => {
+      return Plot.plot({
+        width,
+        height: 300,
+        marginBottom: 60,
+        marginLeft: 50,
+        x: {
+          label: null,
+          tickRotate: -25,
+          domain: data.map((d) => d.name),
+        },
+        y: {
+          label: null,
+          grid: true,
+          tickFormat: (v: number) => `${v}${unit}`,
+        },
+        marks: [
+          Plot.barY(data, {
+            x: 'name',
+            y: 'value',
+            fill: (d: BarDataItem) => (d.isIsrael ? ISRAEL_COLOR : OTHER_COLOR),
+            tip: true,
+            title: (d: BarDataItem) => `${d.name}: ${d.value}${unit}`,
+          }),
+          Plot.ruleY([0]),
+        ],
+      });
+    },
+    [data, unit]
   );
+
+  return <ChartContainer height={300} render={render} />;
 }
 
 export function OECDComparison() {
   const t = useTranslations('dashboard');
+  const { data: result } = useOECDData();
+  const { data: timeseriesResult } = useOECDTimeSeries();
+
+  const oecdData = result?.data;
+  const tsData = timeseriesResult?.data;
 
   const housingData: BarDataItem[] = useMemo(
     () =>
-      oecdData.housingAffordability.countries.map((c) => ({
-        name: c.country,
-        value: c.priceToIncomeRatio,
-        isIsrael: c.country === 'Israel',
-      })),
-    []
+      oecdData
+        ? oecdData.housingAffordability.countries.map((c) => ({
+            name: c.country,
+            value: c.priceToIncomeRatio,
+            isIsrael: c.country === 'Israel',
+          }))
+        : [],
+    [oecdData]
   );
 
   const efficiencyData: BarDataItem[] = useMemo(() => {
+    if (!oecdData) return [];
     return [
       { name: 'Israel', value: oecdData.governmentEfficiency.israel, isIsrael: true },
       { name: 'OECD Average', value: oecdData.governmentEfficiency.oecdAverage, isIsrael: false },
     ];
-  }, []);
+  }, [oecdData]);
+
+  if (!oecdData) return null;
 
   return (
     <motion.div
@@ -110,9 +106,11 @@ export function OECDComparison() {
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="housing">
-            <TabsList className="w-full grid grid-cols-2">
+            <TabsList className="w-full grid grid-cols-2 md:grid-cols-4">
               <TabsTrigger value="housing">{t('oecdTabs.housing')}</TabsTrigger>
               <TabsTrigger value="efficiency">{t('oecdTabs.efficiency')}</TabsTrigger>
+              <TabsTrigger value="taxTrend">{t('oecdTabs.taxTrend')}</TabsTrigger>
+              <TabsTrigger value="healthTrend">{t('oecdTabs.healthTrend')}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="housing" className="pt-4">
@@ -128,7 +126,40 @@ export function OECDComparison() {
                 Government Effectiveness Score (0-100) — {oecdData.governmentEfficiency.source}
               </p>
             </TabsContent>
+
+            <TabsContent value="taxTrend" className="pt-4">
+              {tsData && (
+                <TimeSeriesComparison
+                  data={tsData.taxToGDP}
+                  unit="%"
+                />
+              )}
+              <p className="text-muted-foreground text-xs mt-2 text-center">
+                {t('oecdTabs.taxTrendCaption')}
+              </p>
+            </TabsContent>
+
+            <TabsContent value="healthTrend" className="pt-4">
+              {tsData && (
+                <TimeSeriesComparison
+                  data={tsData.healthSpendingPerCapita}
+                  unit="$"
+                />
+              )}
+              <p className="text-muted-foreground text-xs mt-2 text-center">
+                {t('oecdTabs.healthTrendCaption')}
+              </p>
+            </TabsContent>
           </Tabs>
+
+          {result && (
+            <DataSourceBadge
+              source={result.source}
+              sourceUrl={result.sourceUrl}
+              lastUpdated={result.lastUpdated}
+              isLive={result.isLive}
+            />
+          )}
         </CardContent>
       </Card>
     </motion.div>

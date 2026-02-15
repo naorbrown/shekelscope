@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import budgetData from '@/lib/data/budget-2025.json';
 import costAnalysisData from '@/lib/data/cost-analysis.json';
 import oecdData from '@/lib/data/oecd-comparison.json';
+import freedomData from '@/lib/data/freedom-analysis.json';
 
 describe('budget-2025.json integrity', () => {
   it('allocation percentages sum to 100', () => {
@@ -120,5 +121,76 @@ describe('oecd-comparison.json integrity', () => {
   it('has sourceUrl and lastUpdated at root', () => {
     expect(oecdData.sourceUrl).toBeTruthy();
     expect(oecdData.lastUpdated).toBeTruthy();
+  });
+});
+
+describe('freedom-analysis.json integrity', () => {
+  it('reform scenarios have valid reduction percentages (0-100)', () => {
+    for (const scenario of Object.values(freedomData.reformScenarios)) {
+      expect(scenario.incomeTaxReductionPercent).toBeGreaterThanOrEqual(0);
+      expect(scenario.incomeTaxReductionPercent).toBeLessThanOrEqual(100);
+      expect(scenario.vatReductionPercent).toBeGreaterThanOrEqual(0);
+      expect(scenario.vatReductionPercent).toBeLessThanOrEqual(100);
+      expect(scenario.niReductionPercent).toBeGreaterThanOrEqual(0);
+      expect(scenario.niReductionPercent).toBeLessThanOrEqual(100);
+    }
+  });
+
+  it('international capital gains entries have required fields', () => {
+    for (const entry of freedomData.capitalGainsTax.international) {
+      expect(entry.country).toBeTruthy();
+      expect(typeof entry.shortTerm).toBe('number');
+      expect(typeof entry.longTerm).toBe('number');
+      expect(entry.notes).toBeTruthy();
+    }
+  });
+
+  it('Israel capital gains rates are valid percentages', () => {
+    const israel = freedomData.capitalGainsTax.israel;
+    expect(israel.standard).toBeGreaterThan(0);
+    expect(israel.standard).toBeLessThanOrEqual(100);
+    expect(israel.significantShareholder).toBeGreaterThanOrEqual(
+      israel.standard
+    );
+  });
+
+  it('all economic principles have required fields', () => {
+    for (const principle of freedomData.economicPrinciples) {
+      expect(principle.id).toBeTruthy();
+      expect(principle.author).toBeTruthy();
+      expect(principle.principle).toBeTruthy();
+      expect(principle.application).toBeTruthy();
+    }
+  });
+
+  it('deregulation multipliers have valid percentage values', () => {
+    const food = freedomData.deregulationMultipliers.food;
+    expect(food.estimatedReductionPercent).toBeGreaterThan(0);
+    expect(food.estimatedReductionPercent).toBeLessThanOrEqual(100);
+
+    const cars = freedomData.deregulationMultipliers.cars;
+    expect(cars.currentTaxPercent).toBeGreaterThan(0);
+    expect(cars.reformedTaxPercent).toBeLessThan(cars.currentTaxPercent!);
+
+    const housing = freedomData.deregulationMultipliers.housing;
+    expect(housing.estimatedRentReductionPercent).toBeGreaterThan(0);
+    expect(housing.estimatedRentReductionPercent).toBeLessThanOrEqual(100);
+  });
+
+  it('sources array has valid entries', () => {
+    expect(freedomData.sources.length).toBeGreaterThan(0);
+    for (const source of freedomData.sources) {
+      expect(source.name).toBeTruthy();
+      expect(source.url).toBeTruthy();
+    }
+  });
+
+  it('TASE restrictions have valid comparison markets', () => {
+    expect(freedomData.taseRestrictions.comparisonMarkets.length).toBeGreaterThan(0);
+    for (const market of freedomData.taseRestrictions.comparisonMarkets) {
+      expect(market.market).toBeTruthy();
+      expect(market.listedCompanies).toBeGreaterThan(0);
+      expect(market.dailyVolumeBillionUSD).toBeGreaterThan(0);
+    }
   });
 });

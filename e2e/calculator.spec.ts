@@ -77,7 +77,7 @@ test.describe('Calculator Page', () => {
     await input.fill('15000');
     // Select Tel Aviv
     const citySelect = page.locator('select#city');
-    await citySelect.selectOption({ label: /Tel Aviv/i });
+    await citySelect.selectOption({ label: 'Tel Aviv' });
     await page.getByRole('button', { name: /calculate/i }).click();
     await expect(page.getByText(/effective tax rate/i)).toBeVisible();
   });

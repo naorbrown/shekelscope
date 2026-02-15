@@ -18,6 +18,7 @@ import { TalkingPointsDebunker } from '@/components/sections/talking-points-debu
 import { SectionWrapper } from '@/components/sections/section-wrapper';
 import { ActionLevel, LEVEL_CONFIGS } from '@/components/action/action-level';
 import { ShareCard } from '@/components/action/share-card';
+import { FreedomSection } from '@/components/freedom/freedom-section';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 
 export function HomeClient() {
@@ -75,7 +76,10 @@ export function HomeClient() {
 
       {/* === Always-visible educational sections === */}
 
-      {/* Section 8: Cost of Living */}
+      {/* Section 8: Economic Freedom Analysis */}
+      <FreedomSection />
+
+      {/* Section 9: Cost of Living */}
       <CostOfLivingSection />
 
       {/* Section 9: Housing Crisis */}

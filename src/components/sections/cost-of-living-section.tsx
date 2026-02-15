@@ -1,31 +1,70 @@
 'use client';
 
+import { useCallback, useMemo } from 'react';
+import * as Plot from '@observablehq/plot';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Legend,
-} from 'recharts';
 import { Card, CardContent } from '@/components/ui/card';
+import { ChartContainer } from '@/components/charts/chart-container';
 import { SectionWrapper } from './section-wrapper';
 import costData from '@/lib/data/cost-of-living.json';
 import { TrendingDown, ShoppingCart, Car } from 'lucide-react';
 
+interface GroupedBarItem {
+  item: string;
+  country: string;
+  value: number;
+}
+
 export function CostOfLivingSection() {
   const t = useTranslations('sections.costOfLiving');
 
-  const chartData = costData.basketComparisons.map((item) => ({
-    name: item.item,
-    Israel: item.israelILS,
-    Germany: item.germanyILS,
-    USA: item.usaILS,
-  }));
+  const chartData: GroupedBarItem[] = useMemo(
+    () =>
+      costData.basketComparisons.flatMap((item) => [
+        { item: item.item, country: 'Israel', value: item.israelILS },
+        { item: item.item, country: 'Germany', value: item.germanyILS },
+        { item: item.item, country: 'USA', value: item.usaILS },
+      ]),
+    []
+  );
+
+  const render = useCallback(
+    ({ width }: { width: number; isRTL: boolean }) => {
+      return Plot.plot({
+        width,
+        height: 350,
+        marginBottom: 70,
+        marginLeft: 50,
+        x: {
+          label: null,
+          tickRotate: -25,
+        },
+        y: {
+          label: null,
+          grid: true,
+          tickFormat: (v: number) => `₪${v}`,
+        },
+        color: {
+          domain: ['Israel', 'Germany', 'USA'],
+          range: ['#ef4444', '#94a3b8', '#3b82f6'],
+          legend: true,
+        },
+        marks: [
+          Plot.barY(chartData, {
+            x: 'item',
+            y: 'value',
+            fill: 'country',
+            fx: 'item',
+            tip: true,
+            title: (d: GroupedBarItem) => `${d.country}: ₪${d.value}`,
+          }),
+          Plot.ruleY([0]),
+        ],
+      });
+    },
+    [chartData]
+  );
 
   return (
     <SectionWrapper
@@ -89,41 +128,7 @@ export function CostOfLivingSection() {
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-semibold mb-4">{t('comparisonTitle')}</h3>
-            <div className="h-[350px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" className="stroke-muted-foreground/20" />
-                  <XAxis
-                    dataKey="name"
-                    tick={{ fontSize: 10 }}
-                    className="fill-muted-foreground"
-                    interval={0}
-                    angle={-25}
-                    textAnchor="end"
-                    height={70}
-                  />
-                  <YAxis
-                    tick={{ fontSize: 11 }}
-                    className="fill-muted-foreground"
-                    tickFormatter={(v) => `₪${v}`}
-                  />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
-                      fontSize: '13px',
-                    }}
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    formatter={(value: any) => [`₪${value}`, '']}
-                  />
-                  <Legend />
-                  <Bar dataKey="Israel" fill="#ef4444" radius={[2, 2, 0, 0]} />
-                  <Bar dataKey="Germany" fill="#94a3b8" radius={[2, 2, 0, 0]} />
-                  <Bar dataKey="USA" fill="#3b82f6" radius={[2, 2, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+            <ChartContainer height={350} render={render} />
             <p className="text-xs text-muted-foreground text-center mt-2">
               All prices converted to NIS for comparison
             </p>

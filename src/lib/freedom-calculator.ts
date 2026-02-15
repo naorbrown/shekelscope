@@ -221,15 +221,29 @@ export function calculateFreedomScore(
   result: TotalTaxResult,
   efficiencyResults: EfficiencyResult[]
 ): FreedomScore {
-  // Tax Freedom: based on effective rate vs benchmark
+  // Tax Freedom: based on effective rate vs benchmark, penalized by overhead
   const effectiveRate = result.totalEffectiveRate;
+  const totalContribution = efficiencyResults.reduce(
+    (sum, e) => sum + e.yourContribution,
+    0
+  );
+  const totalOverhead = efficiencyResults.reduce(
+    (sum, e) => sum + e.estimatedOverhead,
+    0
+  );
+  const overheadPenalty =
+    totalContribution > 0 ? (totalOverhead / totalContribution) * 10 : 0;
   const taxFreedom = Math.max(
     0,
-    Math.min(100, Math.round((1 - effectiveRate / MAX_EFFECTIVE_RATE) * 100))
+    Math.min(
+      100,
+      Math.round(
+        (1 - effectiveRate / MAX_EFFECTIVE_RATE) * 100 - overheadPenalty
+      )
+    )
   );
 
   // Purchasing Power: based on cost-of-living premium vs OECD average
-  // Israel food is 19% above EU; housing 10.6x vs 6.4x OECD
   const foodPremium =
     costOfLivingData.foodPriceIndexVsEU.israel /
     costOfLivingData.foodPriceIndexVsEU.euAverage;

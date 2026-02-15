@@ -1,19 +1,12 @@
 'use client';
 
+import { useCallback, useMemo } from 'react';
+import * as Plot from '@observablehq/plot';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-} from 'recharts';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ChartContainer } from '@/components/charts/chart-container';
 import { SectionWrapper } from './section-wrapper';
 import { Home, Clock, MapPin, ExternalLink } from 'lucide-react';
 import housingData from '@/lib/data/housing-data.json';
@@ -21,14 +14,54 @@ import housingData from '@/lib/data/housing-data.json';
 const ISRAEL_COLOR = '#ef4444';
 const OTHER_COLOR = '#94a3b8';
 
+interface PermitItem {
+  name: string;
+  days: number;
+  isIsrael: boolean;
+}
+
 export function HousingCrisisSection() {
   const t = useTranslations('sections.housingCrisis');
 
-  const permitData = housingData.permitTimeComparison.map((c) => ({
-    name: c.country,
-    days: c.days,
-    isIsrael: c.country === 'Israel',
-  }));
+  const permitData: PermitItem[] = useMemo(
+    () =>
+      housingData.permitTimeComparison.map((c) => ({
+        name: c.country,
+        days: c.days,
+        isIsrael: c.country === 'Israel',
+      })),
+    []
+  );
+
+  const render = useCallback(
+    ({ width }: { width: number; isRTL: boolean }) => {
+      return Plot.plot({
+        width,
+        height: 200,
+        marginLeft: 80,
+        x: {
+          label: null,
+          grid: true,
+          tickFormat: (v: number) => `${v} days`,
+        },
+        y: {
+          label: null,
+          domain: permitData.map((d) => d.name),
+        },
+        marks: [
+          Plot.barX(permitData, {
+            x: 'days',
+            y: 'name',
+            fill: (d: PermitItem) => (d.isIsrael ? ISRAEL_COLOR : OTHER_COLOR),
+            tip: true,
+            title: (d: PermitItem) => `${d.name}: ${d.days} days`,
+          }),
+          Plot.ruleX([0]),
+        ],
+      });
+    },
+    [permitData]
+  );
 
   return (
     <SectionWrapper
@@ -94,44 +127,7 @@ export function HousingCrisisSection() {
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-semibold mb-4">{t('permitComparisonTitle')}</h3>
-            <div className="h-[200px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={permitData} layout="vertical" margin={{ top: 5, right: 30, left: 80, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" className="stroke-muted-foreground/20" />
-                  <XAxis
-                    type="number"
-                    tick={{ fontSize: 11 }}
-                    className="fill-muted-foreground"
-                    tickFormatter={(v) => `${v} days`}
-                  />
-                  <YAxis
-                    type="category"
-                    dataKey="name"
-                    tick={{ fontSize: 12 }}
-                    className="fill-muted-foreground"
-                    width={70}
-                  />
-                  <Tooltip
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    formatter={(value: any) => [`${value} days`, '']}
-                    contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
-                      fontSize: '13px',
-                    }}
-                  />
-                  <Bar dataKey="days" radius={[0, 4, 4, 0]}>
-                    {permitData.map((entry, index) => (
-                      <Cell
-                        key={`cell-${index}`}
-                        fill={entry.isIsrael ? ISRAEL_COLOR : OTHER_COLOR}
-                      />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+            <ChartContainer height={200} render={render} />
           </CardContent>
         </Card>
       </motion.div>
