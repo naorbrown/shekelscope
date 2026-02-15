@@ -590,5 +590,19 @@
         }
       }
     }
+  },
+  "profiles": {
+    "title": "Profiles",
+    "save": "Save",
+    "delete": "Delete",
+    "profileName": "Profile name",
+    "maxReached": "Max 5 profiles"
+  },
+  "scenarios": {
+    "title": "Scenario Comparison",
+    "subtitle": "Compare two saved profiles side by side",
+    "selectA": "Profile A",
+    "selectB": "Profile B",
+    "difference": "Difference"
   }
 }

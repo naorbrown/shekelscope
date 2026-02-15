@@ -4,7 +4,10 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
+import { useCalculatorStore } from '@/lib/store/calculator-store';
+import { ExternalLink, Check } from 'lucide-react';
+import { ReminderDialog } from './reminder-dialog';
 
 interface ActionItemConfig {
   translationKey: string;
@@ -68,6 +71,7 @@ interface ActionLevelProps {
 export function ActionLevel({ levelIndex }: ActionLevelProps) {
   const config = LEVEL_CONFIGS[levelIndex];
   const t = useTranslations(`action.levels.${config.id}`);
+  const { completedActions, toggleAction } = useCalculatorStore();
 
   return (
     <motion.div
@@ -95,39 +99,68 @@ export function ActionLevel({ levelIndex }: ActionLevelProps) {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {config.items.map((item) => (
-                <div
-                  key={item.translationKey}
-                  className="rounded-lg border bg-muted/30 p-3"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="space-y-1">
-                      <p className="text-sm font-medium text-foreground">
-                        {t(`${item.translationKey}.title`)}
-                      </p>
-                      <p className="text-xs leading-relaxed text-muted-foreground">
-                        {t(`${item.translationKey}.description`)}
-                      </p>
-                    </div>
-                    {item.url && (
-                      <Button
-                        variant="outline"
-                        size="xs"
-                        asChild
-                        className="shrink-0"
-                      >
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+              {config.items.map((item) => {
+                const actionId = `${config.id}.${item.translationKey}`;
+                const isCompleted = completedActions.some(
+                  (a) => a.actionId === actionId
+                );
+
+                return (
+                  <div
+                    key={item.translationKey}
+                    className={`rounded-lg border p-3 transition-colors ${
+                      isCompleted
+                        ? 'border-green-200 bg-green-50/50 dark:border-green-900 dark:bg-green-950/30'
+                        : 'bg-muted/30'
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <Checkbox
+                        checked={isCompleted}
+                        onCheckedChange={() => toggleAction(actionId)}
+                        className="mt-0.5"
+                      />
+                      <div className="flex-1 space-y-1">
+                        <p
+                          className={`text-sm font-medium ${
+                            isCompleted
+                              ? 'text-green-700 dark:text-green-300 line-through'
+                              : 'text-foreground'
+                          }`}
                         >
-                          <ExternalLink className="size-3" />
-                        </a>
-                      </Button>
-                    )}
+                          {t(`${item.translationKey}.title`)}
+                          {isCompleted && (
+                            <Check className="inline size-3.5 ms-1.5 text-green-600" />
+                          )}
+                        </p>
+                        <p className="text-xs leading-relaxed text-muted-foreground">
+                          {t(`${item.translationKey}.description`)}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-1 shrink-0">
+                        {!isCompleted && (
+                          <ReminderDialog actionId={actionId} />
+                        )}
+                        {item.url && (
+                          <Button
+                            variant="outline"
+                            size="xs"
+                            asChild
+                          >
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink className="size-3" />
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </CardContent>
         </Card>

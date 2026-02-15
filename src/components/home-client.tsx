@@ -11,6 +11,8 @@ import { TaxDonut } from '@/components/dashboard/tax-donut';
 import { DailyReceipt } from '@/components/dashboard/daily-receipt';
 import { OECDComparison } from '@/components/dashboard/oecd-comparison';
 import { EfficiencyScore } from '@/components/dashboard/efficiency-score';
+import { BudgetTreemap } from '@/components/dashboard/budget-treemap';
+import { SankeyFlow } from '@/components/dashboard/sankey-flow';
 import { CostOfLivingSection } from '@/components/sections/cost-of-living-section';
 import { HousingCrisisSection } from '@/components/sections/housing-crisis-section';
 import { CentralBankSection } from '@/components/sections/central-bank-section';
@@ -18,7 +20,11 @@ import { TalkingPointsDebunker } from '@/components/sections/talking-points-debu
 import { SectionWrapper } from '@/components/sections/section-wrapper';
 import { ActionLevel, LEVEL_CONFIGS } from '@/components/action/action-level';
 import { ShareCard } from '@/components/action/share-card';
+import { KnessetContact } from '@/components/action/knesset-contact';
+import { ImpactCounter } from '@/components/action/impact-counter';
 import { FreedomSection } from '@/components/freedom/freedom-section';
+import { ProfileManager } from '@/components/calculator/profile-manager';
+import { ScenarioComparison } from '@/components/calculator/scenario-comparison';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 
 export function HomeClient() {
@@ -35,9 +41,10 @@ export function HomeClient() {
       {/* === Conditional sections: appear after calculation === */}
       {result && (
         <>
-          {/* Section 2: Results */}
+          {/* Profile manager + display toggle */}
           <section id="results" className="scroll-mt-20 space-y-6 mb-12">
-            <div className="flex justify-end">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <ProfileManager />
               <DisplayToggle />
             </div>
             <ResultsSummary />
@@ -57,9 +64,15 @@ export function HomeClient() {
             <RadicalBanner />
           </div>
 
-          {/* Section 5: Budget overview */}
-          <section id="budget" className="scroll-mt-20 mb-12">
+          {/* Section 5: Budget treemap + overview */}
+          <section id="budget" className="scroll-mt-20 space-y-6 mb-12">
+            <BudgetTreemap />
             <BudgetOverview />
+          </section>
+
+          {/* Section 5b: Follow the Money */}
+          <section id="flow" className="scroll-mt-20 mb-12">
+            <SankeyFlow />
           </section>
 
           {/* Section 6: Israel vs World */}
@@ -70,6 +83,11 @@ export function HomeClient() {
           {/* Section 7: Efficiency scorecard */}
           <section id="efficiency" className="scroll-mt-20 mb-12">
             <EfficiencyScore />
+          </section>
+
+          {/* Section 7b: Scenario comparison (shows when 2+ profiles saved) */}
+          <section id="scenarios" className="scroll-mt-20 mb-12">
+            <ScenarioComparison />
           </section>
         </>
       )}
@@ -102,6 +120,17 @@ export function HomeClient() {
             <ActionLevel key={LEVEL_CONFIGS[i].id} levelIndex={i} />
           ))}
         </div>
+
+        {/* Civic platforms directory */}
+        <div className="mb-6">
+          <KnessetContact />
+        </div>
+
+        {/* Impact tracker */}
+        <div className="mb-6">
+          <ImpactCounter />
+        </div>
+
         <ShareCard />
       </SectionWrapper>
     </>

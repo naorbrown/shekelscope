@@ -11,8 +11,8 @@ import {
 } from '@/components/ui/accordion';
 import { formatCurrency } from '@/components/shared/currency-display';
 import { motion } from 'framer-motion';
-import { ExternalLink, Share2, MessageSquare, MapPin, Users } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ExternalLink, Share2, MessageSquare, MapPin, Users, Check } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
 import narratives from '@/lib/data/budget-narratives.json';
 
 type NarrativeAction = {
@@ -68,7 +68,7 @@ export function BudgetOverview() {
   const t = useTranslations('results');
   const bt = useTranslations('budget');
   const locale = useLocale();
-  const { result, displayMode } = useCalculatorStore();
+  const { result, displayMode, completedActions, toggleAction } = useCalculatorStore();
 
   if (!result) return null;
 
@@ -217,37 +217,57 @@ export function BudgetOverview() {
                           <h4 className="text-sm font-semibold mb-2">
                             {isHe ? 'פעלו עכשיו' : 'Take Action'}
                           </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {narrative.actions.map((action, i) => (
-                              <Button
-                                key={i}
-                                variant="outline"
-                                size="sm"
-                                className="h-auto py-2 px-3"
-                                asChild={!!action.url}
-                              >
-                                {action.url ? (
-                                  <a
-                                    href={action.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2"
-                                  >
-                                    <ActionIcon type={action.type} />
-                                    <span className="text-xs">
+                          <div className="space-y-2">
+                            {narrative.actions.map((action, i) => {
+                              const actionId = `budget.${item.id}.${action.type}.${i}`;
+                              const isCompleted = completedActions.some(
+                                (a) => a.actionId === actionId
+                              );
+
+                              return (
+                                <div
+                                  key={i}
+                                  className={`flex items-center gap-2 rounded-md border p-2 transition-colors ${
+                                    isCompleted
+                                      ? 'border-green-200 bg-green-50/50 dark:border-green-900 dark:bg-green-950/30'
+                                      : 'bg-background'
+                                  }`}
+                                >
+                                  <Checkbox
+                                    checked={isCompleted}
+                                    onCheckedChange={() => toggleAction(actionId)}
+                                  />
+                                  {action.url ? (
+                                    <a
+                                      href={action.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className={`inline-flex items-center gap-2 text-xs hover:underline ${
+                                        isCompleted
+                                          ? 'text-green-700 dark:text-green-300 line-through'
+                                          : ''
+                                      }`}
+                                    >
+                                      <ActionIcon type={action.type} />
                                       {isHe ? action.labelHe : action.labelEn}
-                                    </span>
-                                  </a>
-                                ) : (
-                                  <span className="inline-flex items-center gap-2">
-                                    <ActionIcon type={action.type} />
-                                    <span className="text-xs">
+                                      {isCompleted && <Check className="size-3 text-green-600" />}
+                                    </a>
+                                  ) : (
+                                    <span
+                                      className={`inline-flex items-center gap-2 text-xs ${
+                                        isCompleted
+                                          ? 'text-green-700 dark:text-green-300 line-through'
+                                          : ''
+                                      }`}
+                                    >
+                                      <ActionIcon type={action.type} />
                                       {isHe ? action.labelHe : action.labelEn}
+                                      {isCompleted && <Check className="size-3 text-green-600" />}
                                     </span>
-                                  </span>
-                                )}
-                              </Button>
-                            ))}
+                                  )}
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
 
