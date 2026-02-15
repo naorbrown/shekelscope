@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Open Shekel',
     images: [
       {
-        url: `${siteUrl}/og-image.svg`,
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Open Shekel - Israeli Tax Transparency',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Open Shekel - Israeli Tax Transparency',
     description:
       'See exactly where every shekel of your taxes goes.',
-    images: [`${siteUrl}/og-image.svg`],
+    images: [`${siteUrl}/og-image.png`],
   },
   icons: {
     icon: '/favicon.svg',
