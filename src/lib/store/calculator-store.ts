@@ -217,7 +217,7 @@ export const useCalculatorStore = create<CalculatorState>()(
       migrate: (persistedState: unknown, version: number): CalculatorState => {
         const state = persistedState as Record<string, unknown>;
         if (version < 1) {
-          // v0 → v1: add new fields
+          // v0 → v1: add profile/action/reminder fields
           return {
             ...state,
             profiles: [],
@@ -239,12 +239,14 @@ export const useCalculatorStore = create<CalculatorState>()(
         return state as unknown as CalculatorState;
       },
       partialize: (state) => ({
+        // v0 fields
         monthlyIncome: state.monthlyIncome,
         employmentType: state.employmentType,
         gender: state.gender,
         childAges: state.childAges,
         selectedCity: state.selectedCity,
         displayMode: state.displayMode,
+        // v1 fields
         profiles: state.profiles,
         activeProfileId: state.activeProfileId,
         completedActions: state.completedActions,
