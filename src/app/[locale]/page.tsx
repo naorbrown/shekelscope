@@ -16,34 +16,34 @@ export default async function Home({
   const t = await getTranslations('app');
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8">
-      {/* Hero */}
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+    <div className="mx-auto max-w-4xl px-4 py-8">
+      {/* Hero — centered, prominent */}
+      <div className="mb-10 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           {t('tagline')}
         </h1>
-        <p className="mt-3 text-lg text-muted-foreground">
-          {t('description')}
+        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          {t('hookLine')}
         </p>
       </div>
 
-      <RadicalBanner />
+      {/* Calculator — centered, search-bar style */}
+      <div className="mb-12">
+        <TaxForm />
+      </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_1.5fr]">
-        {/* Left: Form */}
-        <div>
-          <TaxForm />
+      {/* Results — full-width, vertical stack */}
+      <div className="space-y-6">
+        <div className="flex justify-end">
+          <DisplayToggle />
         </div>
+        <ResultsSummary />
+        <ResultsBreakdown />
 
-        {/* Right: Results */}
-        <div className="space-y-6">
-          <div className="flex justify-end">
-            <DisplayToggle />
-          </div>
-          <ResultsSummary />
-          <ResultsBreakdown />
-          <BudgetOverview />
-        </div>
+        {/* Facts banner — appears with results, not above */}
+        <RadicalBanner />
+
+        <BudgetOverview />
       </div>
 
       {/* Disclaimer */}

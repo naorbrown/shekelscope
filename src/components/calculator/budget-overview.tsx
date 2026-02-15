@@ -38,6 +38,7 @@ type CategoryNarrative = {
     contactUrl?: string;
     employees?: number;
     avgSalaryMonthly?: number;
+    employeeSourceUrl?: string;
   };
   whatYouPay: { en: string; he: string };
   problems: NarrativeProblem[];
@@ -139,10 +140,22 @@ export function BudgetOverview() {
                           </div>
                           {narrative.ministry.employees && (
                             <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                              <span className="inline-flex items-center gap-1">
-                                <Users className="h-3 w-3" />
-                                {narrative.ministry.employees.toLocaleString()} {isHe ? 'עובדים' : 'employees'}
-                              </span>
+                              {narrative.ministry.employeeSourceUrl ? (
+                                <a
+                                  href={narrative.ministry.employeeSourceUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 underline hover:text-foreground"
+                                >
+                                  <Users className="h-3 w-3" />
+                                  {narrative.ministry.employees.toLocaleString()} {isHe ? 'עובדים' : 'employees'}
+                                </a>
+                              ) : (
+                                <span className="inline-flex items-center gap-1">
+                                  <Users className="h-3 w-3" />
+                                  {narrative.ministry.employees.toLocaleString()} {isHe ? 'עובדים' : 'employees'}
+                                </span>
+                              )}
                               {narrative.ministry.avgSalaryMonthly && (
                                 <span>
                                   {isHe ? 'שכר ממוצע: ' : 'Avg salary: '}
