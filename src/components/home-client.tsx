@@ -11,6 +11,8 @@ import { TaxDonut } from '@/components/dashboard/tax-donut';
 import { DailyReceipt } from '@/components/dashboard/daily-receipt';
 import { OECDComparison } from '@/components/dashboard/oecd-comparison';
 import { EfficiencyScore } from '@/components/dashboard/efficiency-score';
+import { BudgetTreemap } from '@/components/dashboard/budget-treemap';
+import { SankeyFlow } from '@/components/dashboard/sankey-flow';
 import { CostOfLivingSection } from '@/components/sections/cost-of-living-section';
 import { HousingCrisisSection } from '@/components/sections/housing-crisis-section';
 import { CentralBankSection } from '@/components/sections/central-bank-section';
@@ -18,6 +20,7 @@ import { TalkingPointsDebunker } from '@/components/sections/talking-points-debu
 import { SectionWrapper } from '@/components/sections/section-wrapper';
 import { ActionLevel, LEVEL_CONFIGS } from '@/components/action/action-level';
 import { ShareCard } from '@/components/action/share-card';
+import { FreedomSection } from '@/components/freedom/freedom-section';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 
 export function HomeClient() {
@@ -57,8 +60,14 @@ export function HomeClient() {
           </div>
 
           {/* Section 5: Budget overview */}
-          <section id="budget" className="scroll-mt-20 mb-12">
+          <section id="budget" className="scroll-mt-20 space-y-6 mb-12">
             <BudgetOverview />
+            <BudgetTreemap />
+          </section>
+
+          {/* Section 5b: Follow the Money */}
+          <section id="follow-the-money" className="scroll-mt-20 mb-12">
+            <SankeyFlow />
           </section>
 
           {/* Section 6: Israel vs World */}
@@ -75,7 +84,10 @@ export function HomeClient() {
 
       {/* === Always-visible educational sections === */}
 
-      {/* Section 8: Cost of Living */}
+      {/* Section 8: Economic Freedom Analysis */}
+      <FreedomSection />
+
+      {/* Section 9: Cost of Living */}
       <CostOfLivingSection />
 
       {/* Section 9: Housing Crisis */}

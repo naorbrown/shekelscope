@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { key: 'budget', href: '#budget' },
   { key: 'compare', href: '#compare' },
   { key: 'costOfLiving', href: '#cost-of-living' },
+  { key: 'freedom', href: '#freedom' },
   { key: 'action', href: '#action' },
 ] as const;
 

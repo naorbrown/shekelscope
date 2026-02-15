@@ -112,7 +112,9 @@
     "efficiencyTitle": "Government Efficiency Scorecard",
     "efficiencySubtitle": "How much of your money actually reaches the service",
     "overheadLabel": "Est. Total Overhead",
-    "savingsLabel": "Potential Savings"
+    "savingsLabel": "Potential Savings",
+    "treemapTitle": "Budget by Ministry",
+    "sankeyTitle": "Follow the Money"
   },
   "insights": {
     "title": "The Real Cost",
