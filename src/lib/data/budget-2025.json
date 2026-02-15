@@ -1,0 +1,100 @@
+{
+  "taxYear": 2025,
+  "lastUpdated": "2025-01-01",
+  "sourceUrl": "https://www.gov.il/he/departments/policies/state-budget-proposal-2025",
+  "totalBudgetBillionNIS": 607,
+  "totalTaxRevenueBillionNIS": 420,
+  "allocations": [
+    {
+      "id": "defense",
+      "nameEn": "Defense",
+      "nameHe": "ביטחון",
+      "percentage": 16.5,
+      "color": "#1E40AF"
+    },
+    {
+      "id": "education",
+      "nameEn": "Education",
+      "nameHe": "חינוך",
+      "percentage": 15.2,
+      "color": "#7C3AED"
+    },
+    {
+      "id": "welfare",
+      "nameEn": "Welfare & Social Services",
+      "nameHe": "רווחה ושירותים חברתיים",
+      "percentage": 12.8,
+      "color": "#D97706"
+    },
+    {
+      "id": "health",
+      "nameEn": "Health",
+      "nameHe": "בריאות",
+      "percentage": 11.5,
+      "color": "#059669"
+    },
+    {
+      "id": "debt",
+      "nameEn": "Debt Service",
+      "nameHe": "שירות חוב",
+      "percentage": 9.8,
+      "color": "#DC2626"
+    },
+    {
+      "id": "transportation",
+      "nameEn": "Transportation",
+      "nameHe": "תחבורה",
+      "percentage": 6.2,
+      "color": "#0891B2"
+    },
+    {
+      "id": "public_safety",
+      "nameEn": "Public Safety",
+      "nameHe": "ביטחון פנים",
+      "percentage": 5.8,
+      "color": "#BE185D"
+    },
+    {
+      "id": "housing",
+      "nameEn": "Housing & Construction",
+      "nameHe": "שיכון ובינוי",
+      "percentage": 4.5,
+      "color": "#92400E"
+    },
+    {
+      "id": "agriculture",
+      "nameEn": "Agriculture",
+      "nameHe": "חקלאות",
+      "percentage": 1.8,
+      "color": "#166534"
+    },
+    {
+      "id": "immigration",
+      "nameEn": "Immigration & Absorption",
+      "nameHe": "עלייה וקליטה",
+      "percentage": 1.5,
+      "color": "#4338CA"
+    },
+    {
+      "id": "culture",
+      "nameEn": "Culture & Sport",
+      "nameHe": "תרבות וספורט",
+      "percentage": 1.2,
+      "color": "#A21CAF"
+    },
+    {
+      "id": "environment",
+      "nameEn": "Environmental Protection",
+      "nameHe": "הגנת הסביבה",
+      "percentage": 0.8,
+      "color": "#15803D"
+    },
+    {
+      "id": "other",
+      "nameEn": "Other",
+      "nameHe": "אחר",
+      "percentage": 12.4,
+      "color": "#64748B"
+    }
+  ]
+}

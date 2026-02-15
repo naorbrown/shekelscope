@@ -1,0 +1,77 @@
+{
+  "topics": [
+    {
+      "id": "housing-crisis",
+      "icon": "home",
+      "subtopics": [
+        { "id": "ila-monopoly", "key": "housingCrisis.ilaMonopoly" },
+        { "id": "permit-time", "key": "housingCrisis.permitTime" },
+        { "id": "price-growth", "key": "housingCrisis.priceGrowth" },
+        { "id": "land-availability", "key": "housingCrisis.landAvailability" },
+        { "id": "international-comparison", "key": "housingCrisis.internationalComparison" }
+      ]
+    },
+    {
+      "id": "cost-of-living",
+      "icon": "shopping-cart",
+      "subtopics": [
+        { "id": "food-prices", "key": "costOfLiving.foodPrices" },
+        { "id": "car-taxes", "key": "costOfLiving.carTaxes" },
+        { "id": "telecom-success", "key": "costOfLiving.telecomSuccess" },
+        { "id": "import-protections", "key": "costOfLiving.importProtections" },
+        { "id": "rent-burden", "key": "costOfLiving.rentBurden" }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "icon": "heart-pulse",
+      "subtopics": [
+        { "id": "spending-gap", "key": "healthcare.spendingGap" },
+        { "id": "bed-shortage", "key": "healthcare.bedShortage" },
+        { "id": "wait-times", "key": "healthcare.waitTimes" },
+        { "id": "peripheral-access", "key": "healthcare.peripheralAccess" }
+      ]
+    },
+    {
+      "id": "education",
+      "icon": "graduation-cap",
+      "subtopics": [
+        { "id": "pisa-scores", "key": "education.pisaScores" },
+        { "id": "spending-vs-outcomes", "key": "education.spendingVsOutcomes" },
+        { "id": "parallel-systems", "key": "education.parallelSystems" },
+        { "id": "teacher-quality", "key": "education.teacherQuality" }
+      ]
+    },
+    {
+      "id": "why-olim-leave",
+      "icon": "plane",
+      "subtopics": [
+        { "id": "salary-gap", "key": "whyOlimLeave.salaryGap" },
+        { "id": "housing-barrier", "key": "whyOlimLeave.housingBarrier" },
+        { "id": "bureaucracy", "key": "whyOlimLeave.bureaucracy" },
+        { "id": "license-recognition", "key": "whyOlimLeave.licenseRecognition" },
+        { "id": "cultural-tax-shock", "key": "whyOlimLeave.culturalTaxShock" }
+      ]
+    },
+    {
+      "id": "price-salary-ratio",
+      "icon": "scale",
+      "subtopics": [
+        { "id": "purchasing-power", "key": "priceSalaryRatio.purchasingPower" },
+        { "id": "real-wages", "key": "priceSalaryRatio.realWages" },
+        { "id": "dual-income-trap", "key": "priceSalaryRatio.dualIncomeTrap" },
+        { "id": "regional-disparities", "key": "priceSalaryRatio.regionalDisparities" }
+      ]
+    },
+    {
+      "id": "butterfly-effect",
+      "icon": "zap",
+      "subtopics": [
+        { "id": "tax-to-price", "key": "butterflyEffect.taxToPrice" },
+        { "id": "regulation-cascade", "key": "butterflyEffect.regulationCascade" },
+        { "id": "monopoly-chains", "key": "butterflyEffect.monopolyChains" },
+        { "id": "reform-examples", "key": "butterflyEffect.reformExamples" }
+      ]
+    }
+  ]
+}
