@@ -1,16 +1,17 @@
 {
   "app": {
     "name": "Open Shekel",
-    "tagline": "Stop enabling the system that works against you",
+    "tagline": "Stop enabling the economic system that works against you",
     "description": "Enter your salary. See exactly which ministries take your money, what they do with it, and why things still cost so much. Then do something about it.",
-    "hookLine": "Every paycheck, you fund the bureaucracy that makes your life harder. See the numbers. Take action.",
+    "hookLine": "Your money has power. See where it goes, understand why things cost so much, and discover what you can do about it.",
     "disclaimer": "This is an estimate for educational purposes based on 2025 tax rates. Consult a tax professional for your specific situation."
   },
   "nav": {
     "calculator": "Calculator",
-    "dashboard": "Dashboard",
-    "insights": "The Real Cost",
-    "why": "Why So Expensive?",
+    "budget": "Your Budget",
+    "compare": "Israel vs World",
+    "costOfLiving": "Cost of Living",
+    "freedom": "Economic Freedom",
     "action": "Take Action",
     "language": "Language"
   },
@@ -42,7 +43,7 @@
       "line2": "It takes an average of 13 years to get a building permit approved.",
       "line3": "Grocery prices are 19% higher than the European average.",
       "line4": "Import taxes on cars exceed 100%, making ownership a luxury.",
-      "punchline": "Every paycheck, you enable these systems. See exactly how much — and who to hold accountable."
+      "punchline": "You deserve better. These aren't inevitable — they're policy choices. And policy can be changed."
     }
   },
   "results": {
@@ -69,7 +70,8 @@
     "rate": "Rate",
     "overview": "Overview",
     "details": "Details",
-    "budgetBreakdown": "Where Your Taxes Go"
+    "budgetBreakdown": "Where Your Taxes Go",
+    "budgetClickHint": "Click any category for details, problems, and actions you can take"
   },
   "budget": {
     "defense": "Defense",
@@ -102,18 +104,15 @@
     "receiptSubtitle": "What you paid today",
     "shareReceipt": "Share",
     "oecdTitle": "How Israel Compares",
-    "oecdSubtitle": "Where Israel stands among developed nations",
+    "oecdSubtitle": "Where Israel stands among developed nations — and what it means for your wallet",
     "oecdTabs": {
-      "taxBurden": "Tax Burden",
-      "housing": "Housing",
-      "healthcare": "Healthcare",
-      "education": "Education",
-      "efficiency": "Efficiency"
+      "housing": "Housing Affordability",
+      "efficiency": "Government Efficiency"
     },
-    "treemapTitle": "Budget by Ministry",
     "efficiencyTitle": "Government Efficiency Scorecard",
     "efficiencySubtitle": "How much of your money actually reaches the service",
-    "sankeyTitle": "Follow the Money"
+    "overheadLabel": "Est. Total Overhead",
+    "savingsLabel": "Potential Savings"
   },
   "insights": {
     "title": "The Real Cost",
@@ -197,6 +196,170 @@
       "issues": "Miscellaneous government spending spread across dozens of minor agencies, many with overlapping mandates and no clear performance metrics.",
       "alternative": "Sunset clauses requiring periodic reauthorization of agencies, as used in Texas, force regular review and eliminate programs that have outlived their purpose.",
       "rootCause": "Once created, government programs never die — they only grow."
+    }
+  },
+  "freedom": {
+    "title": "What Could You Be Getting Instead?",
+    "subtitle": "Your taxes don't have to be this high. Your groceries don't have to cost this much. Here's what economic freedom would look like for you.",
+    "noData": "Run the calculator first to see your personalized freedom analysis.",
+    "goToCalculator": "Go to Calculator",
+    "hero": {
+      "currentBurden": "Your Current Annual Tax Burden",
+      "reformedBurden": "Under Moderate Reform",
+      "annualSavings": "You Could Save Per Year"
+    },
+    "scenarioToggle": {
+      "moderate": "Moderate Reform",
+      "ambitious": "Ambitious Reform"
+    },
+    "paycheck": {
+      "title": "Your Paycheck Under Reform",
+      "subtitle": "Side-by-side: what you earn now vs. what you could earn",
+      "current": "Current",
+      "reformed": "Reformed",
+      "gross": "Gross Salary",
+      "deductions": "Total Deductions",
+      "net": "Net Income",
+      "effectiveRate": "Effective Tax Rate",
+      "monthlySavings": "Monthly Savings",
+      "annualSavings": "Annual Savings",
+      "extraMonths": "Extra Months of Salary Per Year",
+      "extraMonthsDesc": "Your tax savings equal {months} additional months of your gross salary every year."
+    },
+    "costOfLiving": {
+      "title": "Your Cost of Living Under Freedom",
+      "subtitle": "Remove import taxes, break monopolies, free the housing market — watch prices drop",
+      "category": "Category",
+      "current": "Current",
+      "reformed": "After Reform",
+      "savings": "You Save",
+      "food": "Monthly Food",
+      "car": "Average Car",
+      "rent": "Monthly Rent",
+      "totalMonthly": "Total Monthly Savings",
+      "totalAnnual": "Total Annual Savings",
+      "foodNote": "Remove import quotas and tariffs on food",
+      "carNote": "Remove 83% purchase tax, keep only 18% VAT",
+      "rentNote": "Free land market + streamlined permitting"
+    },
+    "investment": {
+      "title": "Investment Freedom",
+      "subtitle": "Israel taxes your investments heavily. Here's how it compares — and what it costs you.",
+      "capitalGains": "Capital Gains Tax Comparison",
+      "country": "Country",
+      "shortTerm": "Short-Term",
+      "longTerm": "Long-Term",
+      "notes": "Notes",
+      "israelRates": "Israel's Investment Tax Rates",
+      "standard": "Standard Capital Gains",
+      "significantShareholder": "Significant Shareholder",
+      "dividends": "Dividends",
+      "interestIncome": "Interest Income",
+      "crypto": "Cryptocurrency",
+      "foreignInvestments": "Foreign Investments",
+      "realEstate": "Real Estate Appreciation",
+      "taseTitle": "Tel Aviv Stock Exchange (TASE) Restrictions",
+      "taseListedCompanies": "Listed Companies",
+      "taseMarketCap": "Market Cap",
+      "taseDailyVolume": "Daily Volume",
+      "taseIssues": "Foreign ownership limits, dual-listing barriers, and high regulatory complexity restrict market access and liquidity.",
+      "altAssetsTitle": "Alternative Asset Taxation",
+      "cryptoDesc": "25% tax on all gains. Banks reluctant to accept crypto-sourced deposits.",
+      "foreignStocksDesc": "25% tax on gains. Currency gains on foreign holdings separately taxable.",
+      "realEstateDesc": "Up to 10% purchase tax on investment properties. 25% appreciation tax. Betterment levy up to 50% on rezoning gains.",
+      "compoundTitle": "The 10-Year Cost of High Capital Gains Tax",
+      "compoundDesc": "Investing {amount}/year at 8% return over 10 years:",
+      "currentScenario": "At 25% Capital Gains (Current)",
+      "reformedScenario": "At 15% Capital Gains (Reformed)",
+      "youLose": "You lose {amount} over 10 years to excessive taxation"
+    },
+    "principles": {
+      "title": "The Case for Economic Freedom",
+      "subtitle": "Proven principles, real results. Israel's own telecom deregulation proves it.",
+      "telecomProof": "When Israel deregulated telecom in 2012, monthly bills dropped from ₪250 to ₪50 — an 80% reduction. The same competitive forces would transform food, housing, and transportation."
+    },
+    "score": {
+      "title": "Your Economic Freedom Score",
+      "subtitle": "How economically free are you, compared to global benchmarks?",
+      "overall": "Overall Score",
+      "taxFreedom": "Tax Freedom",
+      "purchasingPower": "Purchasing Power",
+      "investmentFreedom": "Investment Freedom",
+      "gradeA": "Excellent",
+      "gradeB": "Good",
+      "gradeC": "Average",
+      "gradeD": "Poor",
+      "gradeF": "Very Poor"
+    },
+    "callToAction": "Economic freedom isn't abstract — it's the difference between saving for your future and barely making it to the end of the month. Demand better."
+  },
+  "sections": {
+    "costOfLiving": {
+      "title": "Why Everything Costs More",
+      "subtitle": "Import taxes, monopolies, and regulation inflate every price you pay. Here's the proof — and the proof that it doesn't have to be this way.",
+      "foodPremium": "Food prices are 19% higher than the EU average",
+      "carTax": "Import taxes on cars exceed 100%",
+      "telecomSuccess": "When telecom was deregulated in 2012, prices dropped 80% in 3 years",
+      "comparisonTitle": "What you pay vs. what others pay",
+      "deregulationProof": "Deregulation works. Telecom proved it. Food, energy, and transportation are next.",
+      "rootCause": "Import duties protect uncompetitive domestic producers. Government-granted monopolies face no competition. Regulation raises costs that consumers pay.",
+      "alternative": "Open markets to competition. Remove import quotas. Let consumers choose — and watch prices drop like they did with mobile phones."
+    },
+    "housingCrisis": {
+      "title": "The Housing Supply Crisis",
+      "subtitle": "Why rent always goes up — and who benefits from the status quo",
+      "priceToIncome": "10.6x",
+      "priceToIncomeLabel": "Price-to-income ratio",
+      "priceToIncomeDetail": "OECD average is 6.4x",
+      "permitTime": "13 years",
+      "permitTimeLabel": "Average permit time",
+      "permitTimeDetail": "From planning to building permit",
+      "landControl": "93%",
+      "landControlLabel": "State-controlled land",
+      "landControlDetail": "Israel Land Authority monopoly",
+      "permitComparisonTitle": "How long it takes to get a building permit",
+      "rootCause": "The Israel Land Authority controls 93% of land. Artificial scarcity drives prices. Only 8% of Israel's land is designated as buildable. The planning system takes 13 years on average from proposal to permit.",
+      "alternative": "In Texas, a building permit takes 2 weeks and housing costs 3x annual income. Free land markets with streamlined permitting could transform Israeli housing within a decade.",
+      "whoIsResponsible": "Israel Land Authority, Ministry of Housing, local planning committees",
+      "actions": {
+        "contactHousing": "Contact Ministry of Housing",
+        "contactILA": "Israel Land Authority",
+        "fileFOI": "File FOI Request",
+        "housingUrl": "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
+        "ilaUrl": "https://www.gov.il/he/departments/israel_land_authority"
+      }
+    },
+    "centralBank": {
+      "title": "The Inflation Tax You Don't See",
+      "subtitle": "How money printing and currency manipulation transfer wealth from workers to asset owners",
+      "m1Growth": "+60%",
+      "m1GrowthLabel": "M1 money supply (5 years)",
+      "m1GrowthDetail": "Each shekel you earn is worth less",
+      "housingInflation": "+120%",
+      "housingInflationLabel": "Housing prices (decade)",
+      "housingInflationDetail": "Far outpacing wage growth",
+      "realWages": "Stagnant",
+      "realWagesLabel": "Real wage growth",
+      "realWagesDetail": "Barely keeping pace with inflation",
+      "howItWorks": "When the Bank of Israel expands the money supply, each existing shekel becomes worth less. This is economically identical to a tax — but one that was never voted on and never debated in the Knesset.",
+      "whoBenefits": "Asset owners, real estate investors, and the government benefit. Workers, savers, first-time buyers, and renters lose.",
+      "currencyManipulation": "The Bank of Israel purchases billions in foreign currency to prevent shekel appreciation. While this helps exporters, it raises import costs for every consumer — making food, electronics, and vehicles more expensive.",
+      "supplyRestriction": "Bank regulation channels credit toward government bonds and established corporations, restricting lending to small businesses that could increase competition.",
+      "rootCause": "Central bank monetary expansion devalues your earnings. Low interest rates fuel housing speculation. The government benefits because inflation shrinks its debt — at your expense.",
+      "alternative": "Rules-based monetary policy, transparent inflation reporting including housing costs, open banking to increase competition, and Knesset oversight of monetary decisions that affect purchasing power.",
+      "actions": {
+        "boiData": "Bank of Israel Data",
+        "knessetFinance": "Knesset Finance Committee",
+        "boiUrl": "https://www.boi.org.il/en/monetary-policy",
+        "knessetUrl": "https://main.knesset.gov.il/Activity/committees/Finance/Pages/default.aspx"
+      }
+    },
+    "debunker": {
+      "title": "What Politicians Say vs. Reality",
+      "subtitle": "Left or right — they divide you on identity, but agree on keeping economic power. Here are the most common talking points and what the data actually shows.",
+      "theySayLabel": "They say",
+      "realityLabel": "Reality",
+      "askInsteadLabel": "Ask instead"
     }
   },
   "why": {

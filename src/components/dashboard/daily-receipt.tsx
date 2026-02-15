@@ -1,32 +1,32 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Share2, Check } from 'lucide-react';
-import { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { formatCurrency } from '@/components/shared/currency-display';
-import type { TotalTaxResult } from '@/lib/tax-engine/types';
+import { useCalculatorStore } from '@/lib/store/calculator-store';
 
-interface DailyReceiptProps {
-  result: TotalTaxResult;
-}
-
-export function DailyReceipt({ result }: DailyReceiptProps) {
+export function DailyReceipt() {
   const t = useTranslations('dashboard');
-  const locale = useLocale();
+  const { result } = useCalculatorStore();
   const [copied, setCopied] = useState(false);
 
-  const dailyAllocations = result.budgetAllocation.map((item) => ({
-    ...item,
-    dailyAmount: item.amount / 365,
-    name: locale === 'he' ? item.nameHe : item.nameEn,
-  }));
+  const dailyAllocations = useMemo(
+    () =>
+      result
+        ? result.budgetAllocation.map((item) => ({
+            ...item,
+            dailyAmount: item.amount / 365,
+            name: item.nameEn,
+          }))
+        : [],
+    [result]
+  );
 
-  const totalDaily = result.dailyTax;
+  const totalDaily = result?.dailyTax ?? 0;
 
   const buildShareText = useCallback(() => {
     const lines = [
@@ -57,7 +57,6 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
       }
     }
 
-    // Clipboard fallback
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -67,14 +66,16 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
     }
   }, [buildShareText]);
 
+  if (!result) return null;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 }}
     >
       <Card className="overflow-hidden">
-        {/* Receipt header with dashed border look */}
         <div className="border-b-2 border-dashed border-muted-foreground/20">
           <CardHeader className="text-center">
             <CardTitle className="font-mono text-lg tracking-wide uppercase">
@@ -87,7 +88,6 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
         </div>
 
         <CardContent className="pt-4">
-          {/* Total daily tax at the top */}
           <div className="mb-4 rounded-lg bg-muted/50 p-3 text-center">
             <p className="font-mono text-3xl font-bold">
               {formatCurrency(totalDaily, true)}
@@ -97,13 +97,13 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
             </p>
           </div>
 
-          {/* Line items */}
           <div className="space-y-1 font-mono text-sm">
             {dailyAllocations.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, x: locale === 'he' ? 20 : -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.05 * index }}
                 className="flex items-center justify-between py-1.5 border-b border-dotted border-muted-foreground/15 last:border-0"
               >
@@ -121,7 +121,6 @@ export function DailyReceipt({ result }: DailyReceiptProps) {
             ))}
           </div>
 
-          {/* Total line */}
           <div className="mt-3 pt-3 border-t-2 border-dashed border-muted-foreground/30 flex justify-between font-mono font-bold">
             <span>TOTAL</span>
             <span className="tabular-nums">{formatCurrency(totalDaily, true)}</span>

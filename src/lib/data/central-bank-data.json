@@ -1,0 +1,46 @@
+{
+  "m1MoneySupply": {
+    "growthPercent5Year": 60,
+    "description": "M1 money supply grew approximately 60% in 5 years, diluting the value of every shekel you earn."
+  },
+  "housingPrices": {
+    "growthPercent10Year": 120,
+    "medianPrice2015": 1400000,
+    "medianPrice2025": 1850000,
+    "description": "Housing prices have risen 120% in a decade, far outpacing wages."
+  },
+  "realWages": {
+    "status": "stagnant",
+    "description": "Real wages have barely kept pace with inflation, meaning your purchasing power hasn't improved despite nominal salary increases."
+  },
+  "interestRatePolicy": {
+    "lowRateEffect": "Low interest rates make housing speculation profitable, driving up prices for everyone. The spread between borrowing costs and rental yields encourages investors to buy properties, reducing supply for families.",
+    "whoBenefits": "Asset owners, real estate investors, and the government (inflation shrinks the real value of public debt). Who loses: workers, savers, first-time home buyers, and renters."
+  },
+  "inflationAsHiddenTax": {
+    "mechanism": "When the central bank expands the money supply, each existing shekel becomes worth less. This is economically identical to a tax — but one that was never voted on, never debated in the Knesset, and affects the poorest the hardest.",
+    "annualImpactEstimate": "Every 1% of unexpected inflation is equivalent to a 1% tax on all cash savings and fixed-income earnings."
+  },
+  "currencyManipulation": {
+    "foreignReservePurchases": "The Bank of Israel has purchased billions in foreign currency to prevent shekel appreciation. While this helps exporters, it raises import costs for every consumer — making food, electronics, and vehicles more expensive.",
+    "effectOnConsumers": "A stronger shekel would mean cheaper imports. Currency intervention effectively subsidizes exporters at the expense of every household buying imported goods."
+  },
+  "supplyRestriction": {
+    "creditChanneling": "Bank regulation channels credit toward government bonds and established corporations, restricting lending to small businesses and startups that could increase competition.",
+    "bankingConcentration": "5 major banks control over 90% of Israel's banking sector, leading to higher fees and fewer choices for consumers."
+  },
+  "whatCanBeChanged": [
+    "Rules-based monetary policy (like Switzerland's debt brake) to prevent inflationary expansion",
+    "Transparency: publish real inflation rates including housing costs",
+    "Open banking regulation to increase competition and lower fees",
+    "Reduce foreign currency intervention to allow import price relief",
+    "Knesset oversight of monetary policy decisions that affect purchasing power"
+  ],
+  "sources": [
+    { "name": "Bank of Israel - Monetary Policy", "url": "https://www.boi.org.il/en/monetary-policy" },
+    { "name": "Bank of Israel - Statistics", "url": "https://www.boi.org.il/en/research-and-publications/statistics" },
+    { "name": "CBS - Consumer Price Index", "url": "https://www.cbs.gov.il" },
+    { "name": "OECD - Housing Prices", "url": "https://data.oecd.org/price/housing-prices.htm" },
+    { "name": "Taub Center - State of the Nation Report", "url": "https://www.taubcenter.org.il" }
+  ]
+}

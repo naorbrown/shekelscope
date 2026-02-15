@@ -1,5 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
-import { WhyClient } from '@/components/why/why-client';
+import { redirect } from 'next/navigation';
 
 export default async function WhyPage({
   params,
@@ -7,7 +6,5 @@ export default async function WhyPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale);
-
-  return <WhyClient />;
+  redirect(`/${locale}#cost-of-living`);
 }

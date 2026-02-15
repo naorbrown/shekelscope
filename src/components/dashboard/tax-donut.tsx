@@ -3,16 +3,10 @@
 import { useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { formatCurrency, formatPercent } from '@/components/shared/currency-display';
-import type { TotalTaxResult } from '@/lib/tax-engine/types';
-
-interface TaxDonutProps {
-  result: TotalTaxResult;
-  displayMode: 'monthly' | 'annual';
-}
+import { useCalculatorStore } from '@/lib/store/calculator-store';
 
 const COLORS = ['#ef4444', '#f97316', '#3b82f6', '#8b5cf6'];
 
@@ -22,14 +16,15 @@ interface SliceData {
   color: string;
 }
 
-export function TaxDonut({ result, displayMode }: TaxDonutProps) {
+export function TaxDonut() {
   const t = useTranslations('dashboard');
   const tResults = useTranslations('results');
-  const locale = useLocale();
+  const { result, displayMode } = useCalculatorStore();
 
   const divisor = displayMode === 'monthly' ? 12 : 1;
 
   const data: SliceData[] = useMemo(() => {
+    if (!result) return [];
     const slices: SliceData[] = [
       {
         name: tResults('incomeTax'),
@@ -59,12 +54,15 @@ export function TaxDonut({ result, displayMode }: TaxDonutProps) {
     return slices.filter((s) => s.value > 0);
   }, [result, divisor, tResults]);
 
+  if (!result) return null;
+
   const totalTax = data.reduce((sum, d) => sum + d.value, 0);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
       <Card>
@@ -123,7 +121,7 @@ export function TaxDonut({ result, displayMode }: TaxDonutProps) {
               </p>
             </div>
 
-            <div className={`mt-4 grid grid-cols-2 gap-3 w-full ${locale === 'he' ? 'text-right' : 'text-left'}`}>
+            <div className="mt-4 grid grid-cols-2 gap-3 w-full text-left">
               {data.map((entry, index) => (
                 <div
                   key={index}

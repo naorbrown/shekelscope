@@ -1,0 +1,52 @@
+{
+  "points": [
+    {
+      "id": "moreTaxes",
+      "theySay": "We need higher taxes to fund social programs.",
+      "reality": "Government overhead consumes 20-40% of welfare budgets before a single shekel reaches anyone. The issue isn't revenue — it's waste. Israel collects 33% of GDP in taxes, near the OECD average, yet outcomes lag behind.",
+      "askInstead": "How much of the current budget actually reaches the people it's meant to help? What's the overhead rate per ministry?"
+    },
+    {
+      "id": "protectLocal",
+      "theySay": "We must protect local industry from foreign competition.",
+      "reality": "Import tariffs and quotas make you pay 19% more for groceries and 100% more for a car. When telecom was deregulated in 2012, prices dropped 80% in 3 years — and the industry thrived. Protection doesn't help workers; it helps monopolists.",
+      "askInstead": "Who specifically benefits from these import protections? And how much extra are families paying because of them?"
+    },
+    {
+      "id": "securityFirst",
+      "theySay": "We can't cut spending — security comes first.",
+      "reality": "Defense is 16.5% of the budget. No one is suggesting cutting defense. But sole-supplier contracts and zero competitive bidding inflate procurement costs by an estimated 15%. Singapore achieves comparable capability at 30% lower admin cost.",
+      "askInstead": "Can we get the same security outcomes at lower cost through competitive procurement?"
+    },
+    {
+      "id": "otherSide",
+      "theySay": "The other side is the real problem.",
+      "reality": "Left and right governments have both grown the budget, expanded regulation, and maintained the same monopoly structures. The average government budget has grown every single term regardless of coalition. The economic chokehold is bipartisan.",
+      "askInstead": "What specific economic reforms has each party actually passed? Not promised — passed."
+    },
+    {
+      "id": "freeMarketDangerous",
+      "theySay": "The free market will leave vulnerable people behind.",
+      "reality": "The current system already leaves people behind — just expensively. Bureaucratic means-testing costs 20% of welfare budgets. Direct cash transfers tested globally deliver equal or better outcomes at 60-80% lower admin cost. Community mutual aid (gemachim) outperform government programs in many Israeli communities.",
+      "askInstead": "Is there evidence that more government spending actually improves outcomes, or just increases overhead?"
+    },
+    {
+      "id": "housingPlan",
+      "theySay": "We have a plan to solve the housing crisis.",
+      "reality": "Every government since 2005 has announced a housing plan. Prices have risen 120% in that time. The Israel Land Authority still controls 93% of land and permits still take 13 years on average. Plans without structural reform are announcements, not solutions.",
+      "askInstead": "Will your plan reduce ILA control of land supply and cut permit times from 13 years to under 1 year?"
+    },
+    {
+      "id": "inflationTemporary",
+      "theySay": "Inflation is temporary and under control.",
+      "reality": "The Bank of Israel expanded M1 money supply by ~60% in 5 years. Housing prices rose 120% in a decade. Real wages barely kept pace. Each 1% of unexpected inflation is a stealth tax on every shekel you hold — transferring wealth from savers to borrowers and asset owners.",
+      "askInstead": "What is the real inflation rate when including housing costs? And who benefits most from monetary expansion?"
+    },
+    {
+      "id": "cantChange",
+      "theySay": "This is just how things work in Israel.",
+      "reality": "New Zealand eliminated all agricultural subsidies in 1984 — farms became more efficient, exports grew. Estonia built a world-class digital government. Israel itself proved change works when telecom deregulation cut prices 80%. 'This is how things work' is how those who benefit from the status quo keep it.",
+      "askInstead": "What would Israel look like if we applied the same deregulation that worked in telecom to food, housing, and transportation?"
+    }
+  ]
+}

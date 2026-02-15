@@ -1,0 +1,138 @@
+{
+  "lastUpdated": "2025-01-01",
+  "reformScenarios": {
+    "moderate": {
+      "id": "moderate",
+      "label": "Moderate Reform",
+      "incomeTaxReductionPercent": 15,
+      "vatReductionPercent": 25,
+      "niReductionPercent": 10,
+      "description": "Based on efficiency savings from competitive government service delivery"
+    },
+    "ambitious": {
+      "id": "ambitious",
+      "label": "Ambitious Reform",
+      "incomeTaxReductionPercent": 30,
+      "vatReductionPercent": 50,
+      "niReductionPercent": 20,
+      "description": "Based on Singapore/Switzerland-level government efficiency"
+    }
+  },
+  "capitalGainsTax": {
+    "israel": {
+      "standard": 25,
+      "significantShareholder": 30,
+      "realEstateAppreciation": 25,
+      "foreignInvestments": 25,
+      "crypto": 25,
+      "dividends": 25,
+      "interestIncome": 15,
+      "notes": "Israel applies flat capital gains tax with no preferential long-term rate"
+    },
+    "international": [
+      { "country": "United States", "shortTerm": 37, "longTerm": 20, "notes": "Long-term (>1yr) preferential rate" },
+      { "country": "United Kingdom", "shortTerm": 20, "longTerm": 20, "notes": "Annual exempt amount of £6,000" },
+      { "country": "Germany", "shortTerm": 26.4, "longTerm": 0, "notes": "Crypto held >1yr is tax-free" },
+      { "country": "Singapore", "shortTerm": 0, "longTerm": 0, "notes": "No capital gains tax" },
+      { "country": "UAE", "shortTerm": 0, "longTerm": 0, "notes": "No capital gains tax" },
+      { "country": "Switzerland", "shortTerm": 0, "longTerm": 0, "notes": "Private capital gains generally tax-free" },
+      { "country": "Portugal", "shortTerm": 28, "longTerm": 28, "notes": "NHR regime offered 0% for 10 years (ended 2024)" }
+    ]
+  },
+  "taseRestrictions": {
+    "foreignOwnershipLimits": true,
+    "dualListingBarriers": true,
+    "regulatoryComplexity": "High — CMA oversight with extensive reporting requirements",
+    "marketCapBillionUSD": 320,
+    "numberOfListedCompanies": 442,
+    "averageDailyVolumeBillionUSD": 0.8,
+    "comparisonMarkets": [
+      { "market": "NYSE", "listedCompanies": 2400, "dailyVolumeBillionUSD": 25 },
+      { "market": "London", "listedCompanies": 1900, "dailyVolumeBillionUSD": 8 },
+      { "market": "Singapore", "listedCompanies": 650, "dailyVolumeBillionUSD": 1.2 }
+    ]
+  },
+  "alternativeAssets": {
+    "crypto": {
+      "taxRate": 25,
+      "reporting": "Must report all transactions to Israel Tax Authority",
+      "restrictions": "Banks reluctant to accept crypto-sourced deposits"
+    },
+    "foreignStocks": {
+      "taxRate": 25,
+      "additionalTaxOnDividends": true,
+      "currencyGainsTaxed": true,
+      "notes": "Currency gains on foreign holdings are separately taxable"
+    },
+    "realEstate": {
+      "taxRate": 25,
+      "purchaseTax": "Up to 10% for investment properties",
+      "appreciationTax": 25,
+      "bettermentLevy": "Up to 50% on rezoning gains",
+      "restrictions": "ILA lease restrictions on 93% of land"
+    }
+  },
+  "deregulationMultipliers": {
+    "food": {
+      "currentPremiumPercent": 19,
+      "estimatedReductionPercent": 15,
+      "mechanism": "Remove import quotas and tariffs on food products"
+    },
+    "cars": {
+      "currentTaxPercent": 107,
+      "reformedTaxPercent": 18,
+      "mechanism": "Remove purchase tax, keep only standard VAT"
+    },
+    "housing": {
+      "currentPriceToIncome": 10.6,
+      "targetPriceToIncome": 5.0,
+      "estimatedRentReductionPercent": 30,
+      "mechanism": "Land reform (release ILA land) + streamlined permitting"
+    },
+    "telecom": {
+      "actualReductionPercent": 80,
+      "mechanism": "Already achieved via 2012 deregulation — proof that competition works"
+    }
+  },
+  "economicPrinciples": [
+    {
+      "id": "spending_efficiency",
+      "author": "Milton Friedman",
+      "principle": "Nobody spends somebody else's money as carefully as he spends his own.",
+      "application": "Government spending inherently lacks the feedback mechanism of personal spending. When bureaucrats allocate your tax shekels, they have no personal stake in the outcome."
+    },
+    {
+      "id": "competition",
+      "author": "Milton Friedman",
+      "principle": "The most important single central fact about a free market is that no exchange takes place unless both parties benefit.",
+      "application": "When telecom was deregulated in Israel in 2012, prices dropped 80%. Proof that competition delivers better outcomes than government-managed markets."
+    },
+    {
+      "id": "knowledge_problem",
+      "author": "Friedrich Hayek",
+      "principle": "The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design.",
+      "application": "Central planning of housing, food prices, and wages always produces worse outcomes than market coordination. Israel's housing crisis is a direct result of government land control."
+    },
+    {
+      "id": "individual_freedom",
+      "author": "Milton Friedman",
+      "principle": "A society that puts equality before freedom will get neither. A society that puts freedom before equality will get a high degree of both.",
+      "application": "Economic freedom enables prosperity for all — not just the connected few. Countries with higher economic freedom consistently show higher standards of living."
+    },
+    {
+      "id": "government_growth",
+      "author": "Milton Friedman",
+      "principle": "Nothing is so permanent as a temporary government program.",
+      "application": "Israel's bureaucracy has grown steadily while service quality stagnates. Programs never die, they only grow — each one adding overhead that taxpayers bear."
+    }
+  ],
+  "sources": [
+    { "name": "Israel Tax Authority", "url": "https://www.gov.il/he/departments/israel_tax_authority" },
+    { "name": "Israel Securities Authority", "url": "https://www.isa.gov.il" },
+    { "name": "Tel Aviv Stock Exchange", "url": "https://www.tase.co.il" },
+    { "name": "OECD Tax Database", "url": "https://www.oecd.org/tax/tax-policy/tax-database" },
+    { "name": "Heritage Foundation Economic Freedom Index", "url": "https://www.heritage.org/index" },
+    { "name": "Fraser Institute Economic Freedom of the World", "url": "https://www.fraserinstitute.org/economic-freedom" },
+    { "name": "Bank of Israel Annual Report", "url": "https://www.boi.org.il" }
+  ]
+}
