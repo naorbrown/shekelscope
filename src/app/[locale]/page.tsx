@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { HomeClient } from '@/components/home-client';
+import { CalculatorPageClient } from '@/components/calculator-page-client';
 
 export default async function Home({
   params,
@@ -13,7 +13,7 @@ export default async function Home({
   return (
     <div className="mx-auto max-w-5xl px-4">
       {/* Hero — centered, prominent */}
-      <section id="calculator" className="scroll-mt-20 py-12 text-center">
+      <section className="py-16 sm:py-24 text-center">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           {t('tagline')}
         </h1>
@@ -22,8 +22,8 @@ export default async function Home({
         </p>
       </section>
 
-      {/* Client-side interactive sections */}
-      <HomeClient />
+      {/* Calculator input */}
+      <CalculatorPageClient />
 
       {/* Disclaimer */}
       <div className="py-8 text-center text-sm text-muted-foreground">
