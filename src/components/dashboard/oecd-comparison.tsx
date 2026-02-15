@@ -11,8 +11,8 @@ import { DataSourceBadge } from '@/components/shared/data-source-badge';
 import { useOECDData, useOECDTimeSeries } from '@/lib/data/fetchers';
 import { TimeSeriesComparison } from '@/components/charts/time-series-comparison';
 
-const ISRAEL_COLOR = '#3b82f6';
-const OTHER_COLOR = '#94a3b8';
+const ISRAEL_COLOR = '#2D7A8A';
+const OTHER_COLOR = '#9A9588';
 
 interface BarDataItem {
   name: string;

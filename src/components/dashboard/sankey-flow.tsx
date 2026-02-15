@@ -66,14 +66,14 @@ export function SankeyFlow() {
 
     // Column 1: Income source
     const nodes: NodeExtra[] = [
-      { name: isRTL ? 'הכנסה' : 'Income', color: '#10b981' },
+      { name: isRTL ? 'הכנסה' : 'Income', color: '#4A8B6F' },
     ];
 
     // Column 2: Tax types
     const taxStartIdx = nodes.length;
-    if (itx > 0) nodes.push({ name: isRTL ? 'מס הכנסה' : 'Income Tax', color: '#ef4444' });
-    if (ni > 0) nodes.push({ name: isRTL ? 'ביטוח לאומי' : "Nat'l Insurance", color: '#f97316' });
-    if (ht > 0) nodes.push({ name: isRTL ? 'מס בריאות' : 'Health Tax', color: '#3b82f6' });
+    if (itx > 0) nodes.push({ name: isRTL ? 'מס הכנסה' : 'Income Tax', color: '#B05A50' });
+    if (ni > 0) nodes.push({ name: isRTL ? 'ביטוח לאומי' : "Nat'l Insurance", color: '#B08850' });
+    if (ht > 0) nodes.push({ name: isRTL ? 'מס בריאות' : 'Health Tax', color: '#2D7A8A' });
 
     // Column 3: Budget categories
     const budgetStartIdx = nodes.length;

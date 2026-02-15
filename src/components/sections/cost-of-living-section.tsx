@@ -47,7 +47,7 @@ export function CostOfLivingSection() {
         },
         color: {
           domain: ['Israel', 'Germany', 'USA'],
-          range: ['#ef4444', '#94a3b8', '#3b82f6'],
+          range: ['#B05A50', '#9A9588', '#2D7A8A'],
           legend: true,
         },
         marks: [

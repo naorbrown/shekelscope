@@ -14,7 +14,7 @@ function makeMockAllocations(): BudgetAllocationResult[] {
       nameHe: 'ביטחון',
       amount: 10000,
       percentage: 16.5,
-      color: '#1E40AF',
+      color: '#2D6A7A',
     },
     {
       id: 'education',
@@ -22,7 +22,7 @@ function makeMockAllocations(): BudgetAllocationResult[] {
       nameHe: 'חינוך',
       amount: 8000,
       percentage: 15.2,
-      color: '#7C3AED',
+      color: '#6B5B8D',
     },
     {
       id: 'housing',
@@ -30,7 +30,7 @@ function makeMockAllocations(): BudgetAllocationResult[] {
       nameHe: 'שיכון ובינוי',
       amount: 5000,
       percentage: 4.5,
-      color: '#92400E',
+      color: '#8A7050',
     },
     {
       id: 'transportation',
@@ -38,7 +38,7 @@ function makeMockAllocations(): BudgetAllocationResult[] {
       nameHe: 'תחבורה',
       amount: 4000,
       percentage: 6.2,
-      color: '#0891B2',
+      color: '#4A8A9A',
     },
   ];
 }

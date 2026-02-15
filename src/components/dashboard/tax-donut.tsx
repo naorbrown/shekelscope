@@ -9,7 +9,7 @@ import { formatCurrency, formatPercent } from '@/components/shared/currency-disp
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 import { AccessibleDataTable } from '@/components/charts/accessible-data-table';
 
-const COLORS = ['#ef4444', '#f97316', '#3b82f6', '#8b5cf6'];
+const COLORS = ['#B05A50', '#B08850', '#2D7A8A', '#6B5B8D'];
 
 interface SliceData {
   name: string;
