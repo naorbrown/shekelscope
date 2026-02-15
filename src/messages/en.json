@@ -68,7 +68,16 @@
     "overview": "Overview",
     "details": "Details",
     "budgetBreakdown": "Where Your Taxes Go",
-    "budgetClickHint": "Click any category for details, problems, and actions you can take"
+    "budgetClickHint": "Click any category for details, problems, and actions you can take",
+    "budgetTitle": "Where Your Taxes Go",
+    "budgetSubtitle": "Click any category to see what you're paying for, the problems, and what you can do",
+    "totalContribution": "Your Budget Contribution",
+    "overheadEstimate": "Estimated Overhead",
+    "potentialSavings": "Potential Savings",
+    "detailedBreakdown": "Detailed Tax Breakdown",
+    "overhead": "Overhead",
+    "reachesService": "Reaches Service",
+    "perYear": "/yr"
   },
   "budget": {
     "defense": "Defense",

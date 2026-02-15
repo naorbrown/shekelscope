@@ -68,7 +68,16 @@
     "overview": "סקירה",
     "details": "פרטים",
     "budgetBreakdown": "לאן הולכים המסים שלך",
-    "budgetClickHint": "לחצו על כל קטגוריה לפרטים, בעיות ופעולות"
+    "budgetClickHint": "לחצו על כל קטגוריה לפרטים, בעיות ופעולות",
+    "budgetTitle": "לאן הולכים המסים שלכם",
+    "budgetSubtitle": "לחצו על קטגוריה לפרטים, בעיות ופעולות שתוכלו לנקוט",
+    "totalContribution": "התרומה שלכם לתקציב",
+    "overheadEstimate": "תקורה משוערת",
+    "potentialSavings": "חיסכון פוטנציאלי",
+    "detailedBreakdown": "פירוט מס מפורט",
+    "overhead": "תקורה",
+    "reachesService": "מגיע לשירות",
+    "perYear": "/שנה"
   },
   "budget": {
     "defense": "ביטחון",
