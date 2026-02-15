@@ -107,7 +107,11 @@
     "oecdSubtitle": "Where Israel stands among developed nations — and what it means for your wallet",
     "oecdTabs": {
       "housing": "Housing Affordability",
-      "efficiency": "Government Efficiency"
+      "efficiency": "Government Efficiency",
+      "taxTrend": "Tax Burden Over Time",
+      "healthTrend": "Health Spending",
+      "taxTrendCaption": "Tax-to-GDP ratio (%) — Israel vs OECD average, 2015–2023",
+      "healthTrendCaption": "Health spending per capita (USD) — Israel vs OECD average, 2015–2023"
     },
     "efficiencyTitle": "Government Efficiency Scorecard",
     "efficiencySubtitle": "How much of your money actually reaches the service",

@@ -76,8 +76,8 @@ function transformTimeSeries(
 
     // Extract Israel and OECD data
     const series = dataSets[0].series;
-    let israelData: Record<number, number> = {};
-    let oecdData: Record<number, number> = {};
+    const israelData: Record<number, number> = {};
+    const oecdData: Record<number, number> = {};
 
     for (const [key, val] of Object.entries(series)) {
       const indices = key.split(':').map(Number);

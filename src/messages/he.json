@@ -113,7 +113,11 @@
       "housing": "דיור",
       "healthcare": "בריאות",
       "education": "חינוך",
-      "efficiency": "יעילות"
+      "efficiency": "יעילות",
+      "taxTrend": "נטל מס לאורך זמן",
+      "healthTrend": "הוצאות בריאות",
+      "taxTrendCaption": "יחס מס-תמ\"ג (%) — ישראל מול ממוצע OECD, 2015–2023",
+      "healthTrendCaption": "הוצאות בריאות לנפש (דולר) — ישראל מול ממוצע OECD, 2015–2023"
     },
     "overheadLabel": "סה\"כ תקורה משוער",
     "savingsLabel": "חיסכון פוטנציאלי",
