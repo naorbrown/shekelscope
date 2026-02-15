@@ -1,0 +1,39 @@
+{
+  "foodPriceIndexVsEU": {
+    "israel": 119,
+    "euAverage": 100
+  },
+  "carImportTax": {
+    "effectiveTotal": 107,
+    "purchaseTax": 83,
+    "vat": 18
+  },
+  "telecomDeregulation": {
+    "before2012MonthlyILS": 250,
+    "after2015MonthlyILS": 50,
+    "reductionPercent": 80,
+    "lesson": "Deregulation cut prices 80%. Proof that competition works."
+  },
+  "basketComparisons": [
+    { "item": "Milk (1L)", "israelILS": 7.5, "germanyILS": 4.2, "usaILS": 4.8 },
+    { "item": "Bread (500g)", "israelILS": 9.0, "germanyILS": 5.5, "usaILS": 6.0 },
+    { "item": "Eggs (12)", "israelILS": 16.0, "germanyILS": 10.0, "usaILS": 11.0 },
+    { "item": "Chicken breast (1kg)", "israelILS": 42.0, "germanyILS": 28.0, "usaILS": 22.0 },
+    { "item": "Rice (1kg)", "israelILS": 12.0, "germanyILS": 7.0, "usaILS": 6.5 },
+    { "item": "Gasoline (1L)", "israelILS": 7.8, "germanyILS": 7.2, "usaILS": 4.5 },
+    { "item": "Public transport monthly", "israelILS": 220, "germanyILS": 180, "usaILS": 280 },
+    { "item": "Internet (monthly)", "israelILS": 110, "germanyILS": 130, "usaILS": 200 }
+  ],
+  "averageMonthlyRent": {
+    "telAviv": 6500,
+    "jerusalem": 4800,
+    "haifa": 3500
+  },
+  "sources": [
+    { "name": "Central Bureau of Statistics", "url": "https://www.cbs.gov.il" },
+    { "name": "Eurostat Comparative Price Levels", "url": "https://ec.europa.eu/eurostat" },
+    { "name": "Numbeo Cost of Living", "url": "https://www.numbeo.com/cost-of-living" },
+    { "name": "Ministry of Finance Import Tax Data", "url": "https://www.gov.il/he/departments/ministry_of_finance" },
+    { "name": "Ministry of Communications Telecom Report", "url": "https://www.gov.il/he/departments/ministry_of_communications" }
+  ]
+}

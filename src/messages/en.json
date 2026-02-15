@@ -1,0 +1,374 @@
+{
+  "app": {
+    "name": "ShekelScope",
+    "tagline": "You're paying for the system that's working against you",
+    "description": "Every paycheck, you fund the bureaucracy that blocks your housing, inflates your food prices, and prevents competition. See exactly how — and what you can do about it.",
+    "hookLine": "This isn't someone else's problem. This is YOUR money.",
+    "disclaimer": "This is an estimate for educational purposes. Consult a tax professional for your specific situation."
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "dashboard": "Dashboard",
+    "insights": "The Real Cost",
+    "why": "Why So Expensive?",
+    "action": "Take Action",
+    "language": "Language"
+  },
+  "calculator": {
+    "title": "Israeli Tax Calculator",
+    "subtitle": "Enter your income to see your complete tax breakdown",
+    "monthlyIncome": "Monthly Gross Income (₪)",
+    "annualIncome": "Annual Gross Income (₪)",
+    "employmentType": "Employment Type",
+    "employee": "Employee",
+    "selfEmployed": "Self-Employed",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "advancedOptions": "Advanced Options",
+    "children": "Number of Children",
+    "childAge": "Child Age",
+    "addChild": "Add Child",
+    "removeChild": "Remove",
+    "pensionRate": "Pension Contribution Rate (%)",
+    "monthlySpending": "Monthly Consumer Spending (₪)",
+    "calculate": "Calculate My Taxes",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "banner": {
+      "line1": "93% of land controlled by one government body.",
+      "line2": "13 years to get a building permit.",
+      "line3": "Food costs 19% more than Europe.",
+      "line4": "Cars taxed at 100%+ markup.",
+      "punchline": "Your taxes fund every one of these systems. See exactly how much below."
+    }
+  },
+  "results": {
+    "title": "Your Tax Breakdown",
+    "totalTaxMonthly": "Total Monthly Tax",
+    "totalTaxAnnual": "Total Annual Tax",
+    "effectiveRate": "Effective Tax Rate",
+    "takeHome": "Annual Take-Home Pay",
+    "monthlyNet": "Monthly Net Income",
+    "incomeTax": "Income Tax",
+    "nationalInsurance": "National Insurance",
+    "healthTax": "Health Insurance Tax",
+    "taxCredits": "Tax Credits",
+    "creditPoints": "Credit Points",
+    "grossTax": "Gross Income Tax",
+    "afterCredits": "After Credits",
+    "employerCost": "Total Employer Cost",
+    "vatEstimate": "Estimated Annual VAT",
+    "dailyTax": "You pay in taxes per day",
+    "perBracket": "Per Bracket Breakdown",
+    "bracket": "Bracket",
+    "taxable": "Taxable",
+    "tax": "Tax",
+    "rate": "Rate",
+    "overview": "Overview",
+    "details": "Details",
+    "budgetBreakdown": "Where Your Taxes Go"
+  },
+  "budget": {
+    "defense": "Defense",
+    "education": "Education",
+    "welfare": "Welfare & Social Services",
+    "health": "Health",
+    "debt": "Debt Service",
+    "transportation": "Transportation",
+    "public_safety": "Public Safety",
+    "housing": "Housing & Construction",
+    "agriculture": "Agriculture",
+    "immigration": "Immigration & Absorption",
+    "culture": "Culture & Sport",
+    "environment": "Environmental Protection",
+    "other": "Other"
+  },
+  "footer": {
+    "sources": "Data Sources",
+    "taxAuthority": "Israeli Tax Authority",
+    "btl": "National Insurance Institute",
+    "mof": "Ministry of Finance",
+    "lastUpdated": "Tax rates last updated"
+  },
+  "dashboard": {
+    "title": "Your Tax Dashboard",
+    "noData": "No income data yet. Run the calculator to see your personalized dashboard.",
+    "goToCalculator": "Go to Calculator",
+    "donutTitle": "Your Tax Breakdown",
+    "receiptTitle": "Your Daily Tax Receipt",
+    "receiptSubtitle": "What you paid today",
+    "shareReceipt": "Share",
+    "oecdTitle": "How Israel Compares",
+    "oecdSubtitle": "Where Israel stands among developed nations",
+    "oecdTabs": {
+      "taxBurden": "Tax Burden",
+      "housing": "Housing",
+      "healthcare": "Healthcare",
+      "education": "Education",
+      "efficiency": "Efficiency"
+    },
+    "treemapTitle": "Budget by Ministry",
+    "efficiencyTitle": "Government Efficiency Scorecard",
+    "efficiencySubtitle": "How much of your money actually reaches the service",
+    "sankeyTitle": "Follow the Money"
+  },
+  "insights": {
+    "title": "The Real Cost",
+    "subtitle": "For every ₪100 you pay in taxes, how much actually helps someone?",
+    "heroStat": "Of your annual taxes, an estimated {amount} is lost to overhead",
+    "potentialSavings": "With competitive alternatives: {amount} in potential annual savings",
+    "personalImpact": "This is YOUR money being burned in overhead before it reaches a single classroom, hospital, or road.",
+    "perMinistry": {
+      "yourContribution": "Your Contribution",
+      "overhead": "Overhead",
+      "reachesService": "Reaches the Service",
+      "alternativeCost": "Competitive Alternative Cost",
+      "savings": "Potential Savings",
+      "grade": "Efficiency Grade",
+      "sources": "Sources"
+    },
+    "callToAction": "You fund this every month. The question isn't whether it can change — it's whether you'll demand it."
+  },
+  "costAnalysis": {
+    "defense": {
+      "issues": "Sole-supplier procurement contracts, costly bureaucratic oversight layers, and lack of competitive bidding inflate costs by an estimated 15%.",
+      "alternative": "Singapore achieves comparable defense capability at 30% lower administrative cost through competitive procurement and lean organizational structure.",
+      "rootCause": "Monopolistic procurement with no competitive pressure."
+    },
+    "education": {
+      "issues": "Multiple administrative layers between the Ministry and the classroom. Union rigidity prevents merit-based pay. Curriculum delivery hasn't modernized despite technology.",
+      "alternative": "Charter school systems and education vouchers show 15-30% better outcomes per dollar spent. Finland achieves world-class results with less bureaucracy.",
+      "rootCause": "Centralized control with no accountability for outcomes."
+    },
+    "welfare": {
+      "issues": "Fragmented delivery across dozens of agencies with overlapping mandates. Means-testing bureaucracy consumes 20% of welfare budgets before a single shekel reaches a recipient.",
+      "alternative": "Direct cash transfers, as piloted across developing and developed nations, cut administrative costs by 60-80% and produce equal or better outcomes.",
+      "rootCause": "Bureaucratic gatekeeping that costs more than the benefits it distributes."
+    },
+    "health": {
+      "issues": "Chronic underfunding masked by mandatory participation. Long wait times, doctor shortages, and aging infrastructure. Kupot Cholim compete on marketing, not outcomes.",
+      "alternative": "Singapore's mixed public-private model with health savings accounts achieves better outcomes at lower cost. Patients have skin in the game and providers compete on quality.",
+      "rootCause": "Mandatory system with no real competition between providers."
+    },
+    "debt": {
+      "issues": "Debt service consumes approximately 8% of the budget — money that produces zero public services. Persistent deficits mean borrowing to pay interest on previous borrowing.",
+      "alternative": "A balanced budget amendment, as implemented in Switzerland and several US states, forces fiscal discipline and frees funds currently lost to interest payments.",
+      "rootCause": "Structural deficits driven by political unwillingness to prioritize spending."
+    },
+    "transportation": {
+      "issues": "Planning delays of 10-20 years for major projects. Cost overruns averaging 35%. Contractor monopolies in infrastructure.",
+      "alternative": "Public-private partnerships and competitive bidding, as in Chile's highway system, cut costs by 40% and delivery time by 60%.",
+      "rootCause": "Government monopoly on infrastructure planning and execution."
+    },
+    "public_safety": {
+      "issues": "Police staffing per capita is below the OECD average. Administrative overhead consumes a disproportionate share. Outdated technology and slow response times in peripheral areas.",
+      "alternative": "Data-driven policing models, as deployed in New York and Tokyo, achieve better safety outcomes with fewer resources by allocating patrols based on predictive analytics.",
+      "rootCause": "Resource allocation driven by politics rather than data."
+    },
+    "housing": {
+      "issues": "The Israel Land Authority controls 93% of land. From planning to building permit takes an average of 13 years. Artificial supply restriction drives prices up.",
+      "alternative": "Free land markets with streamlined permitting (like Texas) achieve housing affordability ratios of 3-4x income vs Israel's 10.6x.",
+      "rootCause": "Government monopoly on land supply and a broken planning system."
+    },
+    "agriculture": {
+      "issues": "Heavy subsidies protect uncompetitive domestic producers. Import quotas on dairy, eggs, and produce keep prices artificially high. Consumers pay twice — through taxes and inflated prices.",
+      "alternative": "New Zealand eliminated all agricultural subsidies in 1984. Farms became more efficient, exports grew, and food prices dropped for consumers.",
+      "rootCause": "Import protection that shields producers from competition at consumers' expense."
+    },
+    "immigration": {
+      "issues": "Absorption centers and bureaucratic intake processes create dependency rather than integration. Hebrew language programs (ulpan) are underfunded and poorly structured for working adults.",
+      "alternative": "Canada's points-based system with private sponsorship integrates immigrants faster and at lower government cost. Language training is market-driven and outcome-based.",
+      "rootCause": "A paternalistic system designed for a different era of immigration."
+    },
+    "culture": {
+      "issues": "Government-funded cultural institutions with little accountability for attendance or impact. Funding decisions driven by political connections rather than public value.",
+      "alternative": "The US model of tax-deductible private donations to arts and culture produces a more diverse, responsive, and cost-effective cultural ecosystem.",
+      "rootCause": "Centralized funding with no market feedback on what the public actually values."
+    },
+    "environment": {
+      "issues": "Regulatory overlap between multiple agencies creates confusion and delays. Enforcement is inconsistent. Polluters face fines that are cheaper than compliance.",
+      "alternative": "Pollution pricing mechanisms (carbon taxes with revenue recycling) create market incentives for clean behavior, as demonstrated in British Columbia and Scandinavia.",
+      "rootCause": "Command-and-control regulation that fails to create proper incentives."
+    },
+    "other": {
+      "issues": "Miscellaneous government spending spread across dozens of minor agencies, many with overlapping mandates and no clear performance metrics.",
+      "alternative": "Sunset clauses requiring periodic reauthorization of agencies, as used in Texas, force regular review and eliminate programs that have outlived their purpose.",
+      "rootCause": "Once created, government programs never die — they only grow."
+    }
+  },
+  "why": {
+    "title": "Why So Expensive?",
+    "subtitle": "Israel is a first-world economy with third-world efficiency. Here's why your money doesn't go as far as it should.",
+    "rootCauseLabel": "Root Cause",
+    "alternativeLabel": "Alternative",
+    "sourceLabel": "Sources",
+    "topics": {
+      "housing": {
+        "title": "The Housing Crisis",
+        "summary": "Israel's housing prices are among the highest in the developed world relative to income. The root cause isn't population growth — it's government control of land and a broken planning system.",
+        "rootCause": "93% of land controlled by one government body. 13 years from planning to building permit. Artificial scarcity drives prices.",
+        "alternative": "In Texas, a building permit takes 2 weeks. Housing costs 3x annual income, not 10.6x.",
+        "stats": {
+          "priceToIncome": "10.6x",
+          "permitTime": "13 years average",
+          "ilaControl": "93% of all land"
+        }
+      },
+      "costOfLiving": {
+        "title": "Why Everything Costs More",
+        "summary": "Israeli food is 19% more expensive than the EU average. Cars cost double. Import duties, monopolies, and regulation create artificial scarcity at every level.",
+        "rootCause": "Import duties protect uncompetitive domestic producers. Government-granted monopolies face no competition. Regulation raises costs that consumers pay.",
+        "alternative": "When Israel deregulated telecom in 2012, prices dropped 80% in 3 years. The same would happen in food, energy, and transportation.",
+        "stats": {
+          "foodPremium": "19% above EU average",
+          "carPremium": "~100% markup vs US",
+          "telecomDrop": "80% price drop after deregulation"
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare: Mandatory ≠ Efficient",
+        "summary": "Israel spends $3,100 per capita on healthcare — less than the OECD average — yet wait times are long and doctor shortages are chronic.",
+        "rootCause": "A mandatory, government-managed system with no real competition between providers. Kupot Cholim have no incentive to innovate.",
+        "alternative": "Singapore's mixed public-private system achieves better outcomes at lower cost with health savings accounts and competitive providers.",
+        "stats": {
+          "perCapitaSpend": "$3,100",
+          "oecdAverage": "$4,200",
+          "doctorShortage": "Chronic — among lowest doctor-to-patient ratios in OECD"
+        }
+      },
+      "education": {
+        "title": "Paying More, Getting Less",
+        "summary": "Israel spends $9,400 per student but scores below the OECD average (470 vs 489) on PISA tests.",
+        "rootCause": "Bloated administrative layers consume 25% of the education budget before a single shekel reaches a classroom.",
+        "alternative": "School choice programs and education vouchers consistently show better outcomes per dollar. Estonia spends less per student and outperforms Israel significantly.",
+        "stats": {
+          "perStudentSpend": "$9,400",
+          "pisaScore": "470 (OECD avg: 489)",
+          "adminOverhead": "~25% of budget"
+        }
+      },
+      "whyOlimLeave": {
+        "title": "Why Olim Leave",
+        "summary": "Thousands of immigrants arrive with optimism and leave within years. The tax burden, bureaucracy, cost of living, and language barriers create an impossible equation.",
+        "rootCause": "New immigrants face the full tax burden immediately while navigating a system designed for insiders. No meaningful tax holiday. Cost of living erases any salary gains.",
+        "alternative": "Countries like Portugal and UAE offer meaningful tax incentives for immigrants. Israel could attract and retain talent by reducing barriers instead of adding them.",
+        "stats": {
+          "departureRate": "Thousands annually",
+          "taxRelief": "Minimal — no meaningful tax holiday",
+          "costOfLivingRank": "Top 10 most expensive globally"
+        }
+      },
+      "priceSalaryRatio": {
+        "title": "The Price-Salary Gap",
+        "summary": "Israeli salaries look competitive on paper. But when adjusted for cost of living, purchasing power is among the lowest in the developed world.",
+        "rootCause": "High taxes + high cost of living + high housing = dramatically reduced purchasing power. An Israeli earning ₪15,000/month has less buying power than a German earning €3,000.",
+        "alternative": "Reducing the tax burden by even 20% and opening markets to competition would dramatically increase real purchasing power.",
+        "stats": {
+          "medianSalary": "₪12,538/month",
+          "purchasingPowerRank": "Among lowest in OECD",
+          "effectiveTaxBurden": "~45% including indirect taxes"
+        }
+      },
+      "butterflyEffect": {
+        "title": "The Butterfly Effect",
+        "summary": "Every shekel you pay in taxes doesn't just disappear — it actively funds the systems that make your life harder. Your tax money pays for the bureaucracy that blocks housing permits, the import duties that raise food prices, and the regulations that prevent competition.",
+        "rootCause": "The system is self-reinforcing. Taxes fund bureaucracy. Bureaucracy creates regulations. Regulations raise costs. Higher costs demand higher taxes.",
+        "alternative": "Breaking the cycle starts with awareness. When enough people understand the connection between what they pay and what they get, demand for change becomes unstoppable.",
+        "stats": {
+          "bureaucracyIndex": "Ranked 67th in ease of doing business",
+          "regulationCost": "Estimated 3-5% of GDP lost to regulatory burden",
+          "cycleDuration": "Decades of compounding inefficiency"
+        }
+      }
+    }
+  },
+  "action": {
+    "title": "Take Action",
+    "subtitle": "You are not powerless. You are the funding source. What you fund, you can change through democratic action.",
+    "levels": {
+      "mindset": {
+        "title": "Shift Your Perspective",
+        "description": "The most powerful change happens inside. Before you can change the system, see your role in it.",
+        "economicLiteracy": {
+          "title": "Understand Basic Economics",
+          "description": "Every regulation has a cost. Every tax has a deadweight loss. Every monopoly hurts consumers. Learn to see the invisible costs."
+        },
+        "personalResponsibility": {
+          "title": "See Your Role",
+          "description": "You're not a victim of the system — you're funding it. Every paycheck, you contribute to the very bureaucracy that makes your life harder. This isn't blame — it's power. What you fund, you can defund."
+        },
+        "loveYourNeighbor": {
+          "title": "Love Your Neighbor as Yourself",
+          "description": "Economic freedom IS loving your neighbor. When you advocate for lower taxes and less regulation, you're fighting for everyone's prosperity — not just your own. The baker, the teacher, the taxi driver — they all benefit from a free economy."
+        },
+        "seeEgo": {
+          "title": "See the Ego",
+          "description": "Fear drives support for big government. 'Without the government, who will take care of us?' But every service the government provides, the free market can provide better and cheaper. The ego wants safety through control. True safety comes through freedom and voluntary cooperation."
+        }
+      },
+      "educate": {
+        "title": "Spread Awareness",
+        "description": "You can't change what people don't see. Help others see.",
+        "shareTool": {
+          "title": "Share ShekelScope",
+          "description": "Send this tool to 5 people. Let them see their own numbers."
+        },
+        "talkToFamily": {
+          "title": "Have the Conversation",
+          "description": "Discuss taxes at the dinner table. Ask: 'Do you know what your effective tax rate is? Do you know where that money goes?'"
+        },
+        "socialMedia": {
+          "title": "Post Your Results",
+          "description": "Share your tax breakdown on social media. Make the invisible visible."
+        }
+      },
+      "civic": {
+        "title": "Engage the System",
+        "description": "Use the democratic tools available to you.",
+        "contactMK": {
+          "title": "Contact Your MK",
+          "description": "Every Knesset member has a duty to respond to constituents. Write to them about specific budget inefficiencies.",
+          "link": "https://main.knesset.gov.il/mk/current/Pages/default.aspx"
+        },
+        "fileFOI": {
+          "title": "File a Freedom of Information Request",
+          "description": "You have a legal right to see how your money is spent. Use it.",
+          "link": "https://foi.gov.il/"
+        },
+        "municipal": {
+          "title": "Attend Municipal Meetings",
+          "description": "Your local municipality decides your arnona rates and local spending. Show up. Ask questions."
+        },
+        "referendum": {
+          "title": "Learn the Referendum Process",
+          "description": "Israeli law allows citizen-initiated referendums on certain issues. Understand the process and thresholds."
+        }
+      },
+      "organize": {
+        "title": "Organize",
+        "description": "Individual action matters. Collective action transforms.",
+        "joinGroups": {
+          "title": "Join Citizen Groups",
+          "description": "Organizations like the Israel Democracy Institute, Kohelet Policy Forum, and the Shoresh Institution research and advocate for economic reform."
+        },
+        "protest": {
+          "title": "Peaceful Protest",
+          "description": "When democratic channels fail, peaceful protest is the ultimate civic tool. The 2011 social justice protests showed the power of citizens demanding change."
+        }
+      },
+      "vote": {
+        "title": "Vote with Purpose",
+        "description": "Every election is a referendum on the economy.",
+        "research": {
+          "title": "Research Party Platforms",
+          "description": "Which parties support reducing taxes, cutting regulation, and opening markets to competition? Vote for economic freedom."
+        },
+        "turnout": {
+          "title": "Show Up",
+          "description": "Low voter turnout benefits the status quo. Your vote matters most when you're informed about economic policy."
+        }
+      }
+    }
+  }
+}

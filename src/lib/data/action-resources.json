@@ -1,0 +1,108 @@
+{
+  "levels": [
+    {
+      "id": "mindset",
+      "icon": "brain",
+      "actions": [
+        {
+          "id": "economic-literacy",
+          "key": "mindset.economicLiteracy"
+        },
+        {
+          "id": "personal-responsibility",
+          "key": "mindset.personalResponsibility"
+        },
+        {
+          "id": "love-your-neighbor",
+          "key": "mindset.loveYourNeighbor"
+        }
+      ]
+    },
+    {
+      "id": "educate",
+      "icon": "share-2",
+      "actions": [
+        {
+          "id": "share-tool",
+          "key": "educate.shareTool"
+        },
+        {
+          "id": "discuss-family",
+          "key": "educate.discussFamily"
+        },
+        {
+          "id": "social-media",
+          "key": "educate.socialMedia"
+        }
+      ]
+    },
+    {
+      "id": "civic",
+      "icon": "landmark",
+      "actions": [
+        {
+          "id": "contact-mk",
+          "key": "civic.contactMK",
+          "url": "https://www.knesset.gov.il/mk/eng/mkindex_eng.asp"
+        },
+        {
+          "id": "file-foi",
+          "key": "civic.fileFOI",
+          "url": "https://foi.gov.il"
+        },
+        {
+          "id": "attend-municipal",
+          "key": "civic.attendMunicipal"
+        },
+        {
+          "id": "referendum-process",
+          "key": "civic.referendumProcess"
+        }
+      ]
+    },
+    {
+      "id": "organize",
+      "icon": "users",
+      "actions": [
+        {
+          "id": "join-citizen-groups",
+          "key": "organize.joinCitizenGroups"
+        },
+        {
+          "id": "support-reform-orgs",
+          "key": "organize.supportReformOrgs",
+          "url": "https://en.idi.org.il"
+        },
+        {
+          "id": "support-kohelet",
+          "key": "organize.supportKohelet",
+          "url": "https://kohelet.org.il/en"
+        },
+        {
+          "id": "support-taub",
+          "key": "organize.supportTaub",
+          "url": "https://www.taubcenter.org.il/en"
+        }
+      ]
+    },
+    {
+      "id": "vote",
+      "icon": "vote",
+      "actions": [
+        {
+          "id": "check-registration",
+          "key": "vote.checkRegistration",
+          "url": "https://www.gov.il/he/departments/topics/elections"
+        },
+        {
+          "id": "research-parties",
+          "key": "vote.researchParties"
+        },
+        {
+          "id": "voter-turnout",
+          "key": "vote.voterTurnout"
+        }
+      ]
+    }
+  ]
+}

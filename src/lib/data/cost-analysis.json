@@ -1,0 +1,174 @@
+{
+  "lastUpdated": "2025-01-01",
+  "categories": [
+    {
+      "id": "defense",
+      "overheadPercent": 15,
+      "reachesServicePercent": 85,
+      "grade": "B",
+      "alternativeCostMultiplier": 0.80,
+      "issues": "Procurement inefficiencies and sole-source contracts inflate costs. Long mandatory service creates hidden economic drag.",
+      "alternative": "Competitive bidding for non-classified procurement; streamlined reserve duty system.",
+      "sources": [
+        { "name": "State Comptroller Annual Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Defense Spending Analysis", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "education",
+      "overheadPercent": 25,
+      "reachesServicePercent": 75,
+      "grade": "D",
+      "alternativeCostMultiplier": 0.65,
+      "issues": "Multiple parallel education streams with redundant administration. Below-OECD PISA scores despite significant spending.",
+      "alternative": "Unified standards with school autonomy; performance-based funding; reduced bureaucratic layers.",
+      "sources": [
+        { "name": "Shoresh Institution Education Report", "url": "https://shoresh.institute" },
+        { "name": "Taub Center Education Policy", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "welfare",
+      "overheadPercent": 30,
+      "reachesServicePercent": 70,
+      "grade": "D",
+      "alternativeCostMultiplier": 0.60,
+      "issues": "Fragmented delivery across multiple agencies. High administrative cost per beneficiary. Means-testing creates poverty traps.",
+      "alternative": "Consolidated welfare delivery; negative income tax model; digital-first service delivery.",
+      "sources": [
+        { "name": "State Comptroller Welfare Audit", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Social Policy", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "health",
+      "overheadPercent": 20,
+      "reachesServicePercent": 80,
+      "grade": "C",
+      "alternativeCostMultiplier": 0.75,
+      "issues": "Chronic underfunding leads to long wait times. Hospital bed shortage at 2.2 per 1000 vs OECD 4.3. Peripheral area access gaps.",
+      "alternative": "Increased competition among HMOs; public-private partnerships for hospitals; telemedicine expansion.",
+      "sources": [
+        { "name": "Taub Center Health Policy", "url": "https://www.taubcenter.org.il" },
+        { "name": "State Comptroller Health Report", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    {
+      "id": "debt",
+      "overheadPercent": 5,
+      "reachesServicePercent": 95,
+      "grade": "B",
+      "alternativeCostMultiplier": 0.95,
+      "issues": "Debt service is largely mechanical. Rising debt-to-GDP ratio limits future fiscal flexibility.",
+      "alternative": "Fiscal responsibility framework; debt ceiling legislation; sovereign wealth fund for surpluses.",
+      "sources": [
+        { "name": "Bank of Israel Annual Report", "url": "https://www.boi.org.il" },
+        { "name": "Shoresh Institution Fiscal Policy", "url": "https://shoresh.institute" }
+      ]
+    },
+    {
+      "id": "transportation",
+      "overheadPercent": 35,
+      "reachesServicePercent": 65,
+      "grade": "F",
+      "alternativeCostMultiplier": 0.55,
+      "issues": "Massive cost overruns on infrastructure projects. Tel Aviv metro decades behind schedule. Poor inter-city rail connectivity.",
+      "alternative": "Independent project oversight; international competitive tenders; congestion pricing to fund transit.",
+      "sources": [
+        { "name": "State Comptroller Transportation Audit", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Infrastructure Report", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "public_safety",
+      "overheadPercent": 18,
+      "reachesServicePercent": 82,
+      "grade": "C",
+      "alternativeCostMultiplier": 0.78,
+      "issues": "Understaffing in peripheral areas. Slow adoption of technology for crime prevention. Uneven resource allocation across districts.",
+      "alternative": "Data-driven policing; community policing models; technology-first approach to crime prevention.",
+      "sources": [
+        { "name": "State Comptroller Public Safety Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Public Safety Analysis", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "housing",
+      "overheadPercent": 40,
+      "reachesServicePercent": 60,
+      "grade": "F",
+      "alternativeCostMultiplier": 0.50,
+      "issues": "ILA monopoly on 93% of land. 13-year average permit time. Regulatory capture by incumbents blocks reform.",
+      "alternative": "Land reform to break ILA monopoly; streamlined permitting to under 2 years; zoning deregulation.",
+      "sources": [
+        { "name": "State Comptroller Housing Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Shoresh Institution Housing Crisis", "url": "https://shoresh.institute" }
+      ]
+    },
+    {
+      "id": "agriculture",
+      "overheadPercent": 30,
+      "reachesServicePercent": 70,
+      "grade": "D",
+      "alternativeCostMultiplier": 0.55,
+      "issues": "Heavy subsidies distort markets. Import quotas on food raise consumer prices. Water subsidies encourage inefficient use.",
+      "alternative": "Phase out import quotas; market-rate water pricing; direct farmer support instead of price controls.",
+      "sources": [
+        { "name": "Shoresh Institution Agriculture Report", "url": "https://shoresh.institute" },
+        { "name": "Taub Center Food Prices Study", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "immigration",
+      "overheadPercent": 22,
+      "reachesServicePercent": 78,
+      "grade": "C",
+      "alternativeCostMultiplier": 0.70,
+      "issues": "Absorption services duplicate existing welfare programs. Language training quality inconsistent. Professional license recognition too slow.",
+      "alternative": "Streamlined license recognition; voucher-based language training; integration with existing social services.",
+      "sources": [
+        { "name": "State Comptroller Immigration Audit", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Immigration Policy", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "culture",
+      "overheadPercent": 20,
+      "reachesServicePercent": 80,
+      "grade": "C",
+      "alternativeCostMultiplier": 0.65,
+      "issues": "Funding concentrated in central Israel. Political influence on cultural funding decisions. Lack of outcome measurement.",
+      "alternative": "Geographic funding equity; arm's-length funding body; matched private-public funding models.",
+      "sources": [
+        { "name": "State Comptroller Culture Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Culture Policy", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "environment",
+      "overheadPercent": 15,
+      "reachesServicePercent": 85,
+      "grade": "B",
+      "alternativeCostMultiplier": 0.80,
+      "issues": "Small budget relative to environmental challenges. Enforcement capacity limited. Slow renewable energy transition.",
+      "alternative": "Carbon pricing to generate revenue; polluter-pays enforcement; green bond financing for infrastructure.",
+      "sources": [
+        { "name": "State Comptroller Environment Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Taub Center Environmental Policy", "url": "https://www.taubcenter.org.il" }
+      ]
+    },
+    {
+      "id": "other",
+      "overheadPercent": 25,
+      "reachesServicePercent": 75,
+      "grade": "C",
+      "alternativeCostMultiplier": 0.70,
+      "issues": "Catch-all category with limited transparency. Coalition fund allocations lack oversight. Difficult to audit.",
+      "alternative": "Zero-based budgeting for miscellaneous items; sunset clauses on all discretionary programs.",
+      "sources": [
+        { "name": "State Comptroller Annual Report", "url": "https://www.mevaker.gov.il" },
+        { "name": "Shoresh Institution Fiscal Transparency", "url": "https://shoresh.institute" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "housing": [
+    { "name": "OECD Economic Survey of Israel 2025", "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-israel-2025_9068b.html" },
+    { "name": "Israel Land Authority (gov.il)", "url": "https://www.gov.il/en/departments/israel-land-authority" },
+    { "name": "Taub Center — Housing Prices", "url": "https://www.taubcenter.org.il/wp-content/uploads/2020/12/housingprices2018en.pdf" },
+    { "name": "Harvard Kennedy School — Affordable Housing: Israel", "url": "https://www.hks.harvard.edu/sites/default/files/centers/mrcbg/files/AWP_162_final.pdf" },
+    { "name": "Global Property Guide — Israel", "url": "https://www.globalpropertyguide.com/middle-east/israel/price-history" },
+    { "name": "Israel CBS — Housing Price Index", "url": "https://www.cbs.gov.il/en/pages/default.aspx" }
+  ],
+  "costOfLiving": [
+    { "name": "OECD Economic Survey of Israel 2025", "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-israel-2025_9068b.html" },
+    { "name": "Israel Central Bureau of Statistics", "url": "https://www.cbs.gov.il/en/pages/default.aspx" },
+    { "name": "Numbeo — Cost of Living in Israel", "url": "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Israel" },
+    { "name": "Bank of Israel — Research", "url": "https://www.boi.org.il/en/" },
+    { "name": "Ministry of Finance", "url": "https://mof.gov.il/en/" }
+  ],
+  "healthcare": [
+    { "name": "OECD Health Statistics", "url": "https://data.oecd.org/israel.htm" },
+    { "name": "Israel Ministry of Health", "url": "https://www.gov.il/en/departments/ministry_of_health" },
+    { "name": "Taub Center — Health Policy", "url": "https://www.taubcenter.org.il/en/" },
+    { "name": "World Bank — Israel Health Data", "url": "https://data.worldbank.org/country/israel" }
+  ],
+  "education": [
+    { "name": "OECD PISA Results", "url": "https://data.oecd.org/israel.htm" },
+    { "name": "Israel Central Bureau of Statistics", "url": "https://www.cbs.gov.il/en/pages/default.aspx" },
+    { "name": "Taub Center — Education Research", "url": "https://www.taubcenter.org.il/en/" },
+    { "name": "OECD — Education at a Glance", "url": "https://www.oecd.org/en/publications/education-at-a-glance-2024_c00cad36-en.html" }
+  ],
+  "whyOlimLeave": [
+    { "name": "Israel CBS — Migration Statistics", "url": "https://www.cbs.gov.il/en/pages/default.aspx" },
+    { "name": "OECD Economic Survey of Israel 2025", "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-israel-2025_9068b.html" },
+    { "name": "Bank of Israel — Economic Data", "url": "https://www.boi.org.il/en/" }
+  ],
+  "priceSalaryRatio": [
+    { "name": "OECD — Income Inequality Data", "url": "https://www.oecd.org/en/data/indicators/income-inequality.html" },
+    { "name": "World Inequality Database — Israel", "url": "https://wid.world/country/israel/" },
+    { "name": "Israel CBS", "url": "https://www.cbs.gov.il/en/pages/default.aspx" },
+    { "name": "Numbeo — Cost of Living", "url": "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Israel" }
+  ],
+  "butterflyEffect": [
+    { "name": "World Bank — Israel Governance Indicators", "url": "https://data.worldbank.org/country/israel" },
+    { "name": "Transparency International — Israel", "url": "https://www.transparency.org/en/countries/israel" },
+    { "name": "State Comptroller Reports", "url": "https://www.mevaker.gov.il/En/Pages/default.aspx" },
+    { "name": "OECD Data — Israel", "url": "https://data.oecd.org/israel.htm" }
+  ]
+}
