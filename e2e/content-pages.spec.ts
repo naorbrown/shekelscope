@@ -9,6 +9,16 @@ test.describe('Why So Expensive Page', () => {
     await expect(page.getByText(/the housing crisis/i)).toBeVisible();
   });
 
+  test('shows new economic topics', async ({ page }) => {
+    await page.goto('/en/why');
+    await page.waitForLoadState('networkidle');
+    // New topics added in content expansion
+    await expect(page.getByText(/inflation tax/i)).toBeVisible();
+    await expect(page.getByText(/tycoon problem/i)).toBeVisible();
+    await expect(page.getByText(/high-tech salaries/i)).toBeVisible();
+    await expect(page.getByText(/don.*need government/i)).toBeVisible();
+  });
+
   test('expands accordion to show content', async ({ page }) => {
     await page.goto('/en/why');
     await page.waitForLoadState('networkidle');

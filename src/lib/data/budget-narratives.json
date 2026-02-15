@@ -5,9 +5,10 @@
         "nameEn": "Ministry of Defense",
         "nameHe": "משרד הביטחון",
         "website": "https://www.mod.gov.il",
-        "contactUrl": "https://www.mod.gov.il/pages/contact.aspx",
+        "contactUrl": "https://www.mod.gov.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
         "employees": 35000,
-        "avgSalaryMonthly": 18500
+        "avgSalaryMonthly": 18500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund the IDF, military intelligence, defense procurement, veterans' services, and the administrative apparatus of the Ministry of Defense. This is the single largest discretionary budget item.",
@@ -40,19 +41,19 @@
           "type": "contact",
           "labelEn": "Contact the Ministry",
           "labelHe": "פנו למשרד הביטחון",
-          "url": "https://www.mod.gov.il/pages/contact.aspx"
+          "url": "https://www.mod.gov.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8"
         },
         {
           "type": "link",
           "labelEn": "Knesset Foreign Affairs & Defense Committee",
           "labelHe": "ועדת חוץ וביטחון של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/ForeignAffairs"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         },
         {
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [
@@ -64,10 +65,11 @@
       "ministry": {
         "nameEn": "Ministry of Education",
         "nameHe": "משרד החינוך",
-        "website": "https://edu.gov.il",
-        "contactUrl": "https://cms.education.gov.il/EducationCMS/Applications/Mankal/Tochniot/Contact.htm",
+        "website": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page",
+        "contactUrl": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page",
         "employees": 180000,
-        "avgSalaryMonthly": 12800
+        "avgSalaryMonthly": 12800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund 180,000 government education employees, school buildings, curriculum development, and a massive administrative bureaucracy between the Ministry and the classroom. Israel spends $9,400 per student but scores below the OECD average on PISA.",
@@ -98,29 +100,29 @@
           "type": "contact",
           "labelEn": "Contact Ministry of Education",
           "labelHe": "פנו למשרד החינוך",
-          "url": "https://edu.gov.il"
+          "url": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page"
         },
         {
           "type": "link",
           "labelEn": "Knesset Education Committee",
           "labelHe": "ועדת חינוך של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/Education"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         },
         {
           "type": "link",
           "labelEn": "Israel PISA Results (OECD)",
           "labelHe": "תוצאות PISA של ישראל (OECD)",
-          "url": "https://www.oecd.org/pisa/"
+          "url": "https://www.oecd.org/en/about/programmes/pisa.html"
         },
         {
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [
-        { "name": "OECD PISA Reports", "url": "https://www.oecd.org/pisa/" },
+        { "name": "OECD PISA Reports", "url": "https://www.oecd.org/en/about/programmes/pisa.html" },
         { "name": "State Comptroller — Education Reports", "url": "https://www.mevaker.gov.il" }
       ]
     },
@@ -131,7 +133,8 @@
         "website": "https://www.gov.il/he/departments/molsa",
         "contactUrl": "https://www.gov.il/he/departments/molsa/govil-contact",
         "employees": 8500,
-        "avgSalaryMonthly": 14200
+        "avgSalaryMonthly": 14200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund income support (havtachat hachnasa), disability benefits, elderly care, child welfare services, and the bureaucratic apparatus that decides who qualifies. ~20% of welfare budgets are consumed by means-testing bureaucracy before a single shekel reaches a recipient.",
@@ -168,7 +171,7 @@
           "type": "link",
           "labelEn": "Knesset Labor & Welfare Committee",
           "labelHe": "ועדת העבודה והרווחה",
-          "url": "https://main.knesset.gov.il/Activity/Committees/LaborWelfare"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         },
         {
           "type": "link",
@@ -189,7 +192,8 @@
         "website": "https://www.health.gov.il",
         "contactUrl": "https://www.health.gov.il/English/Topics/CallCenter",
         "employees": 42000,
-        "avgSalaryMonthly": 16500
+        "avgSalaryMonthly": 16500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You pay TWICE for healthcare: once through mandatory health insurance tax (3.1-5% of salary) deducted from your paycheck, and again through the budget allocation. Despite this double taxation, Israel spends only $3,100 per capita — below the OECD average of $4,200 — with chronic doctor shortages and long wait times.",
@@ -238,11 +242,11 @@
           "type": "link",
           "labelEn": "Knesset Health Committee",
           "labelHe": "ועדת הבריאות של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/Health"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         }
       ],
       "sources": [
-        { "name": "OECD Health Statistics — Israel", "url": "https://www.oecd.org/health/" },
+        { "name": "OECD Health Statistics — Israel", "url": "https://www.oecd.org/en/topics/health.html" },
         { "name": "State Comptroller — Health Reports", "url": "https://www.mevaker.gov.il" }
       ]
     },
@@ -253,7 +257,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_finance",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_finance/govil-contact",
         "employees": 2500,
-        "avgSalaryMonthly": 22000
+        "avgSalaryMonthly": 22000,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "Nearly 10% of your taxes go to paying INTEREST on debt from previous years' deficit spending. This money produces zero public services — no roads, no hospitals, no schools. It's pure transfer from taxpayers to bondholders.",
@@ -291,7 +296,7 @@
           "type": "link",
           "labelEn": "Knesset Finance Committee",
           "labelHe": "ועדת הכספים של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/Finance"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         }
       ],
       "sources": [
@@ -306,7 +311,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_transport",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_transport/govil-contact",
         "employees": 3200,
-        "avgSalaryMonthly": 16800
+        "avgSalaryMonthly": 16800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund road construction, public transit, railway infrastructure, and the planning bureaucracy that takes 10-20 years per major project. Cost overruns average 35%. Meanwhile, you also pay 100%+ import tax on your car.",
@@ -344,13 +350,13 @@
           "type": "link",
           "labelEn": "Knesset Economics Committee",
           "labelHe": "ועדת הכלכלה של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/Economics"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         },
         {
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [
@@ -365,7 +371,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_national_security",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_national_security/govil-contact",
         "employees": 38000,
-        "avgSalaryMonthly": 13500
+        "avgSalaryMonthly": 13500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund the Israel Police, Border Police, fire services, and prison system. Police staffing per capita is below the OECD average, while administrative overhead consumes a disproportionate share of the budget.",
@@ -397,7 +404,7 @@
           "type": "link",
           "labelEn": "Knesset Internal Affairs Committee",
           "labelHe": "ועדת הפנים של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/InternalAffairs"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         }
       ],
       "sources": [
@@ -412,7 +419,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_construction_and_housing/govil-contact",
         "employees": 1200,
-        "avgSalaryMonthly": 17500
+        "avgSalaryMonthly": 17500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund the Ministry that oversees housing policy — the same government that controls 93% of land through the Israel Land Authority and takes 13 years to approve building permits, creating the artificial scarcity that makes your housing so expensive.",
@@ -462,7 +470,7 @@
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [
@@ -478,7 +486,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_agriculture",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_agriculture/govil-contact",
         "employees": 1800,
-        "avgSalaryMonthly": 15200
+        "avgSalaryMonthly": 15200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund agricultural subsidies, import quotas on dairy/eggs/produce, and the bureaucracy that enforces them. You pay TWICE: through taxes that subsidize uncompetitive producers, AND through inflated grocery prices (19% above EU average) caused by import restrictions that eliminate competition.",
@@ -521,11 +530,11 @@
           "type": "link",
           "labelEn": "Knesset Economics Committee",
           "labelHe": "ועדת הכלכלה של הכנסת",
-          "url": "https://main.knesset.gov.il/Activity/Committees/Economics"
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
         }
       ],
       "sources": [
-        { "name": "OECD — Agricultural Policy Monitoring (Israel)", "url": "https://www.oecd.org/agriculture/" },
+        { "name": "OECD — Agricultural Policy Monitoring (Israel)", "url": "https://www.oecd.org/en/topics/agriculture-and-fisheries.html" },
         { "name": "Shoresh Institution — Food Prices", "url": "https://shoresh.institute" }
       ]
     },
@@ -536,7 +545,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration/govil-contact",
         "employees": 1400,
-        "avgSalaryMonthly": 14800
+        "avgSalaryMonthly": 14800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund absorption centers, Hebrew language programs (ulpan), and the bureaucratic intake process for new immigrants. Despite the stated goal of integration, the system creates dependency rather than self-sufficiency.",
@@ -589,7 +599,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_culture_and_sport",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_culture_and_sport/govil-contact",
         "employees": 500,
-        "avgSalaryMonthly": 14500
+        "avgSalaryMonthly": 14500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund government-supported cultural institutions, sports facilities, theaters, and museums — with little accountability for attendance, impact, or public value. Funding decisions are driven by political connections rather than merit.",
@@ -620,7 +631,7 @@
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [
@@ -634,7 +645,8 @@
         "website": "https://www.gov.il/he/departments/ministry_of_environmental_protection",
         "contactUrl": "https://www.gov.il/he/departments/ministry_of_environmental_protection/govil-contact",
         "employees": 600,
-        "avgSalaryMonthly": 16200
+        "avgSalaryMonthly": 16200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "You fund environmental regulation, waste management, and enforcement — across multiple agencies with overlapping mandates. Enforcement is inconsistent, and polluters face fines cheaper than compliance.",
@@ -678,7 +690,8 @@
         "nameHe": "גופים ממשלתיים שונים",
         "website": "https://www.gov.il",
         "employees": 45000,
-        "avgSalaryMonthly": 15500
+        "avgSalaryMonthly": 15500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
       },
       "whatYouPay": {
         "en": "This 12.4% catch-all funds dozens of minor agencies, government offices, the Knesset, the judiciary, the President's office, and various authorities — many with overlapping mandates and no clear performance metrics. Once created, government programs never die.",
@@ -720,13 +733,13 @@
           "type": "link",
           "labelEn": "Contact Your MK",
           "labelHe": "פנו לח\"כ שלכם",
-          "url": "https://main.knesset.gov.il/mk/current/Pages/default.aspx"
+          "url": "https://main.knesset.gov.il/mk/Pages/default.aspx"
         },
         {
           "type": "link",
           "labelEn": "File Freedom of Info Request",
           "labelHe": "הגישו בקשת חופש מידע",
-          "url": "https://foi.gov.il/"
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
         }
       ],
       "sources": [

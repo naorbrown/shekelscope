@@ -282,6 +282,50 @@
           "regulationCost": "Estimated 3-5% of GDP lost to regulatory burden",
           "cycleDuration": "Decades of compounding inefficiency"
         }
+      },
+      "centralBank": {
+        "title": "The Inflation Tax You Don't See",
+        "summary": "The Bank of Israel prints money, expands credit, and keeps interest rates artificially low — inflating asset prices (especially housing) while eroding your purchasing power. This is a hidden tax that transfers wealth from savers and workers to asset owners and the government.",
+        "rootCause": "Central bank monetary expansion inflates the money supply, devaluing each shekel you earn. Low interest rates make housing speculation profitable, driving up prices. The government benefits because inflation shrinks the real value of its debt — at your expense.",
+        "alternative": "Sound money policy: a rules-based monetary framework (like Switzerland's debt brake combined with inflation targeting) that prevents the government from inflating away your savings. Every 1% of unexpected inflation is a 1% stealth tax on every shekel you hold.",
+        "stats": {
+          "moneySupply": "M1 money supply grew ~60% in 5 years",
+          "housingInflation": "Housing prices up 120% in a decade",
+          "realWageGrowth": "Real wages barely kept pace with inflation"
+        }
+      },
+      "tycoonProblem": {
+        "title": "The Tycoon Problem: 10 Families Control Your Economy",
+        "summary": "A handful of elite families and business groups control a disproportionate share of Israel's economy — banking, energy, food, media, and real estate. This concentration kills competition, raises prices, and creates a system where the connected get richer while everyone else pays more.",
+        "rootCause": "Government-granted monopolies, regulatory capture, and barriers to entry protect incumbent businesses. Import quotas shield domestic producers from foreign competition. Banking concentration means fewer choices and higher fees. The same families sit on multiple boards across industries.",
+        "alternative": "Break up concentrated industries. Remove import barriers so foreign companies can compete. Simplify business registration (currently takes weeks of bureaucracy). When telecom was deregulated in 2012, prices dropped 80% — the same would happen in food, banking, and energy.",
+        "stats": {
+          "concentration": "10 business groups control ~30% of public companies",
+          "foodMonopoly": "Strauss, Tnuva, Osem dominate food supply",
+          "bankingFees": "Among highest banking fees in OECD"
+        }
+      },
+      "techAndCostOfLiving": {
+        "title": "High-Tech Salaries Don't Save You",
+        "summary": "Israel's tech sector pays globally competitive salaries — but cost of living erases the gains. A senior developer earning ₪35,000/month has less purchasing power than a counterpart in Austin, Berlin, or Lisbon after housing, taxes, food, and car costs.",
+        "rootCause": "High taxes (income + NI + health = ~35-45%), housing at 10.6x income, food 19% above EU, cars at 2x global price. Red tape and regulation inflate every cost. The result: Israel's 'competitive' tech salaries buy less than mid-range salaries in deregulated economies.",
+        "alternative": "Cut the red tape → costs drop → salaries go further → Israel becomes MORE competitive for talent, not less. Brain drain reverses when a ₪25,000 salary buys what it should, instead of being eaten by bureaucracy-inflated costs.",
+        "stats": {
+          "brainDrain": "Growing emigration of tech workers to EU/US",
+          "purchasingPower": "₪35K/mo buys less than €4K/mo in Berlin",
+          "regulatoryCost": "3-5% of GDP lost to regulatory burden"
+        }
+      },
+      "communityVsGovernment": {
+        "title": "You Don't Need Government to Help People",
+        "summary": "For every social service the government provides inefficiently, there's a community, nonprofit, or private alternative that does it better. Government welfare creates dependency and bureaucratic middlemen. Community action creates jobs, builds relationships, and solves problems where they actually exist.",
+        "rootCause": "Every shekel taken in tax has two costs: the direct cost (the shekel itself) and the opportunity cost (what you would have done with it). Government takes your money, skims 20-40% in overhead, and delivers services designed by distant bureaucrats. The alternative: you keep more money, spend it locally, create demand that employs your neighbors.",
+        "alternative": "Private nonprofits employ people AND deliver services — no bureaucratic middleman. Local businesses create employment that reduces poverty through work, not handouts. Community mutual aid (gemachim) already outperform government programs in many Israeli communities. As Milton Friedman showed: nobody spends other people's money as carefully as they spend their own.",
+        "stats": {
+          "overheadRate": "Government welfare: 20-40% overhead before delivery",
+          "localMultiplier": "₪1 spent locally generates ₪1.50-2.00 in local economic activity",
+          "gemachim": "Thousands of community mutual aid societies already operating"
+        }
       }
     }
   },

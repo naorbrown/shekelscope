@@ -30,7 +30,7 @@ interface CalculatorState {
 export const useCalculatorStore = create<CalculatorState>()(
   persist(
     (set, get) => ({
-      monthlyIncome: 0,
+      monthlyIncome: 13316,
       employmentType: 'employee',
       gender: 'male',
       childAges: [],
@@ -71,7 +71,7 @@ export const useCalculatorStore = create<CalculatorState>()(
 
       reset: () =>
         set({
-          monthlyIncome: 0,
+          monthlyIncome: 13316,
           employmentType: 'employee',
           gender: 'male',
           childAges: [],
