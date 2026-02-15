@@ -7,24 +7,21 @@ import { useCalculatorStore } from '@/lib/store/calculator-store';
 import { DEFAULT_MONTHLY_INCOME } from '@/lib/constants';
 import { DailyTaxHero } from '@/components/results/daily-tax-hero';
 import { DisplayToggle } from '@/components/calculator/display-toggle';
-import { ProfileManager } from '@/components/calculator/profile-manager';
-import { ResultsSummary } from '@/components/calculator/results-summary';
 import { ResultsBreakdown } from '@/components/calculator/results-breakdown';
-import { TaxDonut } from '@/components/dashboard/tax-donut';
-import { BudgetOverview } from '@/components/calculator/budget-overview';
-import { EfficiencyScore } from '@/components/dashboard/efficiency-score';
-import { RadicalBanner } from '@/components/calculator/radical-banner';
-import { FreedomSection } from '@/components/freedom/freedom-section';
-import { SectionWrapper } from '@/components/sections/section-wrapper';
-import { ActionLevel, LEVEL_CONFIGS } from '@/components/action/action-level';
-import { KnessetContact } from '@/components/action/knesset-contact';
+import { BudgetHero } from '@/components/budget/budget-hero';
 import { ImpactCounter } from '@/components/action/impact-counter';
 import { ShareCard } from '@/components/action/share-card';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export function ResultsPageClient() {
   const router = useRouter();
   const locale = useLocale();
-  const t = useTranslations();
+  const t = useTranslations('results');
   const { result, monthlyIncome, hasCalculated } = useCalculatorStore();
 
   // Re-calculate on mount if inputs exist but result is missing (page refresh / direct nav)
@@ -38,7 +35,6 @@ export function ResultsPageClient() {
   // Guard: redirect to calculator if user hasn't entered anything
   useEffect(() => {
     if (!result && monthlyIncome === DEFAULT_MONTHLY_INCOME && !hasCalculated) {
-      // Wait a tick for store hydration from localStorage
       const timeout = setTimeout(() => {
         const state = useCalculatorStore.getState();
         if (!state.result && !state.hasCalculated) {
@@ -60,65 +56,39 @@ export function ResultsPageClient() {
   return (
     <>
       {/* Hero: Daily tax amount */}
-      <div className="mb-8">
+      <div className="mb-6">
         <DailyTaxHero />
       </div>
 
-      {/* Controls */}
-      <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
-        <ProfileManager />
+      {/* Display toggle */}
+      <div className="flex justify-center mb-6">
         <DisplayToggle />
       </div>
 
-      {/* Tax summary + donut */}
-      <section className="space-y-6 mb-12">
-        <ResultsSummary />
-        <div className="max-w-md mx-auto">
-          <TaxDonut />
-        </div>
-        <ResultsBreakdown />
-      </section>
-
-      {/* Ministry breakdown */}
-      <section className="mb-12">
-        <BudgetOverview />
-      </section>
-
-      {/* Efficiency grades */}
-      <section className="mb-12">
-        <EfficiencyScore />
-      </section>
-
-      {/* Facts */}
-      <div className="mb-12">
-        <RadicalBanner />
+      {/* Collapsible detailed tax breakdown */}
+      <div className="mb-8">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="detailed-breakdown" className="border rounded-lg">
+            <AccordionTrigger className="px-4 text-sm font-medium">
+              {t('detailedBreakdown')}
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <ResultsBreakdown />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
 
-      {/* Reform scenarios */}
-      <FreedomSection />
+      {/* THE MAIN SECTION: Where Your Taxes Go */}
+      <section className="mb-12">
+        <BudgetHero />
+      </section>
 
-      {/* Take Action */}
-      <SectionWrapper
-        id="action"
-        title={t('action.title')}
-        subtitle={t('action.subtitle')}
-      >
-        <div className="space-y-0 mb-8">
-          {LEVEL_CONFIGS.map((_, i) => (
-            <ActionLevel key={LEVEL_CONFIGS[i].id} levelIndex={i} />
-          ))}
-        </div>
-
-        <div className="mb-6">
-          <KnessetContact />
-        </div>
-
-        <div className="mb-6">
-          <ImpactCounter />
-        </div>
-
+      {/* Footer CTA */}
+      <section className="space-y-4">
+        <ImpactCounter />
         <ShareCard />
-      </SectionWrapper>
+      </section>
     </>
   );
 }
