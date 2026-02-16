@@ -34,7 +34,6 @@
     "monthlySpending": "Monthly Consumer Spending (₪)",
     "calculate": "See Where It Goes",
     "monthly": "Monthly",
-    "annual": "Annual",
     "banner": {
       "line1": "93% of land is controlled by one government body — the Israel Land Authority.",
       "line2": "It takes an average of 13 years to get a building permit approved.",
@@ -45,10 +44,8 @@
   },
   "results": {
     "title": "Your Tax Breakdown",
-    "totalTaxMonthly": "Total Monthly Tax",
-    "totalTaxAnnual": "Total Annual Tax",
+    "totalTax": "Total Monthly Tax",
     "effectiveRate": "Effective Tax Rate",
-    "takeHome": "Annual Take-Home Pay",
     "monthlyNet": "Monthly Net Income",
     "incomeTax": "Income Tax",
     "nationalInsurance": "National Insurance",
@@ -58,7 +55,7 @@
     "grossTax": "Gross Income Tax",
     "afterCredits": "After Credits",
     "employerCost": "Total Employer Cost",
-    "vatEstimate": "Estimated Annual VAT",
+    "vatEstimate": "Estimated Monthly VAT",
     "dailyTax": "You pay in taxes per day",
     "perBracket": "Per Bracket Breakdown",
     "bracket": "Bracket",
@@ -77,7 +74,7 @@
     "detailedBreakdown": "Detailed Tax Breakdown",
     "overhead": "Overhead",
     "reachesService": "Reaches Service",
-    "perYear": "/yr"
+    "perMonth": "/mo"
   },
   "budget": {
     "defense": "Defense",
@@ -134,8 +131,8 @@
   "insights": {
     "title": "The Real Cost",
     "subtitle": "For every ₪100 you pay in taxes, how much actually helps someone?",
-    "heroStat": "Of your annual taxes, an estimated {amount} is lost to overhead",
-    "potentialSavings": "With competitive alternatives: {amount} in potential annual savings",
+    "heroStat": "Of your monthly taxes, an estimated {amount} is lost to overhead",
+    "potentialSavings": "With competitive alternatives: {amount} in potential monthly savings",
     "personalImpact": "This is YOUR money being burned in overhead before it reaches a single classroom, hospital, or road.",
     "perMinistry": {
       "yourContribution": "Your Contribution",
@@ -221,9 +218,9 @@
     "noData": "Run the calculator first to see your personalized freedom analysis.",
     "goToCalculator": "Go to Calculator",
     "hero": {
-      "currentBurden": "Your Current Annual Tax Burden",
+      "currentBurden": "Your Current Monthly Tax Burden",
       "reformedBurden": "Under Moderate Reform",
-      "annualSavings": "You Could Save Per Year"
+      "monthlySavings": "You Could Save Per Month"
     },
     "scenarioToggle": {
       "moderate": "Moderate Reform",

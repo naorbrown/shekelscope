@@ -22,11 +22,11 @@ export function TaxDonut() {
   const tResults = useTranslations('results');
   const locale = useLocale();
   const isHe = locale === 'he';
-  const { result, displayMode } = useCalculatorStore();
+  const { result } = useCalculatorStore();
   const svgRef = useRef<SVGSVGElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
-  const divisor = displayMode === 'monthly' ? 12 : 1;
+  const divisor = 12;
 
   const data: SliceData[] = useMemo(() => {
     if (!result) return [];
@@ -131,7 +131,7 @@ export function TaxDonut() {
               {/* Center label */}
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
                 <p className="text-muted-foreground text-xs">
-                  {displayMode === 'monthly' ? tResults('totalTaxMonthly') : tResults('totalTaxAnnual')}
+                  {tResults('totalTax')}
                 </p>
                 <p className="text-xl font-bold">{formatCurrency(totalTax)}</p>
               </div>

@@ -10,18 +10,16 @@ import { Building2 } from 'lucide-react';
 export function ResultsSummary() {
   const t = useTranslations('results');
   const locale = useLocale();
-  const { result, displayMode } = useCalculatorStore();
+  const { result } = useCalculatorStore();
 
   if (!result) return null;
 
-  const isMonthly = displayMode === 'monthly';
-  const divisor = isMonthly ? 12 : 1;
   const isHe = locale === 'he';
 
   const stats = [
     {
-      label: isMonthly ? t('totalTaxMonthly') : t('totalTaxAnnual'),
-      value: formatCurrency(result.totalDeductions / divisor),
+      label: t('totalTax'),
+      value: formatCurrency(result.totalDeductions / 12),
       color: 'text-destructive',
     },
     {
@@ -30,8 +28,8 @@ export function ResultsSummary() {
       color: 'text-orange-600',
     },
     {
-      label: isMonthly ? t('monthlyNet') : t('takeHome'),
-      value: formatCurrency(result.netIncome / divisor),
+      label: t('monthlyNet'),
+      value: formatCurrency(result.netIncome / 12),
       color: 'text-emerald-600',
     },
   ];

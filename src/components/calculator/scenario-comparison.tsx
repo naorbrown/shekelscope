@@ -47,9 +47,9 @@ function ResultColumn({
       <h4 className="text-sm font-semibold text-center truncate">{label}</h4>
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <span className="text-muted-foreground">{tResults('totalTaxAnnual')}</span>
+          <span className="text-muted-foreground">{tResults('totalTax')}</span>
           <span className="font-mono font-medium">
-            {formatCurrency(result.totalDeductions)}
+            {formatCurrency(result.totalDeductions / 12)}
           </span>
         </div>
         <div className="flex justify-between">
@@ -66,12 +66,12 @@ function ResultColumn({
         </div>
         <div className="flex justify-between">
           <span className="text-muted-foreground">{tResults('incomeTax')}</span>
-          <span className="font-mono">{formatCurrency(result.incomeTax.netTax)}</span>
+          <span className="font-mono">{formatCurrency(result.incomeTax.netTax / 12)}</span>
         </div>
         <div className="flex justify-between">
           <span className="text-muted-foreground">{tResults('nationalInsurance')}</span>
           <span className="font-mono">
-            {formatCurrency(result.nationalInsurance.employeeContribution)}
+            {formatCurrency(result.nationalInsurance.employeeContribution / 12)}
           </span>
         </div>
       </div>
@@ -102,7 +102,7 @@ export function ScenarioComparison() {
 
   const isHe = locale === 'he';
   const diff =
-    resultA && resultB ? resultB.totalDeductions - resultA.totalDeductions : null;
+    resultA && resultB ? (resultB.totalDeductions - resultA.totalDeductions) / 12 : null;
 
   return (
     <motion.div
@@ -176,7 +176,7 @@ export function ScenarioComparison() {
                   >
                     {diff > 0 ? '+' : ''}
                     {formatCurrency(diff)}
-                    {isHe ? ' בשנה' : '/yr'}
+                    {isHe ? ' בחודש' : '/mo'}
                   </span>
                 </div>
               )}

@@ -21,19 +21,19 @@ export function PaycheckComparison({
   const rows = [
     {
       label: t('gross'),
-      current: result.grossIncome,
-      reformedVal: result.grossIncome,
+      current: result.grossIncome / 12,
+      reformedVal: result.grossIncome / 12,
     },
     {
       label: t('deductions'),
-      current: reformed.currentTotalDeductions,
-      reformedVal: reformed.reformedTotalDeductions,
+      current: reformed.currentTotalDeductions / 12,
+      reformedVal: reformed.reformedTotalDeductions / 12,
       negative: true,
     },
     {
       label: t('net'),
-      current: result.grossIncome - reformed.currentTotalDeductions,
-      reformedVal: result.grossIncome - reformed.reformedTotalDeductions,
+      current: (result.grossIncome - reformed.currentTotalDeductions) / 12,
+      reformedVal: (result.grossIncome - reformed.reformedTotalDeductions) / 12,
       highlight: true,
     },
   ];
@@ -100,21 +100,13 @@ export function PaycheckComparison({
             </span>
           </div>
 
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="rounded-lg bg-emerald-50 dark:bg-emerald-950/30 p-3 text-center">
               <p className="text-xs text-muted-foreground">
                 {t('monthlySavings')}
               </p>
               <p className="font-mono font-bold text-emerald-700 dark:text-emerald-300">
                 {formatCurrency(reformed.monthlySavings)}
-              </p>
-            </div>
-            <div className="rounded-lg bg-emerald-50 dark:bg-emerald-950/30 p-3 text-center">
-              <p className="text-xs text-muted-foreground">
-                {t('annualSavings')}
-              </p>
-              <p className="font-mono font-bold text-emerald-700 dark:text-emerald-300">
-                {formatCurrency(reformed.annualSavings)}
               </p>
             </div>
             <div className="rounded-lg bg-emerald-50 dark:bg-emerald-950/30 p-3 text-center">

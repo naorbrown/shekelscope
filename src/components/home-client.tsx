@@ -5,7 +5,7 @@ import { TaxForm } from '@/components/calculator/tax-form';
 import { ResultsSummary } from '@/components/calculator/results-summary';
 import { ResultsBreakdown } from '@/components/calculator/results-breakdown';
 import { BudgetOverview } from '@/components/calculator/budget-overview';
-import { DisplayToggle } from '@/components/calculator/display-toggle';
+
 import { RadicalBanner } from '@/components/calculator/radical-banner';
 import { TaxDonut } from '@/components/dashboard/tax-donut';
 import { DailyReceipt } from '@/components/dashboard/daily-receipt';
@@ -45,7 +45,6 @@ export function HomeClient() {
           <section id="results" className="scroll-mt-20 space-y-6 mb-12">
             <div className="flex items-center justify-between flex-wrap gap-3">
               <ProfileManager />
-              <DisplayToggle />
             </div>
             <ResultsSummary />
             <ResultsBreakdown />
