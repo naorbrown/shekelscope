@@ -7,6 +7,7 @@ import { useCalculatorStore } from '@/lib/store/calculator-store';
 import { DEFAULT_MONTHLY_INCOME } from '@/lib/constants';
 import { DailyTaxHero } from '@/components/results/daily-tax-hero';
 
+
 import { ResultsBreakdown } from '@/components/calculator/results-breakdown';
 import { BudgetHero } from '@/components/budget/budget-hero';
 import { ImpactCounter } from '@/components/action/impact-counter';
@@ -73,6 +74,7 @@ export function ResultsPageClient() {
           </AccordionItem>
         </Accordion>
       </div>
+
 
       {/* THE MAIN SECTION: Where Your Taxes Go */}
       <section className="mb-12">
