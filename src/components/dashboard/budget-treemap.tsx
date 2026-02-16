@@ -26,14 +26,14 @@ export function BudgetTreemap() {
   const bt = useTranslations('budget');
   const locale = useLocale();
   const isHe = locale === 'he';
-  const { result, displayMode } = useCalculatorStore();
+  const { result } = useCalculatorStore();
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(600);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [lockedId, setLockedId] = useState<string | null>(null);
   const prefersReducedMotion = useReducedMotion();
 
-  const divisor = displayMode === 'monthly' ? 12 : 1;
+  const divisor = 12;
   const height = Math.max(300, width * 0.55);
 
   useEffect(() => {

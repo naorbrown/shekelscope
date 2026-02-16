@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useCalculatorStore } from '@/lib/store/calculator-store';
 import { DEFAULT_MONTHLY_INCOME } from '@/lib/constants';
 import { DailyTaxHero } from '@/components/results/daily-tax-hero';
-import { DisplayToggle } from '@/components/calculator/display-toggle';
+
 import { ResultsBreakdown } from '@/components/calculator/results-breakdown';
 import { BudgetHero } from '@/components/budget/budget-hero';
 import { ImpactCounter } from '@/components/action/impact-counter';
@@ -58,11 +58,6 @@ export function ResultsPageClient() {
       {/* Hero: Daily tax amount */}
       <div className="mb-6">
         <DailyTaxHero />
-      </div>
-
-      {/* Display toggle */}
-      <div className="flex justify-center mb-6">
-        <DisplayToggle />
       </div>
 
       {/* Collapsible detailed tax breakdown */}

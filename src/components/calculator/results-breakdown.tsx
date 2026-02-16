@@ -37,11 +37,11 @@ function Row({
 
 export function ResultsBreakdown() {
   const t = useTranslations('results');
-  const { result, displayMode } = useCalculatorStore();
+  const { result } = useCalculatorStore();
 
   if (!result) return null;
 
-  const d = displayMode === 'monthly' ? 12 : 1;
+  const d = 12;
 
   return (
     <motion.div

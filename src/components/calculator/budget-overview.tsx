@@ -68,11 +68,11 @@ export function BudgetOverview() {
   const t = useTranslations('results');
   const bt = useTranslations('budget');
   const locale = useLocale();
-  const { result, displayMode, completedActions, toggleAction } = useCalculatorStore();
+  const { result, completedActions, toggleAction } = useCalculatorStore();
 
   if (!result) return null;
 
-  const d = displayMode === 'monthly' ? 12 : 1;
+  const d = 12;
   const sorted = [...result.budgetAllocation].sort((a, b) => b.amount - a.amount);
   const isHe = locale === 'he';
 

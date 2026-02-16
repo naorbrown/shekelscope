@@ -13,7 +13,6 @@ export function DailyTaxHero() {
 
   const dailyTax = result.dailyTax;
   const monthlyTax = result.totalDeductions / 12;
-  const annualTax = result.totalDeductions;
 
   return (
     <motion.div
@@ -31,10 +30,6 @@ export function DailyTaxHero() {
       <div className="mt-4 flex items-center justify-center gap-6 text-sm text-muted-foreground">
         <span>
           {formatCurrency(monthlyTax)}<span className="text-xs">/mo</span>
-        </span>
-        <span className="text-muted-foreground/30">|</span>
-        <span>
-          {formatCurrency(annualTax)}<span className="text-xs">/yr</span>
         </span>
         <span className="text-muted-foreground/30">|</span>
         <span className="font-semibold text-foreground">

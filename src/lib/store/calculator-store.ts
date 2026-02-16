@@ -16,7 +16,6 @@ interface CalculatorState {
   gender: Gender;
   childAges: number[];
   selectedCity: string | null;
-  displayMode: 'monthly' | 'annual';
   result: TotalTaxResult | null;
   hasCalculated: boolean;
 
@@ -34,7 +33,6 @@ interface CalculatorState {
   removeChild: (index: number) => void;
   setChildAge: (index: number, age: number) => void;
   setSelectedCity: (city: string | null) => void;
-  setDisplayMode: (mode: 'monthly' | 'annual') => void;
   calculate: () => void;
   reset: () => void;
 
@@ -67,7 +65,6 @@ export const useCalculatorStore = create<CalculatorState>()(
       gender: 'male',
       childAges: [],
       selectedCity: null,
-      displayMode: 'monthly',
       result: null,
       hasCalculated: false,
 
@@ -89,7 +86,6 @@ export const useCalculatorStore = create<CalculatorState>()(
           childAges: s.childAges.map((a, i) => (i === index ? age : a)),
         })),
       setSelectedCity: (city) => set({ selectedCity: city }),
-      setDisplayMode: (mode) => set({ displayMode: mode }),
 
       calculate: () => {
         const state = get();
@@ -213,7 +209,7 @@ export const useCalculatorStore = create<CalculatorState>()(
     }),
     {
       name: 'openshekel-calculator',
-      version: 2,
+      version: 3,
       migrate: (persistedState: unknown, version: number): CalculatorState => {
         const state = persistedState as Record<string, unknown>;
         if (version < 1) {
@@ -236,6 +232,15 @@ export const useCalculatorStore = create<CalculatorState>()(
             hasCalculated: false,
           } as unknown as CalculatorState;
         }
+        if (version < 3) {
+          // v2 → v3: remove displayMode (always monthly now)
+          const { displayMode: _, ...rest } = state as Record<string, unknown>;
+          return {
+            ...rest,
+            result: null,
+            hasCalculated: false,
+          } as unknown as CalculatorState;
+        }
         return state as unknown as CalculatorState;
       },
       partialize: (state) => ({
@@ -245,7 +250,6 @@ export const useCalculatorStore = create<CalculatorState>()(
         gender: state.gender,
         childAges: state.childAges,
         selectedCity: state.selectedCity,
-        displayMode: state.displayMode,
         // v1 fields
         profiles: state.profiles,
         activeProfileId: state.activeProfileId,

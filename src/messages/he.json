@@ -34,7 +34,6 @@
     "monthlySpending": "הוצאה חודשית צרכנית (₪)",
     "calculate": "ראו לאן הכסף הולך",
     "monthly": "חודשי",
-    "annual": "שנתי",
     "banner": {
       "line1": "93% מהקרקעות בשליטת גוף ממשלתי אחד — רשות מקרקעי ישראל.",
       "line2": "לוקח בממוצע 13 שנה לקבל אישור להיתר בנייה.",
@@ -45,10 +44,8 @@
   },
   "results": {
     "title": "פירוט המסים שלך",
-    "totalTaxMonthly": "סה\"כ מס חודשי",
-    "totalTaxAnnual": "סה\"כ מס שנתי",
+    "totalTax": "סה\"כ מס חודשי",
     "effectiveRate": "שיעור מס אפקטיבי",
-    "takeHome": "שכר נטו שנתי",
     "monthlyNet": "הכנסה חודשית נטו",
     "incomeTax": "מס הכנסה",
     "nationalInsurance": "ביטוח לאומי",
@@ -58,7 +55,7 @@
     "grossTax": "מס הכנסה ברוטו",
     "afterCredits": "לאחר זיכויים",
     "employerCost": "עלות מעסיק כוללת",
-    "vatEstimate": "מע\"מ שנתי משוער",
+    "vatEstimate": "מע\"מ חודשי משוער",
     "dailyTax": "אתם משלמים מסים ביום",
     "perBracket": "פירוט לפי מדרגות",
     "bracket": "מדרגה",
@@ -77,7 +74,7 @@
     "detailedBreakdown": "פירוט מס מפורט",
     "overhead": "תקורה",
     "reachesService": "מגיע לשירות",
-    "perYear": "/שנה"
+    "perMonth": "/חודש"
   },
   "budget": {
     "defense": "ביטחון",
@@ -137,8 +134,8 @@
   "insights": {
     "title": "העלות האמיתית",
     "subtitle": "מכל ₪100 שאתם משלמים במסים, כמה באמת עוזר למישהו?",
-    "heroStat": "מתוך המסים השנתיים שלכם, כ-{amount} הולכים לתקורה",
-    "potentialSavings": "עם חלופות תחרותיות: חיסכון שנתי פוטנציאלי של {amount}",
+    "heroStat": "מתוך המסים החודשיים שלכם, כ-{amount} הולכים לתקורה",
+    "potentialSavings": "עם חלופות תחרותיות: חיסכון חודשי פוטנציאלי של {amount}",
     "personalImpact": "זה הכסף שלכם שנשרף בתקורה לפני שהוא מגיע לכיתה, לבית חולים, או לכביש אחד.",
     "perMinistry": {
       "yourContribution": "התרומה שלך",
@@ -293,9 +290,9 @@
     "noData": "הריצו את המחשבון קודם כדי לראות את ניתוח החירות האישי שלכם.",
     "goToCalculator": "למחשבון",
     "hero": {
-      "currentBurden": "נטל המס השנתי הנוכחי שלכם",
+      "currentBurden": "נטל המס החודשי הנוכחי שלכם",
       "reformedBurden": "תחת רפורמה מתונה",
-      "annualSavings": "יכולתם לחסוך בשנה"
+      "monthlySavings": "יכולתם לחסוך בחודש"
     },
     "scenarioToggle": {
       "moderate": "רפורמה מתונה",

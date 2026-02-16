@@ -27,10 +27,10 @@ const narrativeData = narratives as unknown as {
 
 export function BudgetHero() {
   const t = useTranslations('results');
-  const { result, displayMode, completedActions, toggleAction } =
+  const { result, completedActions, toggleAction } =
     useCalculatorStore();
 
-  const displayDivisor = displayMode === 'monthly' ? 12 : 1;
+  const displayDivisor = 12;
 
   const sorted = useMemo(
     () =>
