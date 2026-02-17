@@ -1,0 +1,751 @@
+{
+  "categories": {
+    "defense": {
+      "ministry": {
+        "nameEn": "Ministry of Defense",
+        "nameHe": "משרד הביטחון",
+        "website": "https://www.mod.gov.il",
+        "contactUrl": "https://www.mod.gov.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
+        "employees": 35000,
+        "avgSalaryMonthly": 18500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund the IDF, military intelligence, defense procurement, veterans' services, and the administrative apparatus of the Ministry of Defense. This is the single largest discretionary budget item.",
+        "he": "אתם ממנים את צה\"ל, מודיעין צבאי, רכש ביטחוני, שירותי ותיקים ואת המנגנון הבירוקרטי של משרד הביטחון. זהו סעיף התקציב הגדול ביותר."
+      },
+      "problems": [
+        {
+          "title": { "en": "No Competitive Bidding", "he": "אין מכרזים תחרותיים" },
+          "detail": { "en": "Sole-supplier procurement contracts bypass competitive bidding, inflating costs by an estimated 15-20%. Defense contractors face no price pressure.", "he": "חוזי רכש מספק יחיד עוקפים מכרזים תחרותיים, ומנפחים עלויות ב-15-20%. קבלני ביטחון אינם עומדים בפני לחץ מחירים." },
+          "stat": "15-20% markup"
+        },
+        {
+          "title": { "en": "Administrative Bloat", "he": "ניפוח מנהלי" },
+          "detail": { "en": "Multiple oversight layers between the Ministry and operational units. Administrative staff-to-combat ratios far exceed comparable militaries.", "he": "שכבות פיקוח מרובות בין המשרד ליחידות המבצעיות. יחס הצוות המנהלי ללוחמים חורג בהרבה מצבאות דומים." },
+          "stat": "~35,000 staff"
+        }
+      ],
+      "betterSystem": {
+        "en": "Singapore achieves comparable military capability at 30% lower administrative cost through competitive procurement and lean organizational structure. South Korea uses competitive bidding for most defense contracts.",
+        "he": "סינגפור משיגה יכולת צבאית דומה בעלות מנהלית נמוכה ב-30% באמצעות רכש תחרותי ומבנה ארגוני רזה. דרום קוריאה משתמשת במכרזים תחרותיים לרוב חוזי הביטחון."
+      },
+      "actions": [
+        {
+          "type": "link",
+          "labelEn": "State Comptroller Defense Reports",
+          "labelHe": "דוחות מבקר המדינה — ביטחון",
+          "url": "https://www.mevaker.gov.il"
+        },
+        {
+          "type": "contact",
+          "labelEn": "Contact the Ministry",
+          "labelHe": "פנו למשרד הביטחון",
+          "url": "https://www.mod.gov.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Foreign Affairs & Defense Committee",
+          "labelHe": "ועדת חוץ וביטחון של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "State Comptroller Annual Reports", "url": "https://www.mevaker.gov.il" },
+        { "name": "Israel State Budget 2025", "url": "https://www.gov.il/he/departments/policies/state-budget-proposal-2025" }
+      ]
+    },
+    "education": {
+      "ministry": {
+        "nameEn": "Ministry of Education",
+        "nameHe": "משרד החינוך",
+        "website": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page",
+        "contactUrl": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page",
+        "employees": 180000,
+        "avgSalaryMonthly": 12800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund 180,000 government education employees, school buildings, curriculum development, and a massive administrative bureaucracy between the Ministry and the classroom. Israel spends $9,400 per student but scores below the OECD average on PISA.",
+        "he": "אתם ממנים 180,000 עובדי חינוך ממשלתיים, בנייני בתי ספר, פיתוח תוכניות לימודים ובירוקרטיה מנהלית עצומה בין המשרד לכיתה. ישראל מוציאה $9,400 לתלמיד אבל מציגה ציונים נמוכים מהממוצע ב-OECD במבחני PISA."
+      },
+      "problems": [
+        {
+          "title": { "en": "Administrative Bloat", "he": "ניפוח מנהלי" },
+          "detail": { "en": "~25% of the education budget is consumed by administrative layers before a single shekel reaches a classroom. Multiple bureaucratic tiers between the Ministry and teachers.", "he": "כ-25% מתקציב החינוך נבלע בשכבות מנהליות לפני שאגורה אחת מגיעה לכיתה. שכבות בירוקרטיות מרובות בין המשרד למורים." },
+          "stat": "25% overhead"
+        },
+        {
+          "title": { "en": "Below OECD Average Results", "he": "תוצאות מתחת לממוצע OECD" },
+          "detail": { "en": "Israel scores 470 on PISA vs OECD average 489 despite high per-student spending. Union rigidity prevents merit-based pay, and curriculum delivery hasn't modernized.", "he": "ישראל מציגה ציון 470 ב-PISA מול ממוצע OECD של 489 למרות הוצאה גבוהה לתלמיד. נוקשות ארגונית מונעת שכר מבוסס הישגים, ושיטות ההוראה לא התעדכנו." },
+          "stat": "PISA: 470/489"
+        },
+        {
+          "title": { "en": "No School Choice", "he": "אין בחירת בתי ספר" },
+          "detail": { "en": "Parents have almost no ability to choose schools or create competitive pressure on education quality. The system is centralized, with no accountability for outcomes.", "he": "להורים כמעט אין יכולת לבחור בתי ספר או ליצור לחץ תחרותי על איכות החינוך. המערכת ריכוזית, ללא אחריותיות על תוצאות." }
+        }
+      ],
+      "betterSystem": {
+        "en": "Finland achieves world-class results with less bureaucracy. Estonia spends less per student and significantly outperforms Israel on PISA. Education vouchers and charter schools show 15-30% better outcomes per dollar.",
+        "he": "פינלנד משיגה תוצאות עולמיות עם פחות בירוקרטיה. אסטוניה מוציאה פחות לתלמיד ומשיגה תוצאות טובות משמעותית מישראל ב-PISA. שוברי חינוך ובתי ספר עצמאיים מציגים תוצאות טובות ב-15-30% לכל שקל."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Education",
+          "labelHe": "פנו למשרד החינוך",
+          "url": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Education Committee",
+          "labelHe": "ועדת חינוך של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        },
+        {
+          "type": "link",
+          "labelEn": "Israel PISA Results (OECD)",
+          "labelHe": "תוצאות PISA של ישראל (OECD)",
+          "url": "https://www.oecd.org/en/about/programmes/pisa.html"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "OECD PISA Reports", "url": "https://www.oecd.org/en/about/programmes/pisa.html" },
+        { "name": "State Comptroller — Education Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "welfare": {
+      "ministry": {
+        "nameEn": "Ministry of Welfare & Social Affairs",
+        "nameHe": "משרד הרווחה והביטחון החברתי",
+        "website": "https://www.gov.il/he/departments/molsa",
+        "contactUrl": "https://www.gov.il/he/departments/molsa/govil-contact",
+        "employees": 8500,
+        "avgSalaryMonthly": 14200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund income support (havtachat hachnasa), disability benefits, elderly care, child welfare services, and the bureaucratic apparatus that decides who qualifies. ~20% of welfare budgets are consumed by means-testing bureaucracy before a single shekel reaches a recipient.",
+        "he": "אתם ממנים הבטחת הכנסה, קצבאות נכות, טיפול בקשישים, שירותי רווחת הילד והמנגנון הבירוקרטי שקובע מי זכאי. כ-20% מתקציבי הרווחה נבלעים בבירוקרטיה של בדיקת זכאות לפני שאגורה מגיעה לנזקק."
+      },
+      "problems": [
+        {
+          "title": { "en": "Means-Testing Eats the Budget", "he": "בדיקות זכאות בולעות את התקציב" },
+          "detail": { "en": "20% of welfare budgets are consumed by the bureaucracy that decides who gets help. The gatekeeping costs more than the benefits it distributes in many programs.", "he": "20% מתקציבי הרווחה נבלעים בבירוקרטיה שמחליטה מי מקבל עזרה. שמירת הסף עולה יותר מההטבות שהיא מחלקת בתוכניות רבות." },
+          "stat": "20% waste"
+        },
+        {
+          "title": { "en": "Fragmented Delivery", "he": "מערכת מפוצלת" },
+          "detail": { "en": "Dozens of agencies with overlapping mandates. A single family may interact with 5+ agencies for different benefits, each requiring separate paperwork and verification.", "he": "עשרות סוכנויות עם סמכויות חופפות. משפחה בודדת עשויה לעמוד מול 5+ סוכנויות עבור הטבות שונות, כל אחת דורשת ניירת ואימות נפרדים." }
+        },
+        {
+          "title": { "en": "Creates Dependency", "he": "יוצרת תלות" },
+          "detail": { "en": "Benefit cliffs and marginal tax rates above 70% for low-income earners create poverty traps where working more results in losing benefits — making it economically irrational to seek employment.", "he": "מדרגות הטבה ושיעורי מס שוליים מעל 70% למשתכרים נמוכים יוצרים מלכודות עוני שבהן עבודה נוספת גורמת לאובדן הטבות — מה שהופך חיפוש עבודה ללא רציונלי כלכלית." },
+          "stat": ">70% marginal rate"
+        }
+      ],
+      "betterSystem": {
+        "en": "Direct cash transfers, as piloted in multiple countries, cut administrative costs by 60-80% and produce equal or better outcomes. A negative income tax (as proposed by Milton Friedman) eliminates the poverty trap.",
+        "he": "העברות כספיות ישירות, כפי שנוסו במדינות מרובות, מפחיתות עלויות מנהליות ב-60-80% ומניבות תוצאות זהות או טובות יותר. מס הכנסה שלילי (כפי שהציע מילטון פרידמן) מבטל את מלכודת העוני."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Welfare",
+          "labelHe": "פנו למשרד הרווחה",
+          "url": "https://www.gov.il/he/departments/molsa/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Labor & Welfare Committee",
+          "labelHe": "ועדת העבודה והרווחה",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        },
+        {
+          "type": "link",
+          "labelEn": "Kol Zchut — Your Welfare Rights",
+          "labelHe": "כל זכות — זכויות רווחה",
+          "url": "https://www.kolzchut.org.il"
+        }
+      ],
+      "sources": [
+        { "name": "National Insurance Institute Reports", "url": "https://www.btl.gov.il" },
+        { "name": "State Comptroller — Welfare Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "health": {
+      "ministry": {
+        "nameEn": "Ministry of Health",
+        "nameHe": "משרד הבריאות",
+        "website": "https://www.health.gov.il",
+        "contactUrl": "https://www.health.gov.il/English/Topics/CallCenter",
+        "employees": 42000,
+        "avgSalaryMonthly": 16500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You pay TWICE for healthcare: once through mandatory health insurance tax (3.1-5% of salary) deducted from your paycheck, and again through the budget allocation. Despite this double taxation, Israel spends only $3,100 per capita — below the OECD average of $4,200 — with chronic doctor shortages and long wait times.",
+        "he": "אתם משלמים פעמיים על בריאות: פעם דרך מס ביטוח בריאות חובה (3.1-5% מהמשכורת) שנגרע מהמשכורת, ושוב דרך הקצאת התקציב. למרות המיסוי הכפול, ישראל מוציאה רק $3,100 לנפש — מתחת לממוצע OECD של $4,200 — עם מחסור כרוני ברופאים ותורים ארוכים."
+      },
+      "problems": [
+        {
+          "title": { "en": "Double Taxation", "he": "מיסוי כפול" },
+          "detail": { "en": "You pay health insurance tax directly from your salary AND fund the Health Ministry through income tax. Where does the overlap go? No one can clearly account for this.", "he": "אתם משלמים מס ביטוח בריאות ישירות מהמשכורת וגם ממנים את משרד הבריאות דרך מס הכנסה. לאן הולכת החפיפה? אף אחד לא יכול לתת על כך דין וחשבון ברור." },
+          "stat": "2× taxation"
+        },
+        {
+          "title": { "en": "Doctor Shortage", "he": "מחסור ברופאים" },
+          "detail": { "en": "Israel has one of the lowest doctor-to-patient ratios in the OECD. Wait times for specialists can exceed months. New doctors flee to the private sector or abroad for better pay.", "he": "ישראל מציגה את אחד מיחסי הרופא-למטופל הנמוכים ביותר ב-OECD. תורים למומחים יכולים לחרוג מחודשים. רופאים חדשים בורחים למגזר הפרטי או לחו\"ל בגלל שכר טוב יותר." },
+          "stat": "Lowest in OECD"
+        },
+        {
+          "title": { "en": "Kupot Cholim Compete on Marketing, Not Quality", "he": "קופות חולים מתחרות על שיווק, לא על איכות" },
+          "detail": { "en": "The four HMOs (kupot cholim) compete for members through marketing rather than medical outcomes. No transparent quality metrics. No price competition.", "he": "ארבע קופות החולים מתחרות על חברים באמצעות שיווק ולא באמצעות תוצאות רפואיות. אין מדדי איכות שקופים. אין תחרות מחירים." }
+        }
+      ],
+      "betterSystem": {
+        "en": "Singapore's mixed public-private model with mandatory health savings accounts (Medisave) achieves better outcomes at lower cost. Patients have skin in the game, providers compete on quality, and catastrophic insurance covers emergencies.",
+        "he": "המודל המעורב ציבורי-פרטי של סינגפור עם חשבונות חיסכון בריאותיים חובה (Medisave) משיג תוצאות טובות יותר בעלות נמוכה יותר. למטופלים יש עניין אישי, ספקים מתחרים על איכות, וביטוח קטסטרופלי מכסה מקרי חירום."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Health",
+          "labelHe": "פנו למשרד הבריאות",
+          "url": "https://www.health.gov.il/English/Topics/CallCenter"
+        },
+        {
+          "type": "link",
+          "labelEn": "Compare Kupot Cholim Services",
+          "labelHe": "השוו שירותי קופות חולים",
+          "url": "https://www.health.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "File a Health Complaint",
+          "labelHe": "הגישו תלונה בריאותית",
+          "url": "https://www.health.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Health Committee",
+          "labelHe": "ועדת הבריאות של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        }
+      ],
+      "sources": [
+        { "name": "OECD Health Statistics — Israel", "url": "https://www.oecd.org/en/topics/health.html" },
+        { "name": "State Comptroller — Health Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "debt": {
+      "ministry": {
+        "nameEn": "Ministry of Finance — Debt Management",
+        "nameHe": "משרד האוצר — ניהול חוב",
+        "website": "https://www.gov.il/he/departments/ministry_of_finance",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_finance/govil-contact",
+        "employees": 2500,
+        "avgSalaryMonthly": 22000,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "Nearly 10% of your taxes go to paying INTEREST on debt from previous years' deficit spending. This money produces zero public services — no roads, no hospitals, no schools. It's pure transfer from taxpayers to bondholders.",
+        "he": "כמעט 10% מהמסים שלכם הולכים לתשלום ריבית על חובות מגירעונות של שנים קודמות. הכסף הזה מייצר אפס שירותים ציבוריים — לא כבישים, לא בתי חולים, לא בתי ספר. זהו העברה מוחלטת ממשלמי מסים למחזיקי אגרות חוב."
+      },
+      "problems": [
+        {
+          "title": { "en": "Debt Spiral", "he": "ספירלת חוב" },
+          "detail": { "en": "Israel borrows to pay interest on previous borrowing. Persistent deficits compound year over year, crowding out productive spending.", "he": "ישראל לווה כדי לשלם ריבית על הלוואות קודמות. גירעונות מתמשכים מצטברים משנה לשנה, ודוחקים הוצאות פרודוקטיביות." },
+          "stat": "~10% of budget"
+        },
+        {
+          "title": { "en": "No Fiscal Discipline", "he": "אין משמעת תקציבית" },
+          "detail": { "en": "Israeli governments consistently run deficits regardless of which party is in power. No structural mechanism forces balanced budgets.", "he": "ממשלות ישראל עומדות באופן עקבי בגירעונות ללא קשר למפלגה השלטת. אין מנגנון מבני שכופה תקציבים מאוזנים." }
+        }
+      ],
+      "betterSystem": {
+        "en": "Switzerland's 'debt brake' constitutional amendment forces balanced budgets over the business cycle, reducing debt-to-GDP from 50% to 25% in 20 years. Several US states have balanced budget requirements.",
+        "he": "תיקון חוקתי של 'בלם חוב' בשוויץ כופה תקציבים מאוזנים על פני מחזור עסקי, והפחית חוב-תמ\"ג מ-50% ל-25% ב-20 שנה. מדינות רבות בארה\"ב מחויבות לתקציב מאוזן."
+      },
+      "actions": [
+        {
+          "type": "link",
+          "labelEn": "Israel Debt Clock",
+          "labelHe": "שעון החוב של ישראל",
+          "url": "https://www.gov.il/he/departments/ministry_of_finance"
+        },
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Finance",
+          "labelHe": "פנו למשרד האוצר",
+          "url": "https://www.gov.il/he/departments/ministry_of_finance/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Finance Committee",
+          "labelHe": "ועדת הכספים של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        }
+      ],
+      "sources": [
+        { "name": "Bank of Israel — Fiscal Reports", "url": "https://www.boi.org.il" },
+        { "name": "Israel State Budget", "url": "https://www.gov.il/he/departments/policies/state-budget-proposal-2025" }
+      ]
+    },
+    "transportation": {
+      "ministry": {
+        "nameEn": "Ministry of Transport & Road Safety",
+        "nameHe": "משרד התחבורה והבטיחות בדרכים",
+        "website": "https://www.gov.il/he/departments/ministry_of_transport",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_transport/govil-contact",
+        "employees": 3200,
+        "avgSalaryMonthly": 16800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund road construction, public transit, railway infrastructure, and the planning bureaucracy that takes 10-20 years per major project. Cost overruns average 35%. Meanwhile, you also pay 100%+ import tax on your car.",
+        "he": "אתם ממנים בניית כבישים, תחבורה ציבורית, תשתיות רכבת והבירוקרטיה התכנונית שלוקחת 10-20 שנה לכל פרויקט גדול. חריגות עלות ממוצעות 35%. בינתיים, אתם גם משלמים 100%+ מס יבוא על הרכב שלכם."
+      },
+      "problems": [
+        {
+          "title": { "en": "Decade-Long Delays", "he": "עיכובים של עשור" },
+          "detail": { "en": "Major infrastructure projects take 10-20 years from planning to completion. The Tel Aviv light rail was planned in the 1990s. Bureaucratic approvals, land disputes, and political interference cause endless delays.", "he": "פרויקטי תשתית גדולים לוקחים 10-20 שנה מתכנון להשלמה. הרכבת הקלה בתל אביב תוכננה בשנות ה-90. אישורים בירוקרטיים, סכסוכי קרקע והתערבות פוליטית גורמים לעיכובים אינסופיים." },
+          "stat": "10-20 year delays"
+        },
+        {
+          "title": { "en": "Cost Overruns", "he": "חריגות עלות" },
+          "detail": { "en": "Transportation projects consistently exceed budgets by 35% on average. Contractor monopolies and change orders inflate costs with no accountability.", "he": "פרויקטי תחבורה חורגים באופן עקבי מהתקציב ב-35% בממוצע. מונופולים של קבלנים ושינויי הזמנה מנפחים עלויות ללא אחריותיות." },
+          "stat": "35% over budget"
+        },
+        {
+          "title": { "en": "Car Import Tax", "he": "מס יבוא רכב" },
+          "detail": { "en": "Import duties on vehicles exceed 100%, making car ownership a luxury item. This is a regressive tax that hits working families hardest while generating ₪15B+ annually for the treasury.", "he": "מכסי יבוא על כלי רכב עולים על 100%, והופכים בעלות על רכב לפריט יוקרה. זהו מס רגרסיבי שפוגע בעיקר במשפחות עובדות תוך ייצור 15+ מיליארד ₪ בשנה לאוצר." },
+          "stat": ">100% import tax"
+        }
+      ],
+      "betterSystem": {
+        "en": "Chile's public-private highway partnerships cut costs by 40% and delivery time by 60%. Japan builds world-class rail on time and on budget through competitive contracting. Removing car import duties would save families ₪50,000+ per vehicle.",
+        "he": "שותפויות ציבוריות-פרטיות של כבישים בצ'ילה חותכות עלויות ב-40% וזמני ביצוע ב-60%. יפן בונה רכבת ברמה עולמית בזמן ובתקציב באמצעות הקשרות תחרותית. ביטול מכסי יבוא רכב יחסוך למשפחות 50,000+ ₪ לרכב."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Transport",
+          "labelHe": "פנו למשרד התחבורה",
+          "url": "https://www.gov.il/he/departments/ministry_of_transport/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Economics Committee",
+          "labelHe": "ועדת הכלכלה של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "State Comptroller — Transport Reports", "url": "https://www.mevaker.gov.il" },
+        { "name": "Israel State Budget", "url": "https://www.gov.il/he/departments/policies/state-budget-proposal-2025" }
+      ]
+    },
+    "public_safety": {
+      "ministry": {
+        "nameEn": "Ministry of National Security",
+        "nameHe": "משרד לביטחון לאומי",
+        "website": "https://www.gov.il/he/departments/ministry_of_national_security",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_national_security/govil-contact",
+        "employees": 38000,
+        "avgSalaryMonthly": 13500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund the Israel Police, Border Police, fire services, and prison system. Police staffing per capita is below the OECD average, while administrative overhead consumes a disproportionate share of the budget.",
+        "he": "אתם ממנים את משטרת ישראל, מג\"ב, שירותי כבאות ומערכת הכליאה. מספר שוטרים לנפש נמוך מהממוצע ב-OECD, בעוד תקורה מנהלית בולעת חלק לא פרופורציונלי מהתקציב."
+      },
+      "problems": [
+        {
+          "title": { "en": "Understaffed Police", "he": "משטרה בתת-מנגנון" },
+          "detail": { "en": "Police-to-citizen ratio below OECD average. Slow response times in peripheral areas. Resources diverted to political duties.", "he": "יחס שוטרים-לאזרחים נמוך מממוצע OECD. זמני תגובה איטיים באזורי פריפריה. משאבים מופנים לתפקידים פוליטיים." },
+          "stat": "Below OECD avg"
+        },
+        {
+          "title": { "en": "Administrative Overhead", "he": "תקורה מנהלית" },
+          "detail": { "en": "Excessive administrative staff relative to operational police. Outdated technology and equipment. Budget goes to bureaucracy rather than boots on the ground.", "he": "צוות מנהלי מופרז ביחס לשוטרים מבצעיים. טכנולוגיה וציוד מיושנים. התקציב הולך לבירוקרטיה ולא לשטח." }
+        }
+      ],
+      "betterSystem": {
+        "en": "Data-driven policing models (CompStat, as deployed in New York and Tokyo) achieve better safety outcomes with fewer resources by allocating patrols based on predictive analytics rather than political considerations.",
+        "he": "מודלים של משטור מבוסס נתונים (CompStat, כפי שנפרס בניו יורק וטוקיו) משיגים תוצאות בטיחות טובות יותר עם פחות משאבים באמצעות הקצאת סיורים מבוססת ניתוח חזוי ולא שיקולים פוליטיים."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Israel Police",
+          "labelHe": "פנו למשטרת ישראל",
+          "url": "https://www.police.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Internal Affairs Committee",
+          "labelHe": "ועדת הפנים של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        }
+      ],
+      "sources": [
+        { "name": "State Comptroller — Public Safety Reports", "url": "https://www.mevaker.gov.il" },
+        { "name": "Israel Police Statistics", "url": "https://www.police.gov.il" }
+      ]
+    },
+    "housing": {
+      "ministry": {
+        "nameEn": "Ministry of Housing & Construction",
+        "nameHe": "משרד הבינוי והשיכון",
+        "website": "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_construction_and_housing/govil-contact",
+        "employees": 1200,
+        "avgSalaryMonthly": 17500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund the Ministry that oversees housing policy — the same government that controls 93% of land through the Israel Land Authority and takes 13 years to approve building permits, creating the artificial scarcity that makes your housing so expensive.",
+        "he": "אתם ממנים את המשרד שמפקח על מדיניות הדיור — אותה ממשלה ששולטת ב-93% מהקרקעות דרך רשות מקרקעי ישראל ולוקחת 13 שנה לאשר היתרי בנייה, ויוצרת את המחסור המלאכותי שהופך את הדיור שלכם ליקר כל כך."
+      },
+      "problems": [
+        {
+          "title": { "en": "Government Land Monopoly", "he": "מונופול קרקעות ממשלתי" },
+          "detail": { "en": "The Israel Land Authority (ILA) controls 93% of all land in Israel. You cannot freely buy land — only lease it from the state. This creates artificial scarcity and inflates prices.", "he": "רשות מקרקעי ישראל (רמ\"י) שולטת ב-93% מכל הקרקעות בישראל. לא ניתן לקנות קרקע באופן חופשי — רק לחכור מהמדינה. זה יוצר מחסור מלאכותי ומנפח מחירים." },
+          "stat": "93% state-owned"
+        },
+        {
+          "title": { "en": "13-Year Permit Process", "he": "תהליך היתר של 13 שנה" },
+          "detail": { "en": "From initial planning to building permit takes an average of 13 years. Planning committees, environmental reviews, appeals, and political interference at every stage.", "he": "מתכנון ראשוני ועד היתר בנייה לוקח בממוצע 13 שנה. ועדות תכנון, סקרים סביבתיים, ערעורים והתערבות פוליטית בכל שלב." },
+          "stat": "13 years avg"
+        },
+        {
+          "title": { "en": "Price-to-Income: 10.6x", "he": "יחס מחיר-להכנסה: 10.6" },
+          "detail": { "en": "The average apartment costs 10.6 times the average annual salary — making Israel one of the least affordable housing markets in the developed world.", "he": "דירה ממוצעת עולה פי 10.6 מהמשכורת השנתית הממוצעת — מה שהופך את ישראל לאחד משוקי הדיור הכי לא נגישים בעולם המפותח." },
+          "stat": "10.6× income"
+        }
+      ],
+      "betterSystem": {
+        "en": "In Texas, a building permit takes 2 weeks. Housing costs 3-4x annual income, not 10.6x. The key difference: free land markets, minimal regulation, and no government monopoly on land supply.",
+        "he": "בטקסס, היתר בנייה לוקח שבועיים. דיור עולה פי 3-4 מההכנסה השנתית, לא פי 10.6. ההבדל המרכזי: שווקי קרקע חופשיים, רגולציה מינימלית ואין מונופול ממשלתי על היצע הקרקע."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Housing",
+          "labelHe": "פנו למשרד הבינוי והשיכון",
+          "url": "https://www.gov.il/he/departments/ministry_of_construction_and_housing/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Israel Land Authority",
+          "labelHe": "רשות מקרקעי ישראל",
+          "url": "https://land.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Housing Price Index (CBS)",
+          "labelHe": "מדד מחירי דירות (הלמ\"ס)",
+          "url": "https://www.cbs.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "Israel Central Bureau of Statistics — Housing", "url": "https://www.cbs.gov.il" },
+        { "name": "Bank of Israel — Financial Stability Report", "url": "https://www.boi.org.il" },
+        { "name": "State Comptroller — Housing Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "agriculture": {
+      "ministry": {
+        "nameEn": "Ministry of Agriculture & Rural Development",
+        "nameHe": "משרד החקלאות ופיתוח הכפר",
+        "website": "https://www.gov.il/he/departments/ministry_of_agriculture",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_agriculture/govil-contact",
+        "employees": 1800,
+        "avgSalaryMonthly": 15200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund agricultural subsidies, import quotas on dairy/eggs/produce, and the bureaucracy that enforces them. You pay TWICE: through taxes that subsidize uncompetitive producers, AND through inflated grocery prices (19% above EU average) caused by import restrictions that eliminate competition.",
+        "he": "אתם ממנים סובסידיות חקלאיות, מכסות יבוא על חלב/ביצים/תוצרת והבירוקרטיה שאוכפת אותם. אתם משלמים פעמיים: דרך מסים שמסבסדים יצרנים לא תחרותיים, ודרך מחירי מזון מנופחים (19% מעל ממוצע האיחוד האירופי) שנגרמים ממגבלות יבוא שמבטלות תחרות."
+      },
+      "problems": [
+        {
+          "title": { "en": "Dairy Cartel", "he": "קרטל החלב" },
+          "detail": { "en": "Import quotas protect Tnuva and domestic dairy producers from foreign competition. Israelis pay 2-3x the international price for dairy products. The Dairy Board sets production quotas.", "he": "מכסות יבוא מגנות על תנובה ויצרני חלב מקומיים מתחרות זרה. ישראלים משלמים פי 2-3 מהמחיר הבינלאומי על מוצרי חלב. מועצת החלב קובעת מכסות ייצור." },
+          "stat": "2-3× world price"
+        },
+        {
+          "title": { "en": "Grocery Prices 19% Above EU", "he": "מחירי מזון 19% מעל האיחוד האירופי" },
+          "detail": { "en": "Import duties and competition restrictions keep food prices artificially high. Consumers have no choice — the same companies control production, distribution, and retail.", "he": "מכסי יבוא והגבלות תחרות שומרים על מחירי מזון גבוהים באופן מלאכותי. לצרכנים אין ברירה — אותן חברות שולטות בייצור, בהפצה ובקמעונאות." },
+          "stat": "19% above EU"
+        },
+        {
+          "title": { "en": "You Pay Twice", "he": "אתם משלמים פעמיים" },
+          "detail": { "en": "Your taxes subsidize domestic farmers. Then you pay inflated prices at the supermarket because imports that could lower prices are blocked. Double taxation through the back door.", "he": "המסים שלכם מסבסדים חקלאים מקומיים. ואז אתם משלמים מחירים מנופחים בסופרמרקט כי יבוא שיכול להוריד מחירים חסום. מיסוי כפול דרך הדלת האחורית." }
+        }
+      ],
+      "betterSystem": {
+        "en": "New Zealand eliminated ALL agricultural subsidies in 1984. Farms became more efficient, exports grew, and food prices dropped. Israel's own telecom deregulation in 2012 (prices dropped 80%) proves the same model works here.",
+        "he": "ניו זילנד ביטלה את כל סובסידיות החקלאות ב-1984. החקלאות הפכה יעילה יותר, היצוא גדל ומחירי המזון ירדו. דרגולציית הסלולר של ישראל עצמה ב-2012 (מחירים ירדו 80%) מוכיחה שאותו מודל עובד כאן."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Agriculture",
+          "labelHe": "פנו למשרד החקלאות",
+          "url": "https://www.gov.il/he/departments/ministry_of_agriculture/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Price Comparison Tool (Pricez)",
+          "labelHe": "כלי השוואת מחירים (פרייסז)",
+          "url": "https://www.pricez.co.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Knesset Economics Committee",
+          "labelHe": "ועדת הכלכלה של הכנסת",
+          "url": "https://main.knesset.gov.il/apps/committees/lobby"
+        }
+      ],
+      "sources": [
+        { "name": "OECD — Agricultural Policy Monitoring (Israel)", "url": "https://www.oecd.org/en/topics/agriculture-and-fisheries.html" },
+        { "name": "Shoresh Institution — Food Prices", "url": "https://shoresh.institute" }
+      ]
+    },
+    "immigration": {
+      "ministry": {
+        "nameEn": "Ministry of Aliyah & Integration",
+        "nameHe": "משרד העלייה והקליטה",
+        "website": "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration/govil-contact",
+        "employees": 1400,
+        "avgSalaryMonthly": 14800,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund absorption centers, Hebrew language programs (ulpan), and the bureaucratic intake process for new immigrants. Despite the stated goal of integration, the system creates dependency rather than self-sufficiency.",
+        "he": "אתם ממנים מרכזי קליטה, תוכניות לימוד עברית (אולפן) והתהליך הבירוקרטי של קליטת עולים חדשים. למרות המטרה המוצהרת של שילוב, המערכת יוצרת תלות במקום עצמאות."
+      },
+      "problems": [
+        {
+          "title": { "en": "Creates Dependency, Not Integration", "he": "יוצרת תלות, לא שילוב" },
+          "detail": { "en": "Absorption centers and paternalistic intake processes treat immigrants as dependents rather than contributors. The system was designed for 1950s mass immigration, not modern skilled professionals.", "he": "מרכזי קליטה ותהליכי קליטה פטרנליסטיים מתייחסים לעולים כתלויים ולא כתורמים. המערכת תוכננה לעלייה המונית של שנות ה-50, לא לאנשי מקצוע מיומנים מודרניים." }
+        },
+        {
+          "title": { "en": "Thousands Leave Within Years", "he": "אלפים עוזבים תוך שנים" },
+          "detail": { "en": "Thousands of immigrants arrive with optimism and leave within years. The tax burden, bureaucracy, cost of living, and language barriers create an impossible equation. No meaningful tax holiday for olim.", "he": "אלפי עולים מגיעים באופטימיות ועוזבים תוך שנים. נטל המס, הבירוקרטיה, יוקר המחייה ומחסומי השפה יוצרים משוואה בלתי אפשרית. אין הקלת מס משמעותית לעולים." },
+          "stat": "Thousands/year"
+        }
+      ],
+      "betterSystem": {
+        "en": "Canada's points-based system with private sponsorship integrates immigrants faster at lower government cost. Portugal and UAE offer meaningful tax incentives for immigrants. Market-driven language training is outcome-based.",
+        "he": "המערכת הקנדית מבוססת ניקוד עם חסות פרטית משלבת מהגרים מהר יותר בעלות ממשלתית נמוכה יותר. פורטוגל ואיחוד האמירויות מציעות הקלות מס משמעותיות למהגרים. לימודי שפה מונעי שוק מבוססי תוצאות."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Aliyah",
+          "labelHe": "פנו למשרד העלייה והקליטה",
+          "url": "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "Nefesh B'Nefesh — Olim Resources",
+          "labelHe": "נפש בנפש — משאבים לעולים",
+          "url": "https://www.nbn.org.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Kol Zchut — New Immigrant Rights",
+          "labelHe": "כל זכות — זכויות עולים חדשים",
+          "url": "https://www.kolzchut.org.il/en/New_immigrants_(Olim)"
+        }
+      ],
+      "sources": [
+        { "name": "Israel Central Bureau of Statistics — Immigration", "url": "https://www.cbs.gov.il" },
+        { "name": "Knesset Research — Immigration Reports", "url": "https://main.knesset.gov.il" }
+      ]
+    },
+    "culture": {
+      "ministry": {
+        "nameEn": "Ministry of Culture & Sport",
+        "nameHe": "משרד התרבות והספורט",
+        "website": "https://www.gov.il/he/departments/ministry_of_culture_and_sport",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_culture_and_sport/govil-contact",
+        "employees": 500,
+        "avgSalaryMonthly": 14500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund government-supported cultural institutions, sports facilities, theaters, and museums — with little accountability for attendance, impact, or public value. Funding decisions are driven by political connections rather than merit.",
+        "he": "אתם ממנים מוסדות תרבות נתמכי ממשלה, מתקני ספורט, תיאטראות ומוזיאונים — עם אחריותיות מועטה לנוכחות, השפעה או ערך ציבורי. החלטות מימון מונעות קשרים פוליטיים ולא מריטוקרטיה."
+      },
+      "problems": [
+        {
+          "title": { "en": "Political Funding Decisions", "he": "החלטות מימון פוליטיות" },
+          "detail": { "en": "Cultural funding is allocated based on political connections rather than public demand or artistic merit. Institutions that serve no public need survive indefinitely on government support.", "he": "מימון תרבותי מוקצה על בסיס קשרים פוליטיים ולא ביקוש ציבורי או הישג אמנותי. מוסדות שלא משרתים צורך ציבורי שורדים ללא הגבלה על תמיכה ממשלתית." }
+        },
+        {
+          "title": { "en": "No Accountability Metrics", "he": "אין מדדי אחריותיות" },
+          "detail": { "en": "No transparent data on attendance, cost-per-visitor, or impact measurement. Taxpayers have no way to evaluate whether their money is producing cultural value.", "he": "אין נתונים שקופים על נוכחות, עלות-למבקר או מדידת השפעה. משלמי המסים לא יכולים להעריך אם הכסף שלהם מייצר ערך תרבותי." }
+        }
+      ],
+      "betterSystem": {
+        "en": "The US model of tax-deductible private donations to arts and culture produces a more diverse, responsive, and cost-effective cultural ecosystem — where institutions must compete for public support rather than political favor.",
+        "he": "המודל האמריקני של תרומות פרטיות מוכרות למס לאמנות ותרבות מייצר מערכת תרבותית מגוונת, רספונסיבית וחסכונית יותר — שבה מוסדות חייבים להתחרות על תמיכה ציבורית ולא על חסות פוליטית."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Contact Ministry of Culture",
+          "labelHe": "פנו למשרד התרבות",
+          "url": "https://www.gov.il/he/departments/ministry_of_culture_and_sport/govil-contact"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "State Comptroller — Culture Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "environment": {
+      "ministry": {
+        "nameEn": "Ministry of Environmental Protection",
+        "nameHe": "המשרד להגנת הסביבה",
+        "website": "https://www.gov.il/he/departments/ministry_of_environmental_protection",
+        "contactUrl": "https://www.gov.il/he/departments/ministry_of_environmental_protection/govil-contact",
+        "employees": 600,
+        "avgSalaryMonthly": 16200,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "You fund environmental regulation, waste management, and enforcement — across multiple agencies with overlapping mandates. Enforcement is inconsistent, and polluters face fines cheaper than compliance.",
+        "he": "אתם ממנים רגולציה סביבתית, ניהול פסולת ואכיפה — לאורך מספר סוכנויות עם סמכויות חופפות. האכיפה לא עקבית, ומזהמים עומדים בפני קנסות זולים יותר מעמידה בתקנות."
+      },
+      "problems": [
+        {
+          "title": { "en": "Fines Cheaper Than Compliance", "he": "קנסות זולים יותר מעמידה בתקנות" },
+          "detail": { "en": "Environmental fines are so low that polluters budget for them as a cost of doing business. There is no economic incentive to comply with environmental standards.", "he": "קנסות סביבתיים כל כך נמוכים שמזהמים מתקצבים אותם כעלות עסקית. אין תמריץ כלכלי לעמוד בתקנים סביבתיים." }
+        },
+        {
+          "title": { "en": "Regulatory Overlap", "he": "חפיפה רגולטורית" },
+          "detail": { "en": "Multiple agencies regulate environmental issues with overlapping jurisdiction. This creates confusion, delays, and allows polluters to fall through the cracks.", "he": "מספר סוכנויות מסדירות נושאים סביבתיים עם סמכויות חופפות. זה יוצר בלבול, עיכובים ומאפשר למזהמים ליפול בין הכיסאות." }
+        }
+      ],
+      "betterSystem": {
+        "en": "Pollution pricing (carbon taxes with revenue recycling, as in British Columbia) creates market incentives for clean behavior. When pollution has a real price, companies find efficient ways to reduce it.",
+        "he": "תמחור זיהום (מסי פחמן עם מיחזור הכנסות, כמו בבריטיש קולומביה) יוצר תמריצי שוק להתנהגות נקייה. כשלזיהום יש מחיר אמיתי, חברות מוצאות דרכים יעילות להפחית אותו."
+      },
+      "actions": [
+        {
+          "type": "contact",
+          "labelEn": "Report Pollution",
+          "labelHe": "דווחו על זיהום",
+          "url": "https://www.gov.il/he/departments/ministry_of_environmental_protection"
+        },
+        {
+          "type": "link",
+          "labelEn": "Environmental Complaints Hotline",
+          "labelHe": "קו תלונות סביבתי",
+          "url": "https://www.gov.il/he/departments/ministry_of_environmental_protection"
+        }
+      ],
+      "sources": [
+        { "name": "State Comptroller — Environment Reports", "url": "https://www.mevaker.gov.il" }
+      ]
+    },
+    "other": {
+      "ministry": {
+        "nameEn": "Various Government Bodies",
+        "nameHe": "גופים ממשלתיים שונים",
+        "website": "https://www.gov.il",
+        "employees": 45000,
+        "avgSalaryMonthly": 15500,
+        "employeeSourceUrl": "https://www.gov.il/he/departments/civil_service_commission"
+      },
+      "whatYouPay": {
+        "en": "This 12.4% catch-all funds dozens of minor agencies, government offices, the Knesset, the judiciary, the President's office, and various authorities — many with overlapping mandates and no clear performance metrics. Once created, government programs never die.",
+        "he": "12.4% זה ממן עשרות סוכנויות קטנות, משרדי ממשלה, הכנסת, מערכת המשפט, בית הנשיא ורשויות שונות — רבות עם סמכויות חופפות ואין מדדי ביצוע ברורים. ברגע שתוכנית ממשלתית נוצרת, היא לעולם לא מתה."
+      },
+      "problems": [
+        {
+          "title": { "en": "Programs Never Sunset", "he": "תוכניות לעולם לא מסתיימות" },
+          "detail": { "en": "Once created, government agencies and programs persist indefinitely regardless of whether they still serve a purpose. No periodic review or reauthorization mechanism exists.", "he": "ברגע שנוצרו, סוכנויות ותוכניות ממשלתיות ממשיכות ללא הגבלה ללא קשר לשאלה אם הן עדיין משרתות מטרה. אין מנגנון סקירה תקופתית או אישור מחדש." }
+        },
+        {
+          "title": { "en": "Overlapping Mandates", "he": "סמכויות חופפות" },
+          "detail": { "en": "Multiple agencies often handle the same issue area. This redundancy wastes resources and creates bureaucratic confusion for citizens trying to get services.", "he": "מספר סוכנויות לעתים קרובות מטפלות באותו תחום. כפילות זו מבזבזת משאבים ויוצרת בלבול בירוקרטי לאזרחים שמנסים לקבל שירותים." }
+        },
+        {
+          "title": { "en": "Israel Has ~500K Public Sector Workers", "he": "לישראל כ-500 אלף עובדי מגזר ציבורי" },
+          "detail": { "en": "Approximately 500,000 public sector employees — about 15% of the total workforce. Average public sector salary is 30% higher than private sector. These workers are nearly impossible to fire.", "he": "כ-500,000 עובדי מגזר ציבורי — כ-15% מכוח העבודה הכולל. שכר ממוצע במגזר הציבורי גבוה ב-30% מהמגזר הפרטי. כמעט בלתי אפשרי לפטר עובדים אלה." },
+          "stat": "~500K workers"
+        }
+      ],
+      "betterSystem": {
+        "en": "Texas uses sunset clauses requiring periodic reauthorization of every agency. Programs that have outlived their purpose are eliminated. This forces regular review and accountability.",
+        "he": "טקסס משתמשת בסעיפי שקיעה המחייבים אישור מחדש תקופתי של כל סוכנות. תוכניות שמיצו את ייעודן מבוטלות. זה כופה סקירה ואחריותיות סדירים."
+      },
+      "actions": [
+        {
+          "type": "link",
+          "labelEn": "Full Government Ministry List",
+          "labelHe": "רשימת משרדי ממשלה מלאה",
+          "url": "https://www.gov.il/he/departments/ministries"
+        },
+        {
+          "type": "link",
+          "labelEn": "State Comptroller Reports",
+          "labelHe": "דוחות מבקר המדינה",
+          "url": "https://www.mevaker.gov.il"
+        },
+        {
+          "type": "link",
+          "labelEn": "Contact Your MK",
+          "labelHe": "פנו לח\"כ שלכם",
+          "url": "https://main.knesset.gov.il/mk/Pages/default.aspx"
+        },
+        {
+          "type": "link",
+          "labelEn": "File Freedom of Info Request",
+          "labelHe": "הגישו בקשת חופש מידע",
+          "url": "https://www.gov.il/he/departments/foi/govil-landing-page"
+        }
+      ],
+      "sources": [
+        { "name": "Israel Civil Service Commission", "url": "https://www.gov.il/he/departments/civil_service_commission" },
+        { "name": "State Comptroller Annual Report", "url": "https://www.mevaker.gov.il" }
+      ]
+    }
+  }
+}
