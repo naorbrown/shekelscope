@@ -1,0 +1,22 @@
+{
+  "taxYear": 2025,
+  "lastUpdated": "2025-01-01",
+  "sourceUrl": "https://www.gov.il/he/departments/policies/state-budget-proposal-2025",
+  "totalBudgetBillionNIS": 607,
+  "totalTaxRevenueBillionNIS": 420,
+  "allocations": [
+    { "id": "defense", "nameEn": "Defense", "nameHe": "ביטחון", "percentage": 16.5, "color": "#2D6A7A" },
+    { "id": "education", "nameEn": "Education", "nameHe": "חינוך", "percentage": 15.2, "color": "#6B5B8D" },
+    { "id": "welfare", "nameEn": "Welfare & Social Services", "nameHe": "רווחה ושירותים חברתיים", "percentage": 12.8, "color": "#B08850" },
+    { "id": "health", "nameEn": "Health", "nameHe": "בריאות", "percentage": 11.5, "color": "#4A8B6F" },
+    { "id": "debt", "nameEn": "Debt Service", "nameHe": "שירות חוב", "percentage": 9.8, "color": "#B05A50" },
+    { "id": "transportation", "nameEn": "Transportation", "nameHe": "תחבורה", "percentage": 6.2, "color": "#4A8A9A" },
+    { "id": "public_safety", "nameEn": "Public Safety", "nameHe": "ביטחון פנים", "percentage": 5.8, "color": "#9A5A70" },
+    { "id": "housing", "nameEn": "Housing & Construction", "nameHe": "שיכון ובינוי", "percentage": 4.5, "color": "#8A7050" },
+    { "id": "agriculture", "nameEn": "Agriculture", "nameHe": "חקלאות", "percentage": 1.8, "color": "#507A5A" },
+    { "id": "immigration", "nameEn": "Immigration & Absorption", "nameHe": "עלייה וקליטה", "percentage": 1.5, "color": "#5A6A8A" },
+    { "id": "culture", "nameEn": "Culture & Sport", "nameHe": "תרבות וספורט", "percentage": 1.2, "color": "#8A5A8A" },
+    { "id": "environment", "nameEn": "Environmental Protection", "nameHe": "הגנת הסביבה", "percentage": 0.8, "color": "#5A8A60" },
+    { "id": "other", "nameEn": "Other", "nameHe": "אחר", "percentage": 12.4, "color": "#7A7A72" }
+  ]
+}
